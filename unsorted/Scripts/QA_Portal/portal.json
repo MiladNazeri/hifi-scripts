@@ -1,0 +1,38 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "angularDamping": 0,
+            "clientOnly": false,
+            "created": "2018-02-25T22:34:03Z",
+            "damping": 1,
+            "dimensions": {
+                "x": 2.11399507522583,
+                "y": 1.0412204265594482,
+                "z": 2.11399507522583
+            },
+            "friction": 0,
+            "id": "{35028df3-74db-42a4-9635-ae4ab9e6bbf6}",
+            "lastEdited": 1522546128383064,
+            "lastEditedBy": "{1e98afa7-6418-485e-923e-acd4bc5a758b}",
+            "modelURL": "atp:/models/Teleport-Pad.fbx?1",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 3.1657683849334717,
+                "x": -1.5828841924667358,
+                "y": -1.5828841924667358,
+                "z": -1.5828841924667358
+            },
+            "rotation": {
+                "w": -0.5703364610671997,
+                "x": -0.5704585313796997,
+                "y": -0.41792935132980347,
+                "z": 0.4179292917251587
+            },
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        }
+    ],
+    "Id": "{5b242158-c0e7-46be-a318-3aa78bff1634}",
+    "Version": 86
+}

@@ -1,0 +1,26 @@
+{
+  "Attachment": {
+    "action": "attach",
+    "defaultPosition": {
+      "x": 0,
+      "y": 0.15,
+      "z": 0.15
+    },
+    "joint": "Head",
+    "attached": false,
+    "options": {
+      "translation": {
+        "x": 1,
+        "y": 0,
+        "z": 0
+      },
+      "scale": 1
+    }
+  },
+  "grabbableKey": {
+    "cloneable": false,
+    "grabbable": true
+  },
+  "marketplaceID": ""
+}
+

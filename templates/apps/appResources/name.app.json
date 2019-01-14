@@ -1,0 +1,4 @@
+{
+    "scriptURL": "http://mpassets.highfidelity.com/<MP-ID>/<NAME>/appResources/appData/<NAME>_app.js",
+    "homeURL": "http://mpassets.highfidelity.com/<MP-ID>/<NAME>/appResources/<NAME>_ui.html"
+}

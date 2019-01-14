@@ -1,0 +1,45 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "collisionless": true,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2018-09-11T01:41:03Z",
+            "dimensions": {
+                "blue": 7.55438232421875,
+                "green": 0.23088359832763672,
+                "red": 7.46949577331543,
+                "x": 7.46949577331543,
+                "y": 0.23088359832763672,
+                "z": 7.55438232421875
+            },
+            "id": "{78b9180b-66ad-4ad5-b3fc-3dc16be2050d}",
+            "ignoreForCollisions": true,
+            "lastEdited": 1536639136143975,
+            "lastEditedBy": "{67231b02-59df-40d7-a4b8-cf92232fb522}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 10.626163482666016,
+                "x": -5.313081741333008,
+                "y": -5.313081741333008,
+                "z": -5.313081741333008
+            },
+            "rotation": {
+                "w": 1,
+                "x": -1.52587890625e-05,
+                "y": -1.52587890625e-05,
+                "z": -1.52587890625e-05
+            },
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"ProceduralEntity\":{\"version\":2,\"shaderUrl\":\"file:///D:/Dropbox%20(milad%20productions)/_ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/raymarch.fs\",\"uniforms\":{\"scene\":0,\"spinner\":1.1280000000000006}}}"
+        }
+    ],
+    "Id": "{4f0e4049-c70a-49ea-b9cf-e93c7603f4be}",
+    "Version": 92
+}

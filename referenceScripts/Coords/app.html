@@ -1,0 +1,51 @@
+
+<html>
+    <head>
+        <title> Get boundaries </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <div class="top-bar">
+            <h2>Get coordinates</h2>
+            <p>Click an entity to get bounding box coordinates
+            </p>
+        </div>
+        <div class="content">
+            <input class="id" type="text" placeholder="EntityID"><br>
+            <label class="xstart">xstart: </label> <br>
+            <label class="xend"> xend:  </label> <br>
+
+            <label class="ystart">ystart: </label> <br>
+            <label class="yend"> yend:  </label> <br>
+
+            <label class="zstart">zstart: </label> <br>
+            <label class="zend"> zend:  </label> <br>
+        </div>
+        <script>
+            function main(){
+                $(".submit-button").click(function(){
+                    var clickEvent = {
+                        type : "submit",
+                        entityID : $(".id").val(),
+                        joint : $(".joint_dropdown").val()
+                    };
+                    EventBridge.emitWebEvent(JSON.stringify(clickEvent));
+                });
+                EventBridge.scriptEventReceived.connect(function(scriptEvent){
+                    $(".id").val(scriptEvent.entityID);
+
+                    $(".xstart").text("xstart: " + scriptEvent.startx);
+                    $(".xend").text("xend: " + scriptEvent.endX);
+                    $(".ystart").text("ystart: " + scriptEvent.starty);
+                    $(".yend").text("yend: " + scriptEvent.endy);
+                    $(".zstart").text("zstart: " + scriptEvent.startz);
+                    $(".zend").text("zend: " + scriptEvent.endz);
+
+                });
+            }
+            $(document).ready(main);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,149 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "collidesWith": "static,dynamic,kinematic,otherAvatar,",
+            "collisionMask": 23,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2018-09-14T22:25:03Z",
+            "cutoff": 90,
+            "dimensions": {
+                "blue": 2.3785204887390137,
+                "green": 2.3785204887390137,
+                "red": 2.3785204887390137,
+                "x": 2.3785204887390137,
+                "y": 2.3785204887390137,
+                "z": 2.3785204887390137
+            },
+            "falloffRadius": 5,
+            "id": "{ec1afce0-21e3-4b01-aaca-fd66d0b7f25d}",
+            "intensity": 3.7186360359191895,
+            "lastEdited": 1536965452789530,
+            "lastEditedBy": "{93d88a44-00bc-4c52-9f8c-b03e2142f0c2}",
+            "name": "_Tween_Path_Light",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "parentID": "{ffb937c5-7c32-48e1-8369-094e387ba72d}",
+            "position": {
+                "blue": 0.6555049419403076,
+                "green": 1.2458982467651367,
+                "red": 0.23241949081420898,
+                "x": 0.23241949081420898,
+                "y": 1.2458982467651367,
+                "z": 0.6555049419403076
+            },
+            "queryAACube": {
+                "scale": 4.119718074798584,
+                "x": -9.018094062805176,
+                "y": -10.34274959564209,
+                "z": -73.43994140625
+            },
+            "rotation": {
+                "w": 0.9862363338470459,
+                "x": -1.52587890625e-05,
+                "y": -0.16523993015289307,
+                "z": 1.52587890625e-05
+            },
+            "serverScripts": "http://hifi-content.s3-us-west-1.amazonaws.com/rebecca/zombies/flicker.js",
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false},\"maxLightIntensity\":4,\"interval\":60}"
+        },
+        {
+            "clientOnly": false,
+            "created": "2018-09-14T22:25:03Z",
+            "dimensions": {
+                "blue": 0.4901624619960785,
+                "green": 2.6951279640197754,
+                "red": 1.5190948247909546,
+                "x": 1.5190948247909546,
+                "y": 2.6951279640197754,
+                "z": 0.4901624619960785
+            },
+            "id": "{ffb937c5-7c32-48e1-8369-094e387ba72d}",
+            "lastEdited": 1536965427112056,
+            "lastEditedBy": "{e6bc6230-4d3b-4d3e-94fa-fb2a5268e53f}",
+            "modelURL": "https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/models/satanicenemy/satanicenemy.obj",
+            "name": "_Tween_Path_Monster",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "blue": 0,
+                "green": 0.43735694885253906,
+                "red": 0,
+                "x": 0,
+                "y": 0.43735694885253906,
+                "z": 0
+            },
+            "queryAACube": {
+                "scale": 3.1323509216308594,
+                "x": -1.5661754608154297,
+                "y": -1.1288185119628906,
+                "z": -1.5661754608154297
+            },
+            "rotation": {
+                "w": 0.9862668514251709,
+                "x": -1.52587890625e-05,
+                "y": 0.16502630710601807,
+                "z": -4.57763671875e-05
+            },
+            "serverScripts": "https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/scaryman.js?71",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false},\"X_MULTIPLIER\":0.01,\"Y_MULTIPLIER\":0.01,\"Z_MULTIPLIER\":0.01,\"STARTING_POSITION\":{\"x\":-7.3918,\"y\":-13.2651,\"z\":-71.924},\"MIDDLE_POSITION\":{\"x\":-7.3918,\"y\":-9.2651,\"z\":-71.924},\"ENDING_POSITION\":{\"x\":-7.3918,\"y\":-13.2651,\"z\":-71.924},\"TIME_TO_MIDDLE_POSITION\":650,\"TIME_TO_ENDING_POSITION\":1200,\"DELAY_BETWEEN_TIME\":2000,\"cycleTime\":1000,\"amplitude\":0.5,\"secondaryAnimateIntervalStep\":60,\"DAMP_AMOUNT\":30,\"MUSIC_URL\":\"https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/sounds/tolling-bell_daniel-simion.wav\",\"FX_URL\":\"https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/sounds/I_will_kill_you-Grandpa-13673816.wav\",\"musicVolume\":0.1,\"fxVolume\":0.4}"
+        },
+        {
+            "clientOnly": false,
+            "collisionless": true,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2018-09-14T21:02:02Z",
+            "dimensions": {
+                "blue": 1.3699010610580444,
+                "green": 1.0787124633789062,
+                "red": 1.6025643348693848,
+                "x": 1.6025643348693848,
+                "y": 1.0787124633789062,
+                "z": 1.3699010610580444
+            },
+            "id": "{b22e5a16-f835-458d-8aed-cdff35e892de}",
+            "ignoreForCollisions": true,
+            "lastEdited": 1536965365118741,
+            "lastEditedBy": "{e6bc6230-4d3b-4d3e-94fa-fb2a5268e53f}",
+            "name": "_Tween_Trigger",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "blue": 0.7507400512695312,
+                "green": 0,
+                "red": 0.6817111968994141,
+                "x": 0.6817111968994141,
+                "y": 0,
+                "z": 0.7507400512695312
+            },
+            "queryAACube": {
+                "scale": 2.3682191371917725,
+                "x": -0.5023983716964722,
+                "y": -1.1841095685958862,
+                "z": -0.433369517326355
+            },
+            "rotation": {
+                "w": 0.9588006734848022,
+                "x": -1.52587890625e-05,
+                "y": 0.28398561477661133,
+                "z": -4.57763671875e-05
+            },
+            "script": "https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/zone_trigger.js?7",
+            "scriptTimestamp": 1536960558971,
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"namesToFind\":[\"_Tween_Path_Monster\"],\"grabbableKey\":{\"grabbable\":false}}",
+            "visible": false
+        }
+    ],
+    "Id": "{9de3021d-9aa4-491e-8c72-1e0b11fa5c2d}",
+    "Version": 92
+}

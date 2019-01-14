@@ -1,0 +1,71 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "ambientLight": {
+                "ambientIntensity": 1,
+                "ambientURL": "http://hifi-content.s3.amazonaws.com/alan/dev/SKY-theater-photosphere-360-dark.jpg"
+            },
+            "clientOnly": false,
+            "created": "2018-01-10T02:17:50Z",
+            "dimensions": {
+                "x": 55.13674545288086,
+                "y": 55.1629753112793,
+                "z": 66.67645263671875
+            },
+            "haze": {
+                "hazeAltitudeEffect": true,
+                "hazeBaseRef": 4985,
+                "hazeCeiling": 4989,
+                "hazeColor": {
+                    "blue": 13,
+                    "green": 2,
+                    "red": 12
+                },
+                "hazeEnableGlare": true,
+                "hazeGlareAngle": 50,
+                "hazeGlareColor": {
+                    "blue": 255,
+                    "green": 72,
+                    "red": 0
+                },
+                "hazeRange": 2
+            },
+            "hazeMode": "enabled",
+            "id": "{9e5ba8b2-ddcd-47ac-a3a7-08e355fbbe8d}",
+            "keyLight": {
+                "direction": {
+                    "x": 0.903592586517334,
+                    "y": -0.1908089965581894,
+                    "z": -0.38355231285095215
+                },
+                "intensity": 0
+            },
+            "lastEdited": 1523006877282386,
+            "lastEditedBy": "{42e94560-218e-4ae0-8c83-650b9c0d7fd5}",
+            "name": "Rust Zone",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 102.6097640991211,
+                "x": -51.30488204956055,
+                "y": -51.30488204956055,
+                "z": -51.30488204956055
+            },
+            "rotation": {
+                "w": 0.7383383512496948,
+                "x": 0.11537349224090576,
+                "y": 0.6543526649475098,
+                "z": 0.11537349224090576
+            },
+            "serverScripts": "https://hifi-content.s3.amazonaws.com/milad/Rust/skybox/skyboxRotate.js?v=28",
+            "shapeType": "box",
+            "skybox": {
+                "url": "http://hifi-content.s3.amazonaws.com/alan/dev/SKY-theater-photosphere-360-dark.jpg"
+            },
+            "type": "Zone",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false}}"
+        }
+    ],
+    "Id": "{9ff32a10-9601-40c4-a6ad-1ae639b4acb6}",
+    "Version": 85
+}

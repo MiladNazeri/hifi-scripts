@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Auto-Lights</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/app.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="m-3">
+            <h4>Rotation</h4>
+                <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="speed_control" value="true"><label for="speed_control" class="form-check-label">Speed Control</label></div>
+                <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="pitch_control" value="true"><label for="pitch_control" class="form-check-label">Pitch Control</label></div>
+                <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="yaw_control" value="true"><label for="yaw_control" class="form-check-label">Yaw Control</label></div>
+                <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="roll_control" value="true"><label for="roll_control" class="form-check-label">Roll Control</label></div>
+        </div>
+        <div class="m-3">
+            <h4>Quality</h4>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="falloff_control" value="true"><label for="falloff_control" class="form-check-label">Falloff Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="exponent_control" value="true"><label for="exponent_control" class="form-check-label">Exponent Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="cutoff_control" value="true"><label for="cutoff_control" class="form-check-label">Cutoff Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="intensity1_control" value="true"><label for="intensity1_control" class="form-check-label">Intensity1 Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="intensity2_control" value="true"><label for="intensity2_control" class="form-check-label">Intensity2 Control</label></div>
+        </div>
+        <div class="m-3">
+            <h4>Color</h4>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="red1_control" value="true"><label for="red1_control" class="form-check-label">Red1 Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="green1_control" value="true"><label for="green1_control" class="form-check-label">Green1 Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="blue1_control" value="true"><label for="blue1_control" class="form-check-label">Blue1 Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="red2_control" value="true"><label for="red2_control" class="form-check-label">Red2 Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="green2_control" value="true"><label for="green2_control" class="form-check-label">Green2 Control</label></div>
+            <div class="form-check form-check-inline"><input type="checkbox" class="form-check-input" id="blue2_control" value="true"><label for="blue2_control" class="form-check-label">Blue2 Control</label></div>
+        </div>
+            <div>
+                <button id="update" type="button" class="btn btn-primary m-3">Update</button>
+            </div>
+        </div>
+    </div>
+
+        <!-- <div>Test2  -->
+        <!-- <button>Test</button> -->
+
+    </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="js/Auto-Lights_Tablet.js"></script>
+    
+</body>
+
+</html>

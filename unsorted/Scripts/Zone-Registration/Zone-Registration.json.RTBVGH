@@ -1,0 +1,42 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "created": "2018-08-01T21:17:07Z",
+            "dimensions": {
+                "blue": 2.733569622039795,
+                "green": 5.892127990722656,
+                "red": 1.9886693954467773,
+                "x": 1.9886693954467773,
+                "y": 5.892127990722656,
+                "z": 2.733569622039795
+            },
+            "id": "{3a884af5-5e16-4360-b539-b54db9099b90}",
+            "lastEdited": 1533159543433099,
+            "lastEditedBy": "{4f1104c9-f71e-421a-8543-9e65bc955ca1}",
+            "name": "Zone-Registration",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 6.792965888977051,
+                "x": -3.3964829444885254,
+                "y": -3.3964829444885254,
+                "z": -3.3964829444885254
+            },
+            "rotation": {
+                "w": 0.6337529420852661,
+                "x": -1.52587890625e-05,
+                "y": 0.773495078086853,
+                "z": -1.52587890625e-05
+            },
+            "script": "https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Zone-Registration/Zone-Registration_Client.js",
+            "scriptTimestamp": 1533159542972,
+            "serverScripts": "https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Zone-Registration/Zone-Registration_Server.js",
+            "shapeType": "box",
+            "type": "Zone",
+            "userData": "{\"grabbableKey\":{\"grabbable\":false},\"url\":\"https://script.google.com/a/highfidelity.io/macros/s/AKfycbxj1YYazv7kEXBPJViVlcrT6rKOJQsj7n0lM_tV/exec\",\"event\":\"Load-Test\"}"
+        }
+    ],
+    "Id": "{1f172315-e581-4b3e-8df8-7552fd9afc10}",
+    "Version": 91
+}

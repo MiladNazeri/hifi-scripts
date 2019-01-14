@@ -1,0 +1,47 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "collisionless": true,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2018-09-12T20:34:25Z",
+            "description": "\"scene\": 0,       \"spinner\": 0.04,       \"sphereRadiusFactor\": 0.12,       \"MAX_STEPS\": 200,       \"speed1\": 0.1,       \"speed2\": 0.01,       \"pulse\": 0.03,       \"xDispMultiply\": 20,       \"xDispSpeedMultiply\": 1,       \"yDispMultiply\": 40,       \"yDispSpeedMultiply\": 0,       \"zDispMultiply\": 60,       \"zDispSpeedMultiply\": 0,       \"radiusSize_01\": 0.9,       \"gravity\": 0.015,       \"distanceToFall\": 8,       \"repeatX\": 0.067,       \"repeatY\": 0.09",
+            "dimensions": {
+                "blue": 0.1602635383605957,
+                "green": 4.9563140869140625,
+                "red": 5.480715274810791,
+                "x": 5.480715274810791,
+                "y": 4.9563140869140625,
+                "z": 0.1602635383605957
+            },
+            "id": "{45e4853d-a35a-42f0-a9bd-3acc807b59c5}",
+            "ignoreForCollisions": true,
+            "lastEdited": 1536950365302714,
+            "lastEditedBy": "{f6571ae5-ba49-4225-b4f9-86ee3d609dea}",
+            "name": "Shader_01",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 7.391141414642334,
+                "x": -3.695570707321167,
+                "y": -3.695570707321167,
+                "z": -3.695570707321167
+            },
+            "rotation": {
+                "w": 0.99981689453125,
+                "x": -7.62939453125e-05,
+                "y": -0.019119560718536377,
+                "z": -4.57763671875e-05
+            },
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"ProceduralEntity\":{\"version\":2,\"shaderUrl\":\"https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/raymarch_03.fs\",\"uniforms\":{\"scene\":0,\"spinner\":0.4,\"sphereRadiusFactor\":0.08,\"MAX_STEPS\":200,\"speed1\":0.09,\"speed2\":0.01,\"pulse\":0.05,\"xDispMultiply\":20,\"xDispSpeedMultiply\":1,\"yDispMultiply\":20,\"yDispSpeedMultiply\":1,\"zDispMultiply\":20,\"zDispSpeedMultiply\":1,\"radiusSize_01\":0.9,\"gravity\":0.003,\"distanceToFall\":100.4,\"repeatX\":1,\"repeatY\":1,\"repeatZ\":0.0001}}}"
+        }
+    ],
+    "Id": "{5546b883-083a-46a7-9fc1-868c0e0238d2}",
+    "Version": 92
+}

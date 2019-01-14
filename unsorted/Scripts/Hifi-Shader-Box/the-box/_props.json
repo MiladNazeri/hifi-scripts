@@ -1,0 +1,221 @@
+{
+    "acceleration": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "actionData": "",
+    "age": "265.7015380859375",
+    "ageAsText": "0 hours 4 minutes 25 seconds",
+    "angularDamping": "0.39346998929977417",
+    "angularVelocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "backgroundMode": "inherit",
+    "boundingBox": {
+        "brn": {
+            "x": "-2.9609038829803467",
+            "y": "-110.72048950195312",
+            "z": "-5.548954963684082"
+        },
+        "center": {
+            "x": "-0.46078944206237793",
+            "y": "-109.4703369140625",
+            "z": "-3.0488405227661133"
+        },
+        "dimensions": {
+            "x": "5.0002288818359375",
+            "y": "2.50030517578125",
+            "z": "5.0002288818359375"
+        },
+        "tfl": {
+            "x": "2.039324998855591",
+            "y": "-108.22018432617188",
+            "z": "-0.5487260818481445"
+        }
+    },
+    "certificateID": "",
+    "clientOnly": 0,
+    "collidesWith": "static,dynamic,kinematic,myAvatar,otherAvatar,",
+    "collisionMask": 31,
+    "collisionSoundURL": "",
+    "collisionless": 0,
+    "collisionsWillMove": 0,
+    "color": {
+        "blue": 255,
+        "green": 255,
+        "red": 255
+    },
+    "compoundShapeURL": "",
+    "created": "2018-01-28T08:54:55Z",
+    "damping": "0.39346998929977417",
+    "density": 1000,
+    "description": "",
+    "dimensions": {
+        "x": 5,
+        "y": 2.5,
+        "z": 5
+    },
+    "dynamic": 0,
+    "editionNumber": 0,
+    "entityInstanceNumber": 0,
+    "filterURL": "",
+    "flyingAllowed": 1,
+    "friction": 0.5,
+    "ghostingAllowed": 1,
+    "gravity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "haze": {
+        "hazeAltitudeEffect": 0,
+        "hazeAttenuateKeyLight": 0,
+        "hazeBackgroundBlend": 0,
+        "hazeBaseRef": 0,
+        "hazeCeiling": 200,
+        "hazeColor": {
+            "blue": 179,
+            "green": 154,
+            "red": 128
+        },
+        "hazeEnableGlare": 0,
+        "hazeGlareAngle": 20,
+        "hazeGlareColor": {
+            "blue": 179,
+            "green": 229,
+            "red": 255
+        },
+        "hazeKeyLightAltitude": 200,
+        "hazeKeyLightRange": 1000,
+        "hazeRange": 1000
+    },
+    "hazeMode": "inherit",
+    "href": "",
+    "id": "{73b7d0b1-41a7-473a-b8f1-a30e85989c36}",
+    "ignoreForCollisions": 0,
+    "itemArtist": "",
+    "itemCategories": "",
+    "itemDescription": "",
+    "itemLicense": "",
+    "itemName": "",
+    "keyLight": {
+        "ambientIntensity": 0.5,
+        "ambientURL": "",
+        "color": {
+            "blue": 255,
+            "green": 255,
+            "red": 255
+        },
+        "direction": {
+            "x": "0.3411870300769806",
+            "y": "-0.9396926164627075",
+            "z": "-0.023858120664954185"
+        },
+        "intensity": 5
+    },
+    "lastEdited": "1517129749308578",
+    "lastEditedBy": "{4ce52ebc-377f-45ac-8cde-7c2cb9bbbb8d}",
+    "lifetime": -1,
+    "limitedRun": 4294967295,
+    "localAngularVelocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "localDimensions": {
+        "x": 5,
+        "y": 2.5,
+        "z": 5
+    },
+    "localPosition": {
+        "x": "-0.4607512354850769",
+        "y": "-108.2203369140625",
+        "z": "-3.0488786697387695"
+    },
+    "localRotation": {
+        "w": 1,
+        "x": "-0.0000152587890625",
+        "y": "-0.0000152587890625",
+        "z": "-0.0000152587890625"
+    },
+    "localVelocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "locked": 0,
+    "marketplaceID": "",
+    "name": "",
+    "naturalDimensions": {
+        "x": 1,
+        "y": 1,
+        "z": 1
+    },
+    "naturalPosition": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "originalTextures": "{\n}\n",
+    "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+    "parentID": "{00000000-0000-0000-0000-000000000000}",
+    "parentJointIndex": 65535,
+    "position": {
+        "x": "-0.4607512354850769",
+        "y": "-108.2203369140625",
+        "z": "-3.0488786697387695"
+    },
+    "queryAACube": {
+        "scale": "8.66025447845459",
+        "x": "-4.7908782958984375",
+        "y": "-112.55046081542969",
+        "z": "-7.3790059089660645"
+    },
+    "registrationPoint": {
+        "x": 0.5,
+        "y": 1,
+        "z": 0.5
+    },
+    "renderInfo": {
+    },
+    "restitution": 0.5,
+    "rotation": {
+        "w": 1,
+        "x": "-0.0000152587890625",
+        "y": "-0.0000152587890625",
+        "z": "-0.0000152587890625"
+    },
+    "script": "",
+    "scriptTimestamp": 0,
+    "serverScripts": "",
+    "shapeType": "box",
+    "skybox": {
+        "color": {
+            "blue": 0,
+            "green": 0,
+            "red": 0
+        },
+        "url": ""
+    },
+    "stage": {
+        "altitude": "0.029999999329447746",
+        "automaticHourDay": 0,
+        "day": 60,
+        "hour": 12,
+        "latitude": "37.777000427246094",
+        "longitude": "122.40699768066406",
+        "sunModelEnabled": 0
+    },
+    "staticCertificateVersion": 0,
+    "type": "Zone",
+    "userData": "",
+    "velocity": {
+        "x": 0,
+        "y": 0,
+        "z": 0
+    },
+    "visible": 1
+}

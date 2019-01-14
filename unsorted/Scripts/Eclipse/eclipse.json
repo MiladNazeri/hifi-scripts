@@ -1,0 +1,608 @@
+{
+    "Entities": [
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T21:52:37Z",
+            "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
+            "dimensions": {
+                "x": 0.6447294354438782,
+                "y": 0.6438502073287964,
+                "z": 0.26574596762657166
+            },
+            "id": "{6dd34b44-424c-43b1-8a01-f24e35e2a456}",
+            "lastEdited": 1516200515095278,
+            "lastEditedBy": "{105ca44e-9855-4e93-9be9-19da2b4dcc83}",
+            "locked": 1,
+            "marketplaceID": "85b89b87-07d0-4842-b364-e6a74a56c7b6",
+            "modelURL": "http://content.highfidelity.com/baked/oasis/speakerGizmo/baked/speakerGizmo.baked.fbx",
+            "name": "Sound Emitter",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 499.0406799316406,
+                "y": 6.0207977294921875,
+                "z": 1741.814208984375
+            },
+            "queryAACube": {
+                "scale": 0.9491259455680847,
+                "x": 498.5661315917969,
+                "y": 5.546234607696533,
+                "z": 1741.339599609375
+            },
+            "rotation": {
+                "w": 0.3170367479324341,
+                "x": -1.52587890625e-05,
+                "y": -0.9484245181083679,
+                "z": -1.52587890625e-05
+            },
+            "serverScripts":  "http://hifi-content.s3.amazonaws.com/caitlyn/production/soundEmitter/soundLoopEmitter.js",
+            "type": "Model",
+            "userData": "{\"soundURL\":\"http://mpassets.highfidelity.com/456b622c-caba-4c6e-80b3-3c015439cee7-v1/Mod_CCBY_253664__cliftonmcarlson__night-ambience-w-crickets.wav\",\"soundVolume\":0.25,\"refreshInterval\":100}",
+            "visible": 0
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-15T16:18:00Z",
+            "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
+            "dimensions": {
+                "x": 0.6447294354438782,
+                "y": 0.6438502073287964,
+                "z": 0.26574596762657166
+            },
+            "id": "{3aa13314-9bbb-49b5-8a26-14ce98b7ebe3}",
+            "lastEdited": 1516200515131696,
+            "lastEditedBy": "{54c4901c-2ac8-4076-a348-6f27baa6f6ae}",
+            "locked": 1,
+            "marketplaceID": "e2a978a6-73c8-4fa2-a597-7a361bcd65b1",
+            "modelURL": "http://content.highfidelity.com/baked/oasis/speakerGizmo/baked/speakerGizmo.baked.fbx",
+            "name": "Sound Emitter",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 491.9247741699219,
+                "y": 4.317337989807129,
+                "z": 1788.0352783203125
+            },
+            "queryAACube": {
+                "scale": 0.9491259455680847,
+                "x": 491.4502258300781,
+                "y": 3.8427751064300537,
+                "z": 1787.5606689453125
+            },
+            "rotation": {
+                "w": 0.3172198534011841,
+                "x": -1.52587890625e-05,
+                "y": -0.9483634829521179,
+                "z": -1.52587890625e-05
+            },
+            "serverScripts":  "http://hifi-content.s3.amazonaws.com/caitlyn/production/soundEmitter/soundLoopEmitter.js",
+            "type": "Model",
+            "userData": "{\"soundURL\":\"http://hifi-content.s3.amazonaws.com/DomainContent/baked/oasis/043750731-fountain_1.L.wav\",\"soundVolume\":0.3,\"refreshInterval\":100}",
+            "visible": 0
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "created": "2017-08-14T20:40:32Z",
+            "dimensions": {
+                "x": 1.0755847692489624,
+                "y": 0.26346442103385925,
+                "z": 1.0755852460861206
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -5,
+                "z": 0
+            },
+            "id": "{3438a148-6d80-4565-a2f4-4d4d8396812c}",
+            "lastEdited": 1516200515132360,
+            "lastEditedBy": "{73762338-bd24-42f1-89bb-22f6b2c7ad24}",
+            "locked": 1,
+            "modelURL": "http://content.highfidelity.com/baked/oasis/pillow01/baked/pillow01.baked.fbx",
+            "name": "Throw-Pillow",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 502.7485046386719,
+                "y": 4.357998847961426,
+                "z": 1796.23095703125
+            },
+            "queryAACube": {
+                "scale": 1.543755054473877,
+                "x": 501.97662353515625,
+                "y": 3.5861213207244873,
+                "z": 1795.4591064453125
+            },
+            "rotation": {
+                "w": 0.615472674369812,
+                "x": -0.07588309049606323,
+                "y": 0.775417685508728,
+                "z": 0.11879146099090576
+            },
+            "shapeType": "simple-compound",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "collisionsWillMove": 1,
+            "created": "2017-08-14T20:42:43Z",
+            "dimensions": {
+                "x": 1.0755847692489624,
+                "y": 0.26346442103385925,
+                "z": 1.0755852460861206
+            },
+            "dynamic": 1,
+            "gravity": {
+                "x": 0,
+                "y": -5,
+                "z": 0
+            },
+            "id": "{78933715-bb20-43b1-8235-06e51e8b0aff}",
+            "lastEdited": 1516200515134655,
+            "lastEditedBy": "{73762338-bd24-42f1-89bb-22f6b2c7ad24}",
+            "locked": 1,
+            "modelURL": "http://content.highfidelity.com/baked/oasis/pillow02/baked/pillow02.baked.fbx",
+            "name": "Throw-Pillow",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 513.9769287109375,
+                "y": 4.133766174316406,
+                "z": 1793.3216552734375
+            },
+            "queryAACube": {
+                "scale": 1.543755054473877,
+                "x": 513.205078125,
+                "y": 3.3618886470794678,
+                "z": 1792.5498046875
+            },
+            "rotation": {
+                "w": -0.037125229835510254,
+                "x": 0.10347139835357666,
+                "y": 0.9938353300094604,
+                "z": 0.013656854629516602
+            },
+            "shapeType": "simple-compound",
+            "type": "Model",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-15T16:28:55Z",
+            "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
+            "dimensions": {
+                "x": 0.6447294354438782,
+                "y": 0.6438502073287964,
+                "z": 0.26574596762657166
+            },
+            "id": "{e50be2f0-e76b-4118-9630-de26e8450e07}",
+            "lastEdited": 1516200515135836,
+            "lastEditedBy": "{8c40c885-f0ed-4fcc-a355-4ea1e7869e13}",
+            "locked": 1,
+            "marketplaceID": "e2a978a6-73c8-4fa2-a597-7a361bcd65b1",
+            "modelURL": "http://content.highfidelity.com/baked/oasis/speakerGizmo/baked/speakerGizmo.baked.fbx",
+            "name": "Sound Emitter",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 531.4968872070312,
+                "y": 3.917941093444824,
+                "z": 1798.454345703125
+            },
+            "queryAACube": {
+                "scale": 0.9491259455680847,
+                "x": 531.0223388671875,
+                "y": 3.443378210067749,
+                "z": 1797.979736328125
+            },
+            "rotation": {
+                "w": 0.3172198534011841,
+                "x": -1.52587890625e-05,
+                "y": -0.9483634829521179,
+                "z": -1.52587890625e-05
+            },
+            "serverScripts":  "http://hifi-content.s3.amazonaws.com/caitlyn/production/soundEmitter/soundLoopEmitter.js",
+            "type": "Model",
+            "userData": "{\"soundURL\":\"http://hifi-content.s3.amazonaws.com/DomainContent/baked/oasis/043750731-fountain_1.L.wav\",\"soundVolume\":0.2,\"refreshInterval\":100}",
+            "visible": 0
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-15T16:28:55Z",
+            "description": "Specify URL to your 48K 16bit PCM wav file & volume (0-1) in userData below",
+            "dimensions": {
+                "x": 0.6447294354438782,
+                "y": 0.6438502073287964,
+                "z": 0.26574596762657166
+            },
+            "id": "{bda9965a-b787-4712-abe0-0f40fdd7037b}",
+            "lastEdited": 1516200515140956,
+            "lastEditedBy": "{8c40c885-f0ed-4fcc-a355-4ea1e7869e13}",
+            "locked": 1,
+            "marketplaceID": "e2a978a6-73c8-4fa2-a597-7a361bcd65b1",
+            "modelURL": "http://content.highfidelity.com/baked/oasis/speakerGizmo/baked/speakerGizmo.baked.fbx",
+            "name": "Sound Emitter",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 531.9866333007812,
+                "y": 3.9678945541381836,
+                "z": 1811.9149169921875
+            },
+            "queryAACube": {
+                "scale": 0.9491259455680847,
+                "x": 531.5120849609375,
+                "y": 3.4933316707611084,
+                "z": 1811.4403076171875
+            },
+            "rotation": {
+                "w": 0.3171588182449341,
+                "x": -1.52587890625e-05,
+                "y": -0.9483634829521179,
+                "z": -1.52587890625e-05
+            },
+            "serverScripts":  "http://hifi-content.s3.amazonaws.com/caitlyn/production/soundEmitter/soundLoopEmitter.js",
+            "type": "Model",
+            "userData": "{\"soundURL\":\"http://hifi-content.s3.amazonaws.com/DomainContent/baked/oasis/043750731-fountain_1.R.wav\",\"soundVolume\":0.2,\"refreshInterval\":100}",
+            "visible": 0
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2018-01-17T15:12:47Z",
+            "dimensions": {
+                "x": 0.20000000298023224,
+                "y": 0.20000000298023224,
+                "z": 0.20000000298023224
+            },
+            "id": "{f43c5534-9be3-4636-835d-53020d5cfa69}",
+            "lastEdited": 1516201968594704,
+            "lastEditedBy": "{0e09c70b-47d3-4c6e-9fd5-b7b280136cb4}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 542.5458374023438,
+                "y": 4.846914291381836,
+                "z": 1810.774658203125
+            },
+            "queryAACube": {
+                "scale": 0.3464101552963257,
+                "x": 542.3726196289062,
+                "y": 4.673709392547607,
+                "z": 1810.6014404296875
+            },
+            "rotation": {
+                "w": 0.99871826171875,
+                "x": -1.52587890625e-05,
+                "y": 0.050278425216674805,
+                "z": -1.52587890625e-05
+            },
+            "type": "Sphere",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T17:45:46Z",
+            "description": "Model by Sketchfab User Imaginis3D and shared under Creative Commons Attribution 4.0 International (CC BY 4.0)",
+            "dimensions": {
+                "x": 848.0567626953125,
+                "y": 79.37870788574219,
+                "z": 902.1339721679688
+            },
+            "id": "{65e9c0f0-ec7d-496f-a52a-3a5b5852b00a}",
+            "lastEdited": 1516200515143030,
+            "lastEditedBy": "{105ca44e-9855-4e93-9be9-19da2b4dcc83}",
+            "locked": 1,
+            "marketplaceID": "e0f5d1a8-7062-40e3-ab03-3d4910b2f6c4",
+            "modelURL": "http://content.highfidelity.com/baked/oasis/Nevada-Moon-Rocks/baked/Nevada-Moon-Rocks.baked.fbx",
+            "name": "Nevada Moon Rocks by Imaginis3d",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 339.70416259765625,
+                "y": 32.26031494140625,
+                "z": 1783.37158203125
+            },
+            "queryAACube": {
+                "scale": 1240.7042236328125,
+                "x": -280.64794921875,
+                "y": -588.091796875,
+                "z": 1163.01953125
+            },
+            "rotation": {
+                "w": 1,
+                "x": -1.52587890625e-05,
+                "y": -1.52587890625e-05,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T19:37:11Z",
+            "dimensions": {
+                "x": 1077.451171875,
+                "y": 0.0010000000474974513,
+                "z": 1056.7532958984375
+            },
+            "id": "{a23b0b9b-6147-4722-98c7-9050caf184fd}",
+            "lastEdited": 1516200515144379,
+            "lastEditedBy": "{73762338-bd24-42f1-89bb-22f6b2c7ad24}",
+            "locked": 1,
+            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/domainsBaked/playa/Terrain-8e/baked/Terrain-8e.baked.fbx",
+            "name": "Desert-Plane",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1498.8343505859375,
+                "y": 3.7515716552734375,
+                "z": 782.4837646484375
+            },
+            "queryAACube": {
+                "scale": 1509.181396484375,
+                "x": 744.24365234375,
+                "y": -750.839111328125,
+                "z": 27.89306640625
+            },
+            "rotation": {
+                "w": 0.9366750717163086,
+                "x": -1.52587890625e-05,
+                "y": 0.3501793146133423,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T19:19:42Z",
+            "dimensions": {
+                "x": 1077.451171875,
+                "y": 0.0010000000474974513,
+                "z": 1056.7532958984375
+            },
+            "id": "{febf31b8-0551-4539-b638-e5f4dc360c45}",
+            "lastEdited": 1516200515143551,
+            "lastEditedBy": "{579756b2-2a2e-4d49-89ed-528d07f63519}",
+            "locked": 1,
+            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/domainsBaked/playa/Terrain-8e/baked/Terrain-8e.baked.fbx",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 811.8772583007812,
+                "y": 0,
+                "z": 0
+            },
+            "queryAACube": {
+                "scale": 1509.181396484375,
+                "x": 57.28656005859375,
+                "y": -754.5906982421875,
+                "z": -754.5906982421875
+            },
+            "rotation": {
+                "w": 0.9366750717163086,
+                "x": -1.52587890625e-05,
+                "y": 0.3501793146133423,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T18:38:12Z",
+            "description": "https://hifi-content.s3.amazonaws.com/jimi/environment/201708_SecretGarden/roof.fbx",
+            "dimensions": {
+                "x": 805.9217529296875,
+                "y": 119.49662017822266,
+                "z": 271.89129638671875
+            },
+            "id": "{2f0a3613-96d8-4a65-980d-c515ae0f7e95}",
+            "lastEdited": 1516200515143355,
+            "lastEditedBy": "{105ca44e-9855-4e93-9be9-19da2b4dcc83}",
+            "locked": 1,
+            "modelURL": "http://content.highfidelity.com/baked/oasis/desert-qumran/baked/desert-qumran.baked.fbx?1",
+            "name": "Dead Sea Qumran by GSXNet",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 638.9802856445312,
+                "y": 35.127723693847656,
+                "z": 1995.65234375
+            },
+            "queryAACube": {
+                "scale": 858.9028930664062,
+                "x": 209.52883911132812,
+                "y": -394.32373046875,
+                "z": 1566.200927734375
+            },
+            "rotation": {
+                "w": 0.29982447624206543,
+                "x": 0.005630612373352051,
+                "y": -0.9539177417755127,
+                "z": 0.01072704792022705
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T19:35:00Z",
+            "dimensions": {
+                "x": 1077.451171875,
+                "y": 0.0010000000474974513,
+                "z": 1056.7532958984375
+            },
+            "id": "{b8f99bfa-302e-4b64-a823-8b52d8da3017}",
+            "lastEdited": 1516200515144131,
+            "lastEditedBy": "{73762338-bd24-42f1-89bb-22f6b2c7ad24}",
+            "locked": 1,
+            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/domainsBaked/playa/Terrain-8e/baked/Terrain-8e.baked.fbx",
+            "name": "Desert-Plane",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 2182.08251953125,
+                "y": 3.7515716552734375,
+                "z": 1588.9478759765625
+            },
+            "queryAACube": {
+                "scale": 1509.181396484375,
+                "x": 1427.4918212890625,
+                "y": -750.839111328125,
+                "z": 834.357177734375
+            },
+            "rotation": {
+                "w": 0.9366750717163086,
+                "x": -1.52587890625e-05,
+                "y": 0.3501793146133423,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T19:24:04Z",
+            "dimensions": {
+                "x": 1077.558837890625,
+                "y": 0.0010000000474974513,
+                "z": 1056.898681640625
+            },
+            "id": "{49bef144-4099-430b-973e-3833d973b25b}",
+            "lastEdited": 1516200515143745,
+            "lastEditedBy": "{73762338-bd24-42f1-89bb-22f6b2c7ad24}",
+            "locked": 1,
+            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/domainsBaked/playa/Terrain-8e/baked/Terrain-8e.baked.fbx",
+            "name": "Desert-Plane",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 0,
+                "y": 0,
+                "z": 707.169189453125
+            },
+            "queryAACube": {
+                "scale": 1509.360107421875,
+                "x": -754.6800537109375,
+                "y": -754.6800537109375,
+                "z": -47.5108642578125
+            },
+            "rotation": {
+                "w": 0.9366750717163086,
+                "x": -1.52587890625e-05,
+                "y": 0.3501793146133423,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "clientOnly": 0,
+            "color": {
+                "blue": 150,
+                "green": 150,
+                "red": 150
+            },
+            "created": "2018-01-17T15:04:03Z",
+            "cutoff": 90,
+            "dimensions": {
+                "x": 65.21759796142578,
+                "y": 65.21759796142578,
+                "z": 65.21759796142578
+            },
+            "exponent": 1,
+            "falloffRadius": 10000,
+            "id": "{eab24d25-ee43-4d0f-a6bf-0209993dfb05}",
+            "intensity": 9990000,
+            "isSpotlight": 1,
+            "lastEdited": 1516207024113261,
+            "lastEditedBy": "{01af5c8b-e4a4-462a-96aa-c440d5fbba42}",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 540.0574951171875,
+                "y": 32.05384826660156,
+                "z": 1809.1212158203125
+            },
+            "queryAACube": {
+                "scale": 112.96018981933594,
+                "x": 483.577392578125,
+                "y": -24.426246643066406,
+                "z": 1752.64111328125
+            },
+            "rotation": {
+                "w": 0.37625038623809814,
+                "x": -0.4825409948825836,
+                "y": 0.5349187254905701,
+                "z": 0.5826250314712524
+            },
+            "type": "Light",
+            "userData": "{\"grabbableKey\":{\"grabbable\":true}}"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T19:37:11Z",
+            "dimensions": {
+                "x": 1077.558837890625,
+                "y": 1,
+                "z": 1056.898681640625
+            },
+            "id": "{4b74cf35-7f16-4f21-8290-0c48538a90b0}",
+            "lastEdited": 1516200515144561,
+            "lastEditedBy": "{73762338-bd24-42f1-89bb-22f6b2c7ad24}",
+            "locked": 1,
+            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/domainsBaked/playa/Terrain-8e/baked/Terrain-8e.baked.fbx",
+            "name": "Desert-Plane",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 686.95703125,
+                "y": 3.7515716552734375,
+                "z": 1489.65283203125
+            },
+            "queryAACube": {
+                "scale": 1509.3604736328125,
+                "x": -67.72320556640625,
+                "y": -750.9286499023438,
+                "z": 734.9725952148438
+            },
+            "rotation": {
+                "w": 0.9366750717163086,
+                "x": -1.52587890625e-05,
+                "y": 0.3501793146133423,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        },
+        {
+            "clientOnly": 0,
+            "created": "2017-08-14T19:35:00Z",
+            "dimensions": {
+                "x": 1077.558837890625,
+                "y": 0.0010000000474974513,
+                "z": 1056.898681640625
+            },
+            "id": "{683f5c40-548b-40da-9005-e21587fe5a9e}",
+            "lastEdited": 1516200515143928,
+            "lastEditedBy": "{73762338-bd24-42f1-89bb-22f6b2c7ad24}",
+            "locked": 1,
+            "modelURL": "http://hifi-content.s3.amazonaws.com/DomainContent/production/domainsBaked/playa/Terrain-8e/baked/Terrain-8e.baked.fbx",
+            "name": "Desert-Plane",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "position": {
+                "x": 1370.2052001953125,
+                "y": 3.7515716552734375,
+                "z": 2296.116943359375
+            },
+            "queryAACube": {
+                "scale": 1509.360107421875,
+                "x": 615.525146484375,
+                "y": -750.928466796875,
+                "z": 1541.4368896484375
+            },
+            "rotation": {
+                "w": 0.9366750717163086,
+                "x": -1.52587890625e-05,
+                "y": 0.3501793146133423,
+                "z": -1.52587890625e-05
+            },
+            "shapeType": "static-mesh",
+            "type": "Model"
+        }
+    ],
+    "Version": 4
+}

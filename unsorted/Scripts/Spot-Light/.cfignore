@@ -1,0 +1,10 @@
+node_modules/
+Notes/
+*.DS_Store
+README.md
+.github/
+.git/
+.gitignore
+logs
+*.log
+.env

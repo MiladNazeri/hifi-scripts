@@ -1,0 +1,47 @@
+Dot product: 
+Gives the cosine 
+the magnitude of the projection of A in the direction of B
+minus sign if the direction is opposite
+SCALAR PROJECTION OF A ONTO B
+
+SOHCAHTOA
+sine equals opposite over hyptoenuse
+cosine equals adjacent over hypteniuse
+tangent equals opposite over adjacent
+
+cos^-1 is the inverse of the cosine 
+two normalized angles gives you the cosine  
+acos() <--- inverse of the cosine 
+*arc cosine*
+
+0 - if perpindicular
+-1 - if opposite 
+1 - if 
+
+Cross Product:
+operation on two vectors
+- returns a vector 
+Writen as:
+C = A X B
+C(x) = A(y) * B(z) - A(z) * B(y)
+C(y) = A(z) * B(x) - A(x) * B(z)
+C(z) = A(x) * B(y) - A(y) * B(x)
+
+A & B define a plane
+C is perpindicular to that plane
+
+The order is important
+Anticommutative (result swaps)
+AXB = C then BXA = - C 
+
+----------------------------------------
+
+Matrices
+
+Good for scale, translation, rotation
+M x n - The size of the array 
+M - rows / n - columns
+Mij - i = row / j = column
+
+Matrix can only be multiplied if:
+the number of columns in M1 is equal to the number of rows in M2

@@ -1,0 +1,49 @@
+{
+    "DataVersion": 0,
+    "Entities": [
+        {
+            "clientOnly": false,
+            "collisionless": true,
+            "color": {
+                "blue": 0,
+                "green": 0,
+                "red": 255
+            },
+            "created": "2018-09-14T21:02:02Z",
+            "dimensions": {
+                "blue": 1.3699010610580444,
+                "green": 1.0787124633789062,
+                "red": 1.6025643348693848,
+                "x": 1.6025643348693848,
+                "y": 1.0787124633789062,
+                "z": 1.3699010610580444
+            },
+            "id": "{b22e5a16-f835-458d-8aed-cdff35e892de}",
+            "ignoreForCollisions": true,
+            "lastEdited": 1536963961431696,
+            "lastEditedBy": "{f5323f98-d31d-41cd-8ae5-14720ec3e12d}",
+            "name": "_Tween_Trigger",
+            "owningAvatarID": "{00000000-0000-0000-0000-000000000000}",
+            "queryAACube": {
+                "scale": 2.3682191371917725,
+                "x": -1.1841095685958862,
+                "y": -1.1841095685958862,
+                "z": -1.1841095685958862
+            },
+            "rotation": {
+                "w": 0.9588006734848022,
+                "x": -1.52587890625e-05,
+                "y": 0.28398561477661133,
+                "z": -4.57763671875e-05
+            },
+            "script": "https://hifi-content.s3.amazonaws.com/milad/ROLC/Organize/O_Projects/Hifi/Scripts/Halloween/zone_trigger.js?7",
+            "scriptTimestamp": 1536960558971,
+            "shape": "Cube",
+            "type": "Box",
+            "userData": "{\"namesToFind\":[\"_Tween_Path_Monster\"],\"grabbableKey\":{\"grabbable\":false}}",
+            "visible": false
+        }
+    ],
+    "Id": "{fa5e62a6-8619-4d64-86db-12d281af962d}",
+    "Version": 92
+}
