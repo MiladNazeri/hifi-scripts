@@ -33,7 +33,9 @@ declare namespace Agent {
 
 /**
  * Available in:Assignment Client ScriptsThe Avatar API is used to manipulate scriptable avatars on the domain. This API is a subset of the 
- *  MyAvatar API.Note: In the examples, use "Avatar" instead of "MyAvatar".
+ *  MyAvatar API.
+
+Note: In the examples, use "Avatar" instead of "MyAvatar".
  */
 declare namespace Avatar {
     /**
@@ -105,7 +107,11 @@ declare namespace Avatar {
     function setRawJointData(data: Array.<JointData>): void;
     /**
      * Set a specific joint's rotation and position relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param index {number}  The index of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
@@ -113,7 +119,11 @@ declare namespace Avatar {
     function setJointData(index: number, rotation: Quat, translation: Vec3): void;
     /**
      * Set a specific joint's rotation and position relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param name {string}  The name of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
@@ -121,41 +131,59 @@ declare namespace Avatar {
     function setJointData(name: string, rotation: Quat, translation: Vec3): void;
     /**
      * Set a specific joint's rotation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param index {number}  The index of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      */
     function setJointRotation(index: number, rotation: Quat): void;
     /**
      * Set a specific joint's rotation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param name {string}  The name of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      */
     function setJointRotation(name: string, rotation: Quat): void;
     /**
      * Set a specific joint's translation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param index {number}  The index of the joint.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
      */
     function setJointTranslation(index: number, translation: Vec3): void;
     /**
      * Set a specific joint's translation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param name {string}  The name of the joint.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
      */
     function setJointTranslation(name: string, translation: Vec3): void;
     /**
      * Clear joint translations and rotations set by script for a specific joint. This restores all motion from the default 
-     * animation system including inverse kinematics for that joint.Note: This is slightly faster than the function variation that specifies the joint name.
+     * animation system including inverse kinematics for that joint.
+Note: This is slightly faster than the function variation that specifies the joint name.
      * @param index {number}  The index of the joint.
      */
     function clearJointData(index: number): void;
     /**
      * Clear joint translations and rotations set by script for a specific joint. This restores all motion from the default 
-     * animation system including inverse kinematics for that joint.Note: This is slightly slower than the function variation that specifies the joint index.
+     * animation system including inverse kinematics for that joint.
+Note: This is slightly slower than the function variation that specifies the joint index.
      * @param name {string}  The name of the joint.
      */
     function clearJointData(name: string): void;
@@ -208,7 +236,11 @@ declare namespace Avatar {
     function getJointTranslations(): Array.<Vec3>;
     /**
      * Set the rotations of all joints in the current avatar. Each joint's rotation is relative to its parent joint.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inversekinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints,the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulatejoints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you setthe rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints,
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param jointRotations {Array.<Quat>}  The rotations for all joints in the avatar. The values are in the same order as the 
      * array returned by {@link MyAvatar.getJointNames} or {@link Avatar.getJointNames}.
      */
@@ -267,14 +299,17 @@ declare namespace Avatar {
     function getAttachmentData(): Array.<AttachmentData>;
     /**
      * Set all models currently attached to your avatar. For example, if you retrieve attachment data using 
-     *  MyAvatar.getAttachmentData or  Avatar.getAttachmentData, make changes to it, and then want to update your avatar's attachments per the changed data. You can also remove all attachments by using setting attachmentData to null.
+     *  MyAvatar.getAttachmentData or  Avatar.getAttachmentData, make changes to it, and then want to update your avatar's attachments per the 
+changed data. You can also remove all attachments by using setting attachmentData to null.
      * @param attachmentData {Array.<AttachmentData>}  The attachment data defining the models to have attached to your avatar. Use 
      *     <code>null</code> to remove all attachments.
      */
     function setAttachmentData(attachmentData: Array.<AttachmentData>): void;
     /**
      * Attach a model to your avatar. For example, you can give your avatar a hat to wear, a guitar to hold, or a surfboard to 
-     * stand on.Note: Attached models are models only; they are not entities and can not be manipulated using the  Entities API. Nor can you use this function to attach an entity (such as a sphere or a box) to your avatar.
+     * stand on.
+Note: Attached models are models only; they are not entities and can not be manipulated using the  Entities API. 
+Nor can you use this function to attach an entity (such as a sphere or a box) to your avatar.
      * @param modelURL {string}  The URL of the model to attach. Models can be .FBX or .OBJ format.
      * @param jointName {string} [jointName=""] The name of the avatar joint (see {@link MyAvatar.getJointNames} or {@link Avatar.getJointNames}) to attach the model 
      *     to.
@@ -282,7 +317,10 @@ declare namespace Avatar {
      * @param rotation {Quat} [rotation=Quat.IDENTITY] The rotation to apply to the model relative to the joint orientation.
      * @param scale {number} [scale=1.0] The scale to apply to the model.
      * @param isSoft {boolean} [isSoft=false] If the model has a skeleton, set this to <code>true</code> so that the bones of the 
-     *     attached model's skeleton are be rotated to fit the avatar's current pose. <code>isSoft</code> is used, for example,     to have clothing that moves with the avatar.<br />    If <code>true</code>, the <code>translation</code>, <code>rotation</code>, and <code>scale</code> parameters are     ignored.
+     *     attached model's skeleton are be rotated to fit the avatar's current pose. <code>isSoft</code> is used, for example, 
+    to have clothing that moves with the avatar.<br />
+    If <code>true</code>, the <code>translation</code>, <code>rotation</code>, and <code>scale</code> parameters are 
+    ignored.
      * @param allowDuplicates {boolean} [allowDuplicates=false] 
      * @param useSaved {boolean} [useSaved=true] 
      */
@@ -826,7 +864,9 @@ declare namespace AudioScope {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsThe AvatarManager API has properties and methods which manage Avatars within the same domain.
- * Note: This API is also provided to Interface and client entity scripts as the synonym, AvatarList. For assignment client scripts, see the separate  AvatarList API.
+ * 
+Note: This API is also provided to Interface and client entity scripts as the synonym, 
+AvatarList. For assignment client scripts, see the separate  AvatarList API.
  */
 declare namespace AvatarManager {
     /**
@@ -878,7 +918,8 @@ declare namespace AvatarManager {
     function setAvatarSortCoefficient(name: string, value: number): void;
     /**
      * Used in the PAL for getting PAL-related data about avatars nearby. Using this method is faster
-     * than iterating over each avatar and obtaining data about them in JavaScript, as that methodlocks and unlocks each avatar's data structure potentially hundreds of times per update tick.
+     * than iterating over each avatar and obtaining data about them in JavaScript, as that method
+locks and unlocks each avatar's data structure potentially hundreds of times per update tick.
      * @param specificAvatarIdentifiers {Array.<string>}  A list of specific Avatar Identifiers about
      * which you want to get PAL data
      * @returns {object} 
@@ -944,7 +985,8 @@ declare namespace AvatarManager {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsYour avatar is your in-world representation of you. The MyAvatar API is used to manipulate the avatar.
- * For example, you can customize the avatar's appearance, run custom avatar animations,change the avatar's position within the domain, or manage the avatar's collisions with other objects.
+ * For example, you can customize the avatar's appearance, run custom avatar animations,
+change the avatar's position within the domain, or manage the avatar's collisions with other objects.
  */
 declare namespace MyAvatar {
     function resetSensorsAndBody(): void;
@@ -967,13 +1009,21 @@ declare namespace MyAvatar {
     function getOrientationVar(): object;
     /**
      * Get the position in world coordinates of the point directly between your avatar's eyes assuming your avatar was in its
-     * default pose. This is a reference position; it does not change as your avatar's head moves relative to the avatar position.
+     * default pose. This is a reference position; it does not change as your avatar's head moves relative to the avatar 
+position.
      * @returns {Vec3} 
      */
     function getDefaultEyePosition(): Vec3;
     /**
      * The avatar animation system includes a set of default animations along with rules for how those animations are blended
-     * together with procedural data (such as look at vectors, hand sensors etc.). overrideAnimation() is used to completelyoverride all motion from the default animation system (including inverse kinematics for hand and head controllers) andplay a set of specified animations. To end these animations and restore the default animations, use  MyAvatar.restoreAnimation.Note: When using pre-built animation data, it's critical that the joint orientation of the source animation and target rig are equivalent, since the animation data applies absolute values onto the joints. If the orientations are different, the avatar will move in unpredictable ways. For more information about avatar joint orientation standards, see Avatar Standards.
+     * together with procedural data (such as look at vectors, hand sensors etc.). overrideAnimation() is used to completely
+override all motion from the default animation system (including inverse kinematics for hand and head controllers) and
+play a set of specified animations. To end these animations and restore the default animations, use 
+ MyAvatar.restoreAnimation.
+Note: When using pre-built animation data, it's critical that the joint orientation of the source animation and target 
+rig are equivalent, since the animation data applies absolute values onto the joints. If the orientations are different, 
+the avatar will move in unpredictable ways. For more information about avatar joint orientation standards, see 
+Avatar Standards.
      * @param url {string}  The URL to the animation file. Animation files need to be .FBX format, but only need to contain the 
      * avatar skeleton and animation data.
      * @param fps {number}  The frames per second (FPS) rate for the animation playback. 30 FPS is normal speed.
@@ -984,18 +1034,31 @@ declare namespace MyAvatar {
     function overrideAnimation(url: string, fps: number, loop: boolean, firstFrame: number, lastFrame: number): void;
     /**
      * The avatar animation system includes a set of default animations along with rules for how those animations are blended together with
-     * procedural data (such as look at vectors, hand sensors etc.). Playing your own custom animations will override the default animations.restoreAnimation() is used to restore all motion from the default animation system including inverse kinematics for hand and headcontrollers. If you aren't currently playing an override animation, this function will have no effect.
+     * procedural data (such as look at vectors, hand sensors etc.). Playing your own custom animations will override the default animations.
+restoreAnimation() is used to restore all motion from the default animation system including inverse kinematics for hand and head
+controllers. If you aren't currently playing an override animation, this function will have no effect.
      */
     function restoreAnimation(): void;
     /**
      * Each avatar has an avatar-animation.json file that defines which animations are used and how they are blended together with procedural data
-     * (such as look at vectors, hand sensors etc.). Each animation specified in the avatar-animation.json file is known as an animation role.Animation roles map to easily understandable actions that the avatar can perform, such as "idleStand", "idleTalk", or "walkFwd."getAnimationRoles() is used get the list of animation roles defined in the avatar-animation.json.
+     * (such as look at vectors, hand sensors etc.). Each animation specified in the avatar-animation.json file is known as an animation role.
+Animation roles map to easily understandable actions that the avatar can perform, such as "idleStand", "idleTalk", or "walkFwd."
+getAnimationRoles() is used get the list of animation roles defined in the avatar-animation.json.
      * @returns {Array.<string>} 
      */
     function getAnimationRoles(): Array.<string>;
     /**
      * Each avatar has an avatar-animation.json file that defines a set of animation roles. Animation roles map to easily understandable actions
-     * that the avatar can perform, such as "idleStand", "idleTalk", or "walkFwd". To get the full list of roles, use getAnimationRoles().For each role, the avatar-animation.json defines when the animation is used, the animation clip (.FBX) used, and how animations are blendedtogether with procedural data (such as look at vectors, hand sensors etc.).overrideRoleAnimation() is used to change the animation clip (.FBX) associated with a specified animation role. To end the animations and restore the default animations, use  MyAvatar.restoreRoleAnimation.Note: Hand roles only affect the hand. Other 'main' roles, like 'idleStand', 'idleTalk', 'takeoffStand' are full body.Note: When using pre-built animation data, it's critical that the joint orientation of the source animation and targetrig are equivalent, since the animation data applies absolute values onto the joints. If the orientations are different,the avatar will move in unpredictable ways. For more information about avatar joint orientation standards, see Avatar Standards.
+     * that the avatar can perform, such as "idleStand", "idleTalk", or "walkFwd". To get the full list of roles, use getAnimationRoles().
+For each role, the avatar-animation.json defines when the animation is used, the animation clip (.FBX) used, and how animations are blended
+together with procedural data (such as look at vectors, hand sensors etc.).
+overrideRoleAnimation() is used to change the animation clip (.FBX) associated with a specified animation role. To end 
+the animations and restore the default animations, use  MyAvatar.restoreRoleAnimation.
+Note: Hand roles only affect the hand. Other 'main' roles, like 'idleStand', 'idleTalk', 'takeoffStand' are full body.
+Note: When using pre-built animation data, it's critical that the joint orientation of the source animation and target
+rig are equivalent, since the animation data applies absolute values onto the joints. If the orientations are different,
+the avatar will move in unpredictable ways. For more information about avatar joint orientation standards, see 
+Avatar Standards.
      * @param role {string}  The animation role to override
      * @param url {string}  The URL to the animation file. Animation files need to be .FBX format, but only need to contain the avatar skeleton and animation data.
      * @param fps {number}  The frames per second (FPS) rate for the animation playback. 30 FPS is normal speed.
@@ -1006,7 +1069,12 @@ declare namespace MyAvatar {
     function overrideRoleAnimation(role: string, url: string, fps: number, loop: boolean, firstFrame: number, lastFrame: number): void;
     /**
      * Each avatar has an avatar-animation.json file that defines a set of animation roles. Animation roles map to easily understandable actions that
-     * the avatar can perform, such as "idleStand", "idleTalk", or "walkFwd". To get the full list of roles, use getAnimationRoles(). For each role,the avatar-animation.json defines when the animation is used, the animation clip (.FBX) used, and how animations are blended together withprocedural data (such as look at vectors, hand sensors etc.). You can change the animation clip (.FBX) associated with a specified animationrole using overrideRoleAnimation().restoreRoleAnimation() is used to restore a specified animation role's default animation clip. If you have not specified an override animationfor the specified role, this function will have no effect.
+     * the avatar can perform, such as "idleStand", "idleTalk", or "walkFwd". To get the full list of roles, use getAnimationRoles(). For each role,
+the avatar-animation.json defines when the animation is used, the animation clip (.FBX) used, and how animations are blended together with
+procedural data (such as look at vectors, hand sensors etc.). You can change the animation clip (.FBX) associated with a specified animation
+role using overrideRoleAnimation().
+restoreRoleAnimation() is used to restore a specified animation role's default animation clip. If you have not specified an override animation
+for the specified role, this function will have no effect.
      * @param role {string}  The animation role clip to restore.
      */
     function restoreRoleAnimation(role: string): void;
@@ -1093,7 +1161,8 @@ declare namespace MyAvatar {
     function triggerRotationRecenter(): void;
     /**
      * The isRecenteringHorizontally function returns true if MyAvatar
-     * is translating the root of the Avatar to keep the center of gravity under the head.isActive(Horizontal) is returned.
+     * is translating the root of the Avatar to keep the center of gravity under the head.
+isActive(Horizontal) is returned.
      */
     function isRecenteringHorizontally(): void;
     /**
@@ -1132,13 +1201,15 @@ declare namespace MyAvatar {
     function getTargetAvatar(): AvatarData;
     /**
      * Get the position of the avatar's left hand as positioned by a hand controller (e.g., Oculus Touch or Vive).
-     * Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints for hand animation.)
+     * Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
+for hand animation.)
      * @returns {Vec3} 
      */
     function getLeftHandPosition(): Vec3;
     /**
      * Get the position of the avatar's right hand as positioned by a hand controller (e.g., Oculus Touch or Vive).
-     * Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints for hand animation.)
+     * Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
+for hand animation.)
      * @returns {Vec3} 
      */
     function getRightHandPosition(): Vec3;
@@ -1152,13 +1223,19 @@ declare namespace MyAvatar {
     function getRightHandTipPosition(): Vec3;
     /**
      * Get the pose (position, rotation, velocity, and angular velocity) of the avatar's left hand as positioned by a 
-     * hand controller (e.g., Oculus Touch or Vive).Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints for hand animation.) If you are using the Leap Motion, the return value's valid property will be false and any pose values returned will not be meaningful.
+     * hand controller (e.g., Oculus Touch or Vive).
+Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
+for hand animation.) If you are using the Leap Motion, the return value's valid property will be 
+false and any pose values returned will not be meaningful.
      * @returns {Pose} 
      */
     function getLeftHandPose(): Pose;
     /**
      * Get the pose (position, rotation, velocity, and angular velocity) of the avatar's left hand as positioned by a 
-     * hand controller (e.g., Oculus Touch or Vive).Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints for hand animation.) If you are using the Leap Motion, the return value's valid property will be false and any pose values returned will not be meaningful.
+     * hand controller (e.g., Oculus Touch or Vive).
+Note: The Leap Motion isn't part of the hand controller input system. (Instead, it manipulates the avatar's joints 
+for hand animation.) If you are using the Leap Motion, the return value's valid property will be 
+false and any pose values returned will not be meaningful.
      * @returns {Pose} 
      */
     function getRightHandPose(): Pose;
@@ -1594,7 +1671,11 @@ declare namespace MyAvatar {
     function setRawJointData(data: Array.<JointData>): void;
     /**
      * Set a specific joint's rotation and position relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param index {number}  The index of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
@@ -1602,21 +1683,30 @@ declare namespace MyAvatar {
     function setJointData(index: number, rotation: Quat, translation: Vec3): void;
     /**
      * Set a specific joint's rotation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param index {number}  The index of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      */
     function setJointRotation(index: number, rotation: Quat): void;
     /**
      * Set a specific joint's translation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param index {number}  The index of the joint.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
      */
     function setJointTranslation(index: number, translation: Vec3): void;
     /**
      * Clear joint translations and rotations set by script for a specific joint. This restores all motion from the default 
-     * animation system including inverse kinematics for that joint.Note: This is slightly faster than the function variation that specifies the joint name.
+     * animation system including inverse kinematics for that joint.
+Note: This is slightly faster than the function variation that specifies the joint name.
      * @param index {number}  The index of the joint.
      */
     function clearJointData(index: number): void;
@@ -1641,7 +1731,11 @@ declare namespace MyAvatar {
     function getJointTranslation(index: number): Vec3;
     /**
      * Set a specific joint's rotation and position relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param name {string}  The name of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
@@ -1649,21 +1743,30 @@ declare namespace MyAvatar {
     function setJointData(name: string, rotation: Quat, translation: Vec3): void;
     /**
      * Set a specific joint's rotation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param name {string}  The name of the joint.
      * @param rotation {Quat}  The rotation of the joint relative to its parent.
      */
     function setJointRotation(name: string, rotation: Quat): void;
     /**
      * Set a specific joint's translation relative to its parent.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse 
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints, 
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate 
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set 
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param name {string}  The name of the joint.
      * @param translation {Vec3}  The translation of the joint relative to its parent.
      */
     function setJointTranslation(name: string, translation: Vec3): void;
     /**
      * Clear joint translations and rotations set by script for a specific joint. This restores all motion from the default 
-     * animation system including inverse kinematics for that joint.Note: This is slightly slower than the function variation that specifies the joint index.
+     * animation system including inverse kinematics for that joint.
+Note: This is slightly slower than the function variation that specifies the joint index.
      * @param name {string}  The name of the joint.
      */
     function clearJointData(name: string): void;
@@ -1697,7 +1800,11 @@ declare namespace MyAvatar {
     function getJointTranslations(): Array.<Vec3>;
     /**
      * Set the rotations of all joints in the current avatar. Each joint's rotation is relative to its parent joint.
-     * Setting joint data completely overrides/replaces all motion from the default animation system including inversekinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints,the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulatejoints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you setthe rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
+     * Setting joint data completely overrides/replaces all motion from the default animation system including inverse
+kinematics, but just for the specified joint. So for example, if you were to procedurally manipulate the finger joints,
+the avatar's hand and head would still do inverse kinematics properly. However, as soon as you start to manipulate
+joints in the inverse kinematics chain, the inverse kinematics might not function as you expect. For example, if you set
+the rotation of the elbow, the hand inverse kinematics position won't end up in the right place.
      * @param jointRotations {Array.<Quat>}  The rotations for all joints in the avatar. The values are in the same order as the 
      * array returned by {@link MyAvatar.getJointNames} or {@link Avatar.getJointNames}.
      */
@@ -1756,14 +1863,17 @@ declare namespace MyAvatar {
     function getAttachmentData(): Array.<AttachmentData>;
     /**
      * Set all models currently attached to your avatar. For example, if you retrieve attachment data using 
-     *  MyAvatar.getAttachmentData or  Avatar.getAttachmentData, make changes to it, and then want to update your avatar's attachments per the changed data. You can also remove all attachments by using setting attachmentData to null.
+     *  MyAvatar.getAttachmentData or  Avatar.getAttachmentData, make changes to it, and then want to update your avatar's attachments per the 
+changed data. You can also remove all attachments by using setting attachmentData to null.
      * @param attachmentData {Array.<AttachmentData>}  The attachment data defining the models to have attached to your avatar. Use 
      *     <code>null</code> to remove all attachments.
      */
     function setAttachmentData(attachmentData: Array.<AttachmentData>): void;
     /**
      * Attach a model to your avatar. For example, you can give your avatar a hat to wear, a guitar to hold, or a surfboard to 
-     * stand on.Note: Attached models are models only; they are not entities and can not be manipulated using the  Entities API. Nor can you use this function to attach an entity (such as a sphere or a box) to your avatar.
+     * stand on.
+Note: Attached models are models only; they are not entities and can not be manipulated using the  Entities API. 
+Nor can you use this function to attach an entity (such as a sphere or a box) to your avatar.
      * @param modelURL {string}  The URL of the model to attach. Models can be .FBX or .OBJ format.
      * @param jointName {string} [jointName=""] The name of the avatar joint (see {@link MyAvatar.getJointNames} or {@link Avatar.getJointNames}) to attach the model 
      *     to.
@@ -1771,7 +1881,10 @@ declare namespace MyAvatar {
      * @param rotation {Quat} [rotation=Quat.IDENTITY] The rotation to apply to the model relative to the joint orientation.
      * @param scale {number} [scale=1.0] The scale to apply to the model.
      * @param isSoft {boolean} [isSoft=false] If the model has a skeleton, set this to <code>true</code> so that the bones of the 
-     *     attached model's skeleton are be rotated to fit the avatar's current pose. <code>isSoft</code> is used, for example,     to have clothing that moves with the avatar.<br />    If <code>true</code>, the <code>translation</code>, <code>rotation</code>, and <code>scale</code> parameters are     ignored.
+     *     attached model's skeleton are be rotated to fit the avatar's current pose. <code>isSoft</code> is used, for example, 
+    to have clothing that moves with the avatar.<br />
+    If <code>true</code>, the <code>translation</code>, <code>rotation</code>, and <code>scale</code> parameters are 
+    ignored.
      * @param allowDuplicates {boolean} [allowDuplicates=false] 
      * @param useSaved {boolean} [useSaved=true] 
      */
@@ -1894,14 +2007,16 @@ declare namespace MyAvatar {
     function getDefaultJointTranslation(index: number): Vec3;
     /**
      * Provides read only access to the default joint rotations in avatar coordinates.
-     * The default pose of the avatar is defined by the position and orientation of all bonesin the avatar's model file. Typically this is a T-pose.
+     * The default pose of the avatar is defined by the position and orientation of all bones
+in the avatar's model file. Typically this is a T-pose.
      * @param index {number}  index number
      * @returns {Quat} 
      */
     function getAbsoluteDefaultJointRotationInObjectFrame(index: number): Quat;
     /**
      * Provides read only access to the default joint translations in avatar coordinates.
-     * The default pose of the avatar is defined by the position and orientation of all bonesin the avatar's model file. Typically this is a T-pose.
+     * The default pose of the avatar is defined by the position and orientation of all bones
+in the avatar's model file. Typically this is a T-pose.
      * @param index {number}  index number
      * @returns {Vec3} 
      */
@@ -2043,12 +2158,16 @@ declare namespace MyAvatar {
     let motorMode: string;
     /**
      * The sound that's played when the avatar experiences a 
-     *     collision. It can be a mono or stereo 16-bit WAV file running at either 24kHz or 48kHz. The latter is down-sampled     by the audio mixer, so all audio effectively plays back at a 24khz. 48kHz RAW files are also supported.
+     *     collision. It can be a mono or stereo 16-bit WAV file running at either 24kHz or 48kHz. The latter is down-sampled 
+    by the audio mixer, so all audio effectively plays back at a 24khz. 48kHz RAW files are also supported.
      */
     let collisionSoundURL: string;
     /**
      * Specifies the listening position when hearing spatialized audio. Must be one 
-     *     of the following property values:    audioListenerModeHead    audioListenerModeCamera    audioListenerModeCustom
+     *     of the following property values:
+    audioListenerModeHead
+    audioListenerModeCamera
+    audioListenerModeCustom
      */
     let audioListenerMode: number;
     /**
@@ -2130,17 +2249,20 @@ declare namespace MyAvatar {
     let rightHandTipPose: Pose;
     /**
      * If true then the avatar hips are placed according to the center of
-     *     gravity model that balance the center of gravity over the base of support of the feet.  Setting the value false     will result in the default behaviour where the hips are placed under the head.
+     *     gravity model that balance the center of gravity over the base of support of the feet.  Setting the value false 
+    will result in the default behaviour where the hips are placed under the head.
      */
     let centerOfGravityModelEnabled: boolean;
     /**
      * If true then the avatar is re-centered to be under the 
-     *     head's position. In room-scale VR, this behavior is what causes your avatar to follow your HMD as you walk around     the room. Setting the value false is useful if you want to pin the avatar to a fixed position.
+     *     head's position. In room-scale VR, this behavior is what causes your avatar to follow your HMD as you walk around 
+    the room. Setting the value false is useful if you want to pin the avatar to a fixed position.
      */
     let hmdLeanRecenterEnabled: boolean;
     /**
      * Set to true to enable collisions for the avatar, false 
-     *     to disable collisions. May return true even though the value was set false because the     zone may disallow collisionless avatars.
+     *     to disable collisions. May return true even though the value was set false because the 
+    zone may disallow collisionless avatars.
      */
     let collisionsEnabled: boolean;
     /**
@@ -2185,7 +2307,8 @@ declare namespace MyAvatar {
     let userEyeHeight: number;
     /**
      * UUID representing "my avatar". Only use for local-only entities and overlays in situations 
-     *     where MyAvatar.sessionUUID is not available (e.g., if not connected to a domain). Note: Likely to be deprecated.     Read-only.
+     *     where MyAvatar.sessionUUID is not available (e.g., if not connected to a domain). Note: Likely to be deprecated. 
+    Read-only.
      */
     const SELF_ID: Uuid;
     let walkSpeed: number;
@@ -2561,7 +2684,8 @@ declare namespace Picks {
 
     /**
      * Adds a new Pick.
-     * Different  PickTypes use different properties, and within one PickType, the properties you choose can lead to a wide range of behaviors.  For example,  with PickType.Ray, depending on which optional parameters you pass, you could create a Static Ray Pick, a Mouse Ray Pick, or a Joint Ray Pick.
+     * Different  PickTypes use different properties, and within one PickType, the properties you choose can lead to a wide range of behaviors.  For example,
+  with PickType.Ray, depending on which optional parameters you pass, you could create a Static Ray Pick, a Mouse Ray Pick, or a Joint Ray Pick.
      * @param type {PickType}  A PickType that specifies the method of picking to use
      * @param properties {Picks.RayPickProperties}  A PickProperties object, containing all the properties for initializing this Pick
      * @returns {number} 
@@ -2772,17 +2896,20 @@ declare namespace Pointers {
         name: string;
         /**
          * When using  Pointers.createPointer, an optionally defined overlay to represent the beginning of the Ray Pointer,
-         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
+         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).
+When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
          */
         start: Overlays.OverlayProperties;
         /**
          * When using  Pointers.createPointer, an optionally defined overlay to represent the path of the Ray Pointer,
-         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field), which must be "line3d".When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
+         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field), which must be "line3d".
+When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
          */
         path: Overlays.OverlayProperties;
         /**
          * When using  Pointers.createPointer, an optionally defined overlay to represent the end of the Ray Pointer,
-         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
+         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).
+When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
          */
         end: Overlays.OverlayProperties;
     }
@@ -2820,12 +2947,14 @@ declare namespace Pointers {
         enabled: boolean;
         /**
          * A collection of different visual states to switch between.
-         * When using  Pointers.createPointer, a list of RayPointerRenderStates.When returned from  Pointers.getPointerProperties, a map between render state names and RayPointRenderStates.
+         * When using  Pointers.createPointer, a list of RayPointerRenderStates.
+When returned from  Pointers.getPointerProperties, a map between render state names and RayPointRenderStates.
          */
         renderStates: Array.<Pointers.RayPointerRenderState>;
         /**
          * A collection of different visual states to use if there is no intersection.
-         * When using  Pointers.createPointer, a list of DefaultRayPointerRenderStates.When returned from  Pointers.getPointerProperties, a map between render state names and DefaultRayPointRenderStates.
+         * When using  Pointers.createPointer, a list of DefaultRayPointerRenderStates.
+When returned from  Pointers.getPointerProperties, a map between render state names and DefaultRayPointRenderStates.
          */
         defaultRenderStates: Array.<Pointers.DefaultRayPointerRenderState>;
         /**
@@ -2875,7 +3004,8 @@ declare namespace Pointers {
         name: string;
         /**
          * When using  Pointers.createPointer, an optionally defined overlay to represent the beginning of the Parabola Pointer,
-         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
+         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).
+When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
          */
         start: Overlays.OverlayProperties;
         /**
@@ -2885,7 +3015,8 @@ declare namespace Pointers {
         path: Pointers.ParabolaProperties;
         /**
          * When using  Pointers.createPointer, an optionally defined overlay to represent the end of the Parabola Pointer,
-         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
+         * using the properties you would normally pass to  Overlays.addOverlay, plus the type (as a type field).
+When returned from  Pointers.getPointerProperties, the ID of the created overlay if it exists, or a null ID otherwise.
          */
         end: Overlays.OverlayProperties;
     }
@@ -2923,12 +3054,14 @@ declare namespace Pointers {
         enabled: boolean;
         /**
          * A collection of different visual states to switch between.
-         * When using  Pointers.createPointer, a list of ParabolaPointerRenderStates.When returned from  Pointers.getPointerProperties, a map between render state names and ParabolaPointerRenderStates.
+         * When using  Pointers.createPointer, a list of ParabolaPointerRenderStates.
+When returned from  Pointers.getPointerProperties, a map between render state names and ParabolaPointerRenderStates.
          */
         renderStates: Array.<Pointers.ParabolaPointerRenderState>;
         /**
          * A collection of different visual states to use if there is no intersection.
-         * When using  Pointers.createPointer, a list of DefaultParabolaPointerRenderStates.When returned from  Pointers.getPointerProperties, a map between render state names and DefaultParabolaPointerRenderStates.
+         * When using  Pointers.createPointer, a list of DefaultParabolaPointerRenderStates.
+When returned from  Pointers.getPointerProperties, a map between render state names and DefaultParabolaPointerRenderStates.
          */
         defaultRenderStates: Array.<Pointers.DefaultParabolaPointerRenderState>;
         /**
@@ -2955,7 +3088,8 @@ declare namespace Pointers {
 
     /**
      * Adds a new Pointer
-     * Different  PickTypes use different properties, and within one PickType, the properties you choose can lead to a wide range of behaviors.  For example,  with PickType.Ray, depending on which optional parameters you pass, you could create a Static Ray Pointer, a Mouse Ray Pointer, or a Joint Ray Pointer.
+     * Different  PickTypes use different properties, and within one PickType, the properties you choose can lead to a wide range of behaviors.  For example,
+  with PickType.Ray, depending on which optional parameters you pass, you could create a Static Ray Pointer, a Mouse Ray Pointer, or a Joint Ray Pointer.
      * @param type {PickType}  A PickType that specifies the method of picking to use
      * @param properties {Pointers.LaserPointerProperties}  A PointerProperties object, containing all the properties for initializing this Pointer <b>and</b> the {@link Picks.PickProperties} for the Pick that
      *   this Pointer will use to do its picking.
@@ -3305,7 +3439,8 @@ declare namespace Audio {
     function setOutputDevice(device: object, isHMD: boolean): void;
     /**
      * Enable or disable reverberation. Reverberation is done by the client, on the post-mix audio. The reverberation options 
-     * come from either the domain's audio zone if used &mdash; configured on the server &mdash; or as scripted by  Audio.setReverbOptions.
+     * come from either the domain's audio zone if used &mdash; configured on the server &mdash; or as scripted by 
+ Audio.setReverbOptions.
      * @param enable {boolean}  <code>true</code> to enable reverberation, <code>false</code> to disable.
      */
     function setReverb(enable: boolean): void;
@@ -3349,7 +3484,9 @@ declare namespace Audio {
     /**
      * Triggered when the input audio volume changes.
      * @param volume {number}  The requested volume to be applied to the audio input, range <code>0.0</code> &ndash; 
-     *     <code>1.0</code>. The resulting value of <code>Audio.inputVolume</code> depends on the capabilities of the device:     for example, the volume can't be changed on some devices, and others might only support values of <code>0.0</code>     and <code>1.0</code>.
+     *     <code>1.0</code>. The resulting value of <code>Audio.inputVolume</code> depends on the capabilities of the device: 
+    for example, the volume can't be changed on some devices, and others might only support values of <code>0.0</code> 
+    and <code>1.0</code>.
      * @returns {Signal} 
      */
     function inputVolumeChanged(volume: number): Signal;
@@ -3369,7 +3506,10 @@ declare namespace Audio {
     function onContextChanged(): void;
     /**
      * Starts playing &mdash; "injecting" &mdash; the content of an audio file. The sound is played globally (sent to the audio 
-     * mixer) so that everyone hears it, unless the injectorOptions has localOnly set to true in which case only the client hears the sound played. No sound is played if sent to the audio mixer but the client is not connected to an audio mixer. The  AudioInjector object returned by the function can be used to control the playback and get information about its current state.
+     * mixer) so that everyone hears it, unless the injectorOptions has localOnly set to 
+true in which case only the client hears the sound played. No sound is played if sent to the audio mixer 
+but the client is not connected to an audio mixer. The  AudioInjector object returned by the function can be used 
+to control the playback and get information about its current state.
      * @param sound {SoundObject}  The content of an audio file, loaded using {@link SoundCache.getSound}. See 
      * {@link SoundObject} for supported formats.
      * @param injectorOptions {AudioInjector.AudioInjectorOptions} [injectorOptions={}] Audio injector configuration.
@@ -3378,7 +3518,8 @@ declare namespace Audio {
     function playSound(sound: SoundObject, injectorOptions: AudioInjector.AudioInjectorOptions): AudioInjector;
     /**
      * Start playing the content of an audio file, locally (isn't sent to the audio mixer). This is the same as calling 
-     *  Audio.playSound with  AudioInjector.AudioInjectorOptions localOnly set true and the specified position.
+     *  Audio.playSound with  AudioInjector.AudioInjectorOptions localOnly set true and 
+the specified position.
      * @param sound {SoundObject}  The content of an audio file, loaded using {@link SoundCache.getSound}. See 
      * {@link SoundObject} for supported formats.
      * @param position {Vec3}  The position in the domain to play the sound.
@@ -3420,13 +3561,15 @@ declare namespace Audio {
     function disconnected(): Signal;
     /**
      * Triggered when the noise gate is opened: the input audio signal is no longer blocked (fully attenuated) because it has 
-     * risen above an adaptive threshold set just above the noise floor. Only occurs if Audio.noiseReduction is true.
+     * risen above an adaptive threshold set just above the noise floor. Only occurs if Audio.noiseReduction is 
+true.
      * @returns {Signal} 
      */
     function noiseGateOpened(): Signal;
     /**
      * Triggered when the noise gate is closed: the input audio signal is blocked (fully attenuated) because it has fallen 
-     * below an adaptive threshold set just above the noise floor. Only occurs if Audio.noiseReduction is true.
+     * below an adaptive threshold set just above the noise floor. Only occurs if Audio.noiseReduction is 
+true.
      * @returns {Signal} 
      */
     function noiseGateClosed(): Signal;
@@ -3448,7 +3591,8 @@ declare namespace Audio {
     let muted: boolean;
     /**
      * true if noise reduction is enabled, otherwise false. When 
-     *     enabled, the input audio signal is blocked (fully attenuated) when it falls below an adaptive threshold set just     above the noise floor.
+     *     enabled, the input audio signal is blocked (fully attenuated) when it falls below an adaptive threshold set just 
+    above the noise floor.
      */
     let noiseReduction: boolean;
     /**
@@ -3458,7 +3602,8 @@ declare namespace Audio {
     let inputLevel: number;
     /**
      * Adjusts the volume of the input audio; range 0.0 &ndash; 1.0. 
-     *     If set to a value, the resulting value depends on the input device: for example, the volume can't be changed on some     devices, and others might only support values of 0.0 and 1.0.
+     *     If set to a value, the resulting value depends on the input device: for example, the volume can't be changed on some 
+    devices, and others might only support values of 0.0 and 1.0.
      */
     let inputVolume: number;
     /**
@@ -3526,7 +3671,172 @@ declare namespace Clipboard {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsThe Controller API provides facilities to interact with computer and controller hardware.
- * FunctionsProperties   Controller.getActions   Controller.getHardware   Controller.getStandardMappings   Controller.disableMapping   Controller.enableMapping   Controller.loadMapping   Controller.newMapping   Controller.parseMappingInput, Hardware, and Action Reflection   Controller.findAction   Controller.findDevice   Controller.getActionNames   Controller.getAllActions   Controller.getAvailableInputs   Controller.getDeviceName   Controller.getDeviceNamesInput, Hardware, and Action Events   Controller.actionEvent   Controller.hardwareChanged   Controller.inputEventMouse, Keyboard, and Touch Events   Controller.keyPressEvent   Controller.keyReleaseEvent   Controller.mouseDoublePressEvent   Controller.mouseMoveEvent   Controller.mousePressEvent   Controller.mouseReleaseEvent   Controller.touchBeginEvent   Controller.touchEndEvent   Controller.touchUpdateEvent   Controller.wheelEventControl Capturing   Controller.captureMouseEvents   Controller.captureTouchEvents   Controller.captureWheelEvents   Controller.releaseMouseEvents   Controller.releaseTouchEvents   Controller.releaseWheelEventsAction Capturing   Controller.captureActionEvents   Controller.captureEntityClickEvents   Controller.captureJoystick   Controller.captureKeyEvents   Controller.releaseActionEvents   Controller.releaseEntityClickEvents   Controller.releaseJoystick   Controller.releaseKeyEventsController and Action Values   Controller.getValue   Controller.getAxisValue   Controller.getPoseValue   Controller.getActionValueHaptics   Controller.triggerHapticPulse   Controller.triggerHapticPulseOnDevice   Controller.triggerShortHapticPulse   Controller.triggerShortHapticPulseOnDeviceDisplay Information   Controller.getViewportDimensions   Controller.getRecommendedHUDRectVirtual Game Pad   Controller.setVPadEnabled   Controller.setVPadHidden   Controller.setVPadExtraBottomMarginInput Recordings   Controller.startInputRecording   Controller.stopInputRecording   Controller.saveInputRecording   Controller.getInputRecorderSaveDirectory   Controller.loadInputRecording   Controller.startInputPlayback   Controller.stopInputPlaybackEntity Methods:The default scripts implement hand controller actions that use  Entities.callEntityMethod to call entity script methods, if present in the entity being interacted with.      Method NameDescriptionExample              startFarTriggercontinueFarTriggerstopFarTrigger      These methods are called when a user is more than 0.3m away from the entity, the entity is triggerable, and the         user starts, continues, or stops squeezing the trigger.            A light switch that can be toggled on and off from a distance.              startNearTriggercontinueNearTriggerstopNearTrigger      These methods are called when a user is less than 0.3m away from the entity, the entity is triggerable, and the         user starts, continues, or stops squeezing the trigger.      A doorbell that can be rung when a user is near.              startDistanceGrabcontinueDistanceGrab      These methods are called when a user is more than 0.3m away from the entity, the entity is either cloneable, or        grabbable and not locked, and the user starts or continues to squeeze the trigger.      A comet that emits icy particle trails when a user is dragging it through the sky.              startNearGrabcontinueNearGrab      These methods are called when a user is less than 0.3m away from the entity, the entity is either cloneable, or         grabbable and not locked, and the user starts or continues to squeeze the trigger.      A ball that glows when it's being held close.              releaseGrab      This method is called when a user releases the trigger when having been either distance or near grabbing an         entity.      Turn off the ball glow or comet trail with the user finishes grabbing it.              startEquipcontinueEquipreleaseEquip      These methods are called when a user starts, continues, or stops equipping an entity.      A glass that stays in the user's hand after the trigger is clicked.      All the entity methods are called with the following two arguments:  The entity ID.  A string, "hand,userID" &mdash; where "hand" is "left" or "right", and "userID"    is the user's  MyAvatar.
+ * 
+Functions
+
+Properties
+
+   Controller.getActions
+   Controller.getHardware
+   Controller.getStandard
+
+
+Mappings
+
+   Controller.disableMapping
+   Controller.enableMapping
+   Controller.loadMapping
+   Controller.newMapping
+   Controller.parseMapping
+
+
+Input, Hardware, and Action Reflection
+
+   Controller.findAction
+   Controller.findDevice
+   Controller.getActionNames
+   Controller.getAllActions
+   Controller.getAvailableInputs
+   Controller.getDeviceName
+   Controller.getDeviceNames
+
+
+Input, Hardware, and Action Events
+
+   Controller.actionEvent
+   Controller.hardwareChanged
+   Controller.inputEvent
+
+
+Mouse, Keyboard, and Touch Events
+
+   Controller.keyPressEvent
+   Controller.keyReleaseEvent
+   Controller.mouseDoublePressEvent
+   Controller.mouseMoveEvent
+   Controller.mousePressEvent
+   Controller.mouseReleaseEvent
+   Controller.touchBeginEvent
+   Controller.touchEndEvent
+   Controller.touchUpdateEvent
+   Controller.wheelEvent
+
+
+Control Capturing
+
+   Controller.captureMouseEvents
+   Controller.captureTouchEvents
+   Controller.captureWheelEvents
+   Controller.releaseMouseEvents
+   Controller.releaseTouchEvents
+   Controller.releaseWheelEvents
+
+
+Action Capturing
+
+   Controller.captureActionEvents
+   Controller.captureEntityClickEvents
+   Controller.captureJoystick
+   Controller.captureKeyEvents
+   Controller.releaseActionEvents
+   Controller.releaseEntityClickEvents
+   Controller.releaseJoystick
+   Controller.releaseKeyEvents
+
+
+Controller and Action Values
+
+   Controller.getValue
+   Controller.getAxisValue
+   Controller.getPoseValue
+   Controller.getActionValue
+
+
+Haptics
+
+   Controller.triggerHapticPulse
+   Controller.triggerHapticPulseOnDevice
+   Controller.triggerShortHapticPulse
+   Controller.triggerShortHapticPulseOnDevice
+
+
+Display Information
+
+   Controller.getViewportDimensions
+   Controller.getRecommendedHUDRect
+
+
+Virtual Game Pad
+
+   Controller.setVPadEnabled
+   Controller.setVPadHidden
+   Controller.setVPadExtraBottomMargin
+
+
+Input Recordings
+
+   Controller.startInputRecording
+   Controller.stopInputRecording
+   Controller.saveInputRecording
+   Controller.getInputRecorderSaveDirectory
+   Controller.loadInputRecording
+   Controller.startInputPlayback
+   Controller.stopInputPlayback
+
+
+Entity Methods:
+
+The default scripts implement hand controller actions that use  Entities.callEntityMethod to call entity script 
+methods, if present in the entity being interacted with.
+
+
+  
+    Method NameDescriptionExample
+  
+  
+    
+      startFarTriggercontinueFarTriggerstopFarTrigger
+      These methods are called when a user is more than 0.3m away from the entity, the entity is triggerable, and the 
+        user starts, continues, or stops squeezing the trigger.
+      
+      A light switch that can be toggled on and off from a distance.
+    
+    
+      startNearTriggercontinueNearTriggerstopNearTrigger
+      These methods are called when a user is less than 0.3m away from the entity, the entity is triggerable, and the 
+        user starts, continues, or stops squeezing the trigger.
+      A doorbell that can be rung when a user is near.
+    
+    
+      startDistanceGrabcontinueDistanceGrab
+      These methods are called when a user is more than 0.3m away from the entity, the entity is either cloneable, or
+        grabbable and not locked, and the user starts or continues to squeeze the trigger.
+      A comet that emits icy particle trails when a user is dragging it through the sky.
+    
+    
+      startNearGrabcontinueNearGrab
+      These methods are called when a user is less than 0.3m away from the entity, the entity is either cloneable, or 
+        grabbable and not locked, and the user starts or continues to squeeze the trigger.
+      A ball that glows when it's being held close.
+    
+    
+      releaseGrab
+      This method is called when a user releases the trigger when having been either distance or near grabbing an 
+        entity.
+      Turn off the ball glow or comet trail with the user finishes grabbing it.
+    
+    
+      startEquipcontinueEquipreleaseEquip
+      These methods are called when a user starts, continues, or stops equipping an entity.
+      A glass that stays in the user's hand after the trigger is clicked.
+    
+  
+
+All the entity methods are called with the following two arguments:
+
+  The entity ID.
+  A string, "hand,userID" &mdash; where "hand" is "left" or "right", and "userID"
+    is the user's  MyAvatar.
  */
 declare namespace Controller {
     interface Hardware-Application {
@@ -3752,7 +4062,8 @@ declare namespace Controller {
     function triggerShortHapticPulseOnDevice(deviceID: number, strength: number, hand: Controller.Hand): void;
     /**
      * Create a new controller mapping. Routes can then be added to the mapping using  MappingObject methods and 
-     * routed to Standard controls, Actions, or script functions using  RouteObject methods. The mapping can then be enabled using  Controller.enableMapping for it to take effect.
+     * routed to Standard controls, Actions, or script functions using  RouteObject 
+methods. The mapping can then be enabled using  Controller.enableMapping for it to take effect.
      * @param mappingName {string}  A unique name for the mapping. If not specified a new UUID generated 
      *     by {@link Uuid.generate} is used.
      * @returns {MappingObject} 
@@ -3811,7 +4122,10 @@ declare namespace Controller {
     function stopInputRecording(): void;
     /**
      * Play back the current recording from the beginning. The current recording may have been recorded by 
-     *  Controller.startInputRecording and  Controller.stopInputRecording, or loaded by  Controller.loadInputRecording. Playback repeats in a loop until  Controller.stopInputPlayback is called.
+     *  Controller.startInputRecording and 
+ Controller.stopInputRecording, or loaded by 
+ Controller.loadInputRecording. Playback repeats in a loop until 
+ Controller.stopInputPlayback is called.
      */
     function startInputPlayback(): void;
     /**
@@ -3820,7 +4134,10 @@ declare namespace Controller {
     function stopInputPlayback(): void;
     /**
      * Save the current recording to a file. The current recording may have been recorded by
-     *  Controller.startInputRecording and Controller.stopInputRecording, or loaded by Controller.loadInputRecording. It is saved in the directory returned by  Controller.getInputRecorderSaveDirectory.
+     *  Controller.startInputRecording and
+ Controller.stopInputRecording, or loaded by
+ Controller.loadInputRecording. It is saved in the directory returned by 
+ Controller.getInputRecorderSaveDirectory.
      */
     function saveInputRecording(): void;
     /**
@@ -3845,17 +4162,23 @@ declare namespace Controller {
     function captureMouseEvents(): void;
     /**
      * Enable processing of mouse "move", "press", "double-press", and "release" events into 
-     *  Controller.Hardware-Keyboard outputs that were disabled using  Controller.captureMouseEvents.
+     *  Controller.Hardware-Keyboard outputs that were disabled using 
+ Controller.captureMouseEvents.
      */
     function releaseMouseEvents(): void;
     /**
      * Disable processing of touch "begin", "update", and "end" events into 
-     *  Controller.Hardware,  Controller.Hardware, and  Controller.Hardware outputs.
+     *  Controller.Hardware, 
+ Controller.Hardware, and 
+ Controller.Hardware outputs.
      */
     function captureTouchEvents(): void;
     /**
      * Enable processing of touch "begin", "update", and "end" events into 
-     *  Controller.Hardware,  Controller.Hardware, and  Controller.Hardware outputs that were disabled using  Controller.captureTouchEvents.
+     *  Controller.Hardware, 
+ Controller.Hardware, and 
+ Controller.Hardware outputs that were disabled using 
+ Controller.captureTouchEvents.
      */
     function releaseTouchEvents(): void;
     /**
@@ -3893,7 +4216,8 @@ declare namespace Controller {
     function inputEvent(action: number, value: number): Signal;
     /**
      * Triggered when a device is registered or unregistered by a plugin. Not all plugins generate 
-     * hardwareChanged events: for example connecting or disconnecting a mouse will not generate an event but connecting or disconnecting an Xbox controller will.
+     * hardwareChanged events: for example connecting or disconnecting a mouse will not generate an event but 
+connecting or disconnecting an Xbox controller will.
      * @returns {Signal} 
      */
     function hardwareChanged(): Signal;
@@ -3935,7 +4259,8 @@ declare namespace Controller {
         debug: boolean;
         /**
          * One or more numeric  Controller.Hardware property names which are evaluated 
-         *     as booleans and ANDed together. Prepend with a ! to use the logical NOT of the property value. The leading     "Controller.Hardware." can be omitted from the property names.
+         *     as booleans and ANDed together. Prepend with a ! to use the logical NOT of the property value. The leading 
+    "Controller.Hardware." can be omitted from the property names.
          */
         when: string;
         /**
@@ -3985,17 +4310,30 @@ declare namespace Controller {
 
     /**
      * Predefined actions on Interface and the user's avatar. These can be used as end
-     *     points in a  RouteObject mapping. A synonym for Controller.Hardware.Actions.    Read-only.    Default mappings are provided from the Controller.Hardware.Keyboard and Controller.Standard to     actions in         keyboardMouse.json and         standard.json, respectively.
+     *     points in a  RouteObject mapping. A synonym for Controller.Hardware.Actions.
+    Read-only.
+    Default mappings are provided from the Controller.Hardware.Keyboard and Controller.Standard to 
+    actions in 
+    
+    keyboardMouse.json and 
+    
+    standard.json, respectively.
      */
     let Actions: Controller.Actions;
     /**
      * Standard and hardware-specific controller and computer outputs, plus predefined 
-     *     actions on Interface and the user's avatar. The outputs can be mapped to Actions or functions in a      RouteObject mapping. Additionally, hardware-specific controller outputs can be mapped to Standard     controller outputs. Read-only.
+     *     actions on Interface and the user's avatar. The outputs can be mapped to Actions or functions in a 
+     RouteObject mapping. Additionally, hardware-specific controller outputs can be mapped to Standard 
+    controller outputs. Read-only.
      */
     let Hardware: Controller.Hardware;
     /**
      * Standard controller outputs that can be mapped to Actions or 
-     *     functions in a  RouteObject mapping. Read-only.    Each hardware device has a mapping from its outputs to Controller.Standard items, specified in a JSON file.     For example,     leapmotion.json and     vive.json.
+     *     functions in a  RouteObject mapping. Read-only.
+    Each hardware device has a mapping from its outputs to Controller.Standard items, specified in a JSON file. 
+    For example, 
+    leapmotion.json and 
+    vive.json.
      */
     let Standard: Controller.Standard;
 }
@@ -4101,14 +4439,18 @@ declare namespace HMD {
     function worldPointFromOverlay(coordinates: Vec2): Vec3;
     /**
      * Get the 2D point on the HUD overlay represented by given spherical coordinates. 
-     * 2D HUD overlay coordinates are pixels with the origin at the top left of the overlay.Spherical coordinates are polar coordinates in radians with { x: 0, y: 0 } being the center of the HUD overlay.
+     * 2D HUD overlay coordinates are pixels with the origin at the top left of the overlay.
+Spherical coordinates are polar coordinates in radians with { x: 0, y: 0 } being the center of the HUD 
+overlay.
      * @param sphericalPos {Vec2}  The point on the HUD overlay in spherical coordinates.
      * @returns {Vec2} 
      */
     function sphericalToOverlay(sphericalPos: Vec2): Vec2;
     /**
      * Get the spherical coordinates of a 2D point on the HUD overlay.
-     * 2D HUD overlay coordinates are pixels with the origin at the top left of the overlay.Spherical coordinates are polar coordinates in radians with { x: 0, y: 0 } being the center of the HUDoverlay.
+     * 2D HUD overlay coordinates are pixels with the origin at the top left of the overlay.
+Spherical coordinates are polar coordinates in radians with { x: 0, y: 0 } being the center of the HUD
+overlay.
      * @param overlayPos {Vec2}  The point on the HUD overlay in HUD coordinates.
      * @returns {Vec2} 
      */
@@ -4166,7 +4508,8 @@ declare namespace HMD {
     function requestHideHandControllers(): void;
     /**
      * Check whether any script wants models of the HMD hand controllers displayed. Requests are made and canceled using 
-     *  HMD.requestShowHandControllers and  HMD.requestHideHandControllers.
+     *  HMD.requestShowHandControllers and 
+ HMD.requestHideHandControllers.
      * @returns {boolean} 
      */
     function shouldShowHandControllers(): boolean;
@@ -4201,14 +4544,17 @@ declare namespace HMD {
     function closeTablet(): void;
     /**
      * Opens the tablet if the tablet is used in the current display mode and it isn't already showing, and sets the tablet to 
-     * contextual mode if requested. In contextual mode, the page displayed on the tablet is wholly controlled by script (i.e., the user cannot navigate to another).
+     * contextual mode if requested. In contextual mode, the page displayed on the tablet is wholly controlled by script (i.e., 
+the user cannot navigate to another).
      * @param contextualMode {boolean} [contextualMode=false] If <code>true</code> then the tablet is opened at a specific position and 
-     *     orientation already set by the script, otherwise it opens at a position and orientation relative to the user. For     contextual mode, set the world or local position and orientation of the <code>HMD.tabletID</code> overlay.
+     *     orientation already set by the script, otherwise it opens at a position and orientation relative to the user. For 
+    contextual mode, set the world or local position and orientation of the <code>HMD.tabletID</code> overlay.
      */
     function openTablet(contextualMode: boolean): void;
     /**
      * Triggered when a request to show or hide models of the HMD hand controllers is made using 
-     *  HMD.requestShowHandControllers or HMD.requestHideHandControllers.
+     *  HMD.requestShowHandControllers or
+ HMD.requestHideHandControllers.
      * @returns {Signal} 
      */
     function shouldShowHandControllersChanged(): Signal;
@@ -4274,7 +4620,8 @@ declare namespace HMD {
     let showTablet: boolean;
     /**
      * true if the tablet has been opened in contextual mode, otherwise 
-     *     false. In contextual mode, the tablet has been opened at a specific world position and orientation rather     than at a position and orientation relative to the user. Read-only.
+     *     false. In contextual mode, the tablet has been opened at a specific world position and orientation rather 
+    than at a position and orientation relative to the user. Read-only.
      */
     let tabletContextualMode: boolean;
     /**
@@ -4318,7 +4665,17 @@ declare namespace HMD {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsThe Menu API provides access to the menu that is displayed at the top of the window
- * on a user's desktop and in the tablet when the "MENU" button is pressed.GroupingsA "grouping" provides a way to group a set of menus or menu items together so that they can all be set visible or invisible as a group. There are two available groups: "Advanced" and "Developer".These groupings can be toggled in the "Settings" menu.If a menu item doesn't belong to a group it is always displayed.
+ * on a user's desktop and in the tablet when the "MENU" button is pressed.
+
+
+
+Groupings
+
+A "grouping" provides a way to group a set of menus or menu items together so 
+that they can all be set visible or invisible as a group. 
+There are two available groups: "Advanced" and "Developer".
+These groupings can be toggled in the "Settings" menu.
+If a menu item doesn't belong to a group it is always displayed.
  */
 declare namespace Menu {
     /**
@@ -4340,7 +4697,8 @@ declare namespace Menu {
     function menuExists(menuName: string): boolean;
     /**
      * Add a separator with an unclickable label below it. The separator will be placed at the bottom of the menu.
-     * If you want to add a separator at a specific point in the menu, use  Menu.addMenuItem with Menu.MenuItemProperties instead.
+     * If you want to add a separator at a specific point in the menu, use  Menu.addMenuItem with
+ Menu.MenuItemProperties instead.
      * @param menuName {string}  Name of the menu to add a separator to.
      * @param separatorName {string}  Name of the separator that will be displayed as the label below the separator line.
      */
@@ -4577,7 +4935,10 @@ declare namespace Selection {
     function getHighlightedListNames(): Array.<string>;
     /**
      * Enable highlighting for a selection list.
-     * If the selection list doesn't exist, it will be created.All objects in the list will be displayed with the highlight effect specified.The function can be called several times with different values in the style to modify it.Note: This function implicitly calls  Selection.enableListToScene.
+     * If the selection list doesn't exist, it will be created.
+All objects in the list will be displayed with the highlight effect specified.
+The function can be called several times with different values in the style to modify it.
+Note: This function implicitly calls  Selection.enableListToScene.
      * @param listName {string}  The name of the selection list.
      * @param highlightStyle {Selection.HighlightStyle}  The highlight style.
      * @returns {boolean} 
@@ -4585,21 +4946,25 @@ declare namespace Selection {
     function enableListHighlight(listName: string, highlightStyle: Selection.HighlightStyle): boolean;
     /**
      * Disable highlighting for the selection list.
-     * If the selection list doesn't exist or wasn't enabled for highlighting then nothing happens and false isreturned.Note: This function implicitly calls  Selection.disableListToScene.
+     * If the selection list doesn't exist or wasn't enabled for highlighting then nothing happens and false is
+returned.
+Note: This function implicitly calls  Selection.disableListToScene.
      * @param listName {string}  The name of the selection list.
      * @returns {boolean} 
      */
     function disableListHighlight(listName: string): boolean;
     /**
      * Enable scene selection for the selection list.
-     * If the Selection doesn't exist, it will be created.All objects in the list will be sent to a scene selection.
+     * If the Selection doesn't exist, it will be created.
+All objects in the list will be sent to a scene selection.
      * @param listName {string}  The name of the selection list.
      * @returns {boolean} 
      */
     function enableListToScene(listName: string): boolean;
     /**
      * Disable scene selection for the named selection.
-     * If the selection list doesn't exist or wasn't enabled on the scene then nothing happens and false isreturned.
+     * If the selection list doesn't exist or wasn't enabled on the scene then nothing happens and false is
+returned.
      * @param listName {string}  The name of the selection list.
      * @returns {boolean} 
      */
@@ -4676,7 +5041,8 @@ declare namespace Wallet {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsThe Window API provides various facilities not covered elsewhere: window dimensions, window focus, normal or entity camera
- * view, clipboard, announcements, user connections, common dialog boxes, snapshots, file import, domain changes, domain physics.
+ * view, clipboard, announcements, user connections, common dialog boxes, snapshots, file import, domain changes, domain 
+physics.
  */
 declare namespace Window {
     /**
@@ -4716,7 +5082,8 @@ declare namespace Window {
     function prompt(message: string, defaultText: string): string;
     /**
      * Prompt the user to enter some text. Displays a non-modal dialog with a message and a text box, plus "OK" and "Cancel" 
-     * buttons. A  Window.promptTextChanged signal is emitted when the user OKs the dialog; no signal is emitted if the user cancels the dialog.
+     * buttons. A  Window.promptTextChanged signal is emitted when the user OKs the dialog; no signal 
+is emitted if the user cancels the dialog.
      * @param message {string} [message=""] The question to display.
      * @param defaultText {string} [defaultText=""] The default answer text.
      */
@@ -4730,7 +5097,8 @@ declare namespace Window {
     function browseDir(title: string, directory: string): string;
     /**
      * Prompt the user to choose a directory. Displays a non-modal dialog that navigates the directory tree. A
-     *  Window.browseDirChanged signal is emitted when a directory is chosen; no signal is emitted ifthe user cancels the dialog.
+     *  Window.browseDirChanged signal is emitted when a directory is chosen; no signal is emitted if
+the user cancels the dialog.
      * @param title {string} [title=""] The title to display at the top of the dialog.
      * @param directory {string} [directory=""] The initial directory to start browsing at.
      */
@@ -4746,7 +5114,8 @@ declare namespace Window {
     function browse(title: string, directory: string, nameFilter: string): string;
     /**
      * Prompt the user to choose a file. Displays a non-modal dialog that navigates the directory tree. A
-     *  Window.browseChanged signal is emitted when a file is chosen; no signal is emitted if the usercancels the dialog.
+     *  Window.browseChanged signal is emitted when a file is chosen; no signal is emitted if the user
+cancels the dialog.
      * @param title {string} [title=""] The title to display at the top of the dialog.
      * @param directory {string} [directory=""] The initial directory to start browsing at.
      * @param nameFilter {string} [nameFilter=""] The types of files to display. Examples: <code>"*.json"</code> and
@@ -4765,7 +5134,8 @@ declare namespace Window {
     function save(title: string, directory: string, nameFilter: string): string;
     /**
      * Prompt the user to specify the path and name of a file to save to. Displays a non-model dialog that navigates the
-     * directory tree and allows the user to type in a file name. A  Window.saveFileChanged signal isemitted when a file is specified; no signal is emitted if the user cancels the dialog.
+     * directory tree and allows the user to type in a file name. A  Window.saveFileChanged signal is
+emitted when a file is specified; no signal is emitted if the user cancels the dialog.
      * @param title {string} [title=""] The title to display at the top of the dialog.
      * @param directory {string} [directory=""] The initial directory to start browsing at.
      * @param nameFilter {string} [nameFilter=""] The types of files to display. Examples: <code>"*.json"</code> and
@@ -4784,7 +5154,8 @@ declare namespace Window {
     function browseAssets(title: string, directory: string, nameFilter: string): string;
     /**
      * Prompt the user to choose an Asset Server item. Displays a non-modal dialog that navigates the tree of assets on the 
-     * Asset Server. A  Window.assetsDirChanged signal is emitted when an asset is chosen; no signal isemitted if the user cancels the dialog.
+     * Asset Server. A  Window.assetsDirChanged signal is emitted when an asset is chosen; no signal is
+emitted if the user cancels the dialog.
      * @param title {string} [title=""] The title to display at the top of the dialog.
      * @param directory {string} [directory=""] The initial directory to start browsing at.
      * @param nameFilter {string} [nameFilter=""] The types of files to display. Examples: <code>"*.json"</code> and
@@ -4814,15 +5185,29 @@ declare namespace Window {
     function copyToClipboard(text: string): void;
     /**
      * Takes a snapshot of the current Interface view from the primary camera. When a still image only is captured, 
-     *  Window.stillSnapshotTaken is emitted; when a still image plus moving images are captured,  Window.processingGifStarted and  Window.processingGifCompletedare emitted. The path to store the snapshots and the length of the animated GIF to capture are specified in Settings >General > Snapshots.If user has supplied a specific filename for the snapshot:    If the user's requested filename has a suffix that's contained within SUPPORTED_IMAGE_FORMATS,        DON'T append ".jpg" to the filename. QT will save the image in the format associated with the        filename's suffix.        If you want lossless Snapshots, supply a `.png` filename. Otherwise, use `.jpeg` or `.jpg`.    Otherwise, ".jpg" is appended to the user's requested filename so that the image is saved in JPG format.If the user hasn't supplied a specific filename for the snapshot:    Save the snapshot in JPG format according to FILENAME_PATH_FORMAT
+     *  Window.stillSnapshotTaken is emitted; when a still image plus moving images are captured, 
+ Window.processingGifStarted and  Window.processingGifCompleted
+are emitted. The path to store the snapshots and the length of the animated GIF to capture are specified in Settings >
+General > Snapshots.
+
+If user has supplied a specific filename for the snapshot:
+    If the user's requested filename has a suffix that's contained within SUPPORTED_IMAGE_FORMATS,
+        DON'T append ".jpg" to the filename. QT will save the image in the format associated with the
+        filename's suffix.
+        If you want lossless Snapshots, supply a `.png` filename. Otherwise, use `.jpeg` or `.jpg`.
+    Otherwise, ".jpg" is appended to the user's requested filename so that the image is saved in JPG format.
+If the user hasn't supplied a specific filename for the snapshot:
+    Save the snapshot in JPG format according to FILENAME_PATH_FORMAT
      * @param notify {boolean} [notify=true] This value is passed on through the {@link Window.stillSnapshotTaken|stillSnapshotTaken}
      *     signal.
      * @param includeAnimated {boolean} [includeAnimated=false] If <code>true</code>, a moving image is captured as an animated GIF in addition 
      *     to a still image.
      * @param aspectRatio {number} [aspectRatio=0] The width/height ratio of the snapshot required. If the value is <code>0</code> the
-     *     full resolution is used (window dimensions in desktop mode; HMD display dimensions in HMD mode), otherwise one of the    dimensions is adjusted in order to match the aspect ratio.
+     *     full resolution is used (window dimensions in desktop mode; HMD display dimensions in HMD mode), otherwise one of the
+    dimensions is adjusted in order to match the aspect ratio.
      * @param filename {string} [filename=""] If this parameter is not given, the image will be saved as "hifi-snap-by-&lt;user name&gt-YYYY-MM-DD_HH-MM-SS".
-     *     If this parameter is <code>""</code> then the image will be saved as ".jpg".    Otherwise, the image will be saved to this filename, with an appended ".jpg".
+     *     If this parameter is <code>""</code> then the image will be saved as ".jpg".
+    Otherwise, the image will be saved to this filename, with an appended ".jpg".
      */
     function takeSnapshot(notify: boolean, includeAnimated: boolean, aspectRatio: number, filename: string): void;
     /**
@@ -4830,7 +5215,8 @@ declare namespace Window {
      * @param notify {boolean} [notify=true] This value is passed on through the {@link Window.stillSnapshotTaken|stillSnapshotTaken}
      *     signal.
      * @param filename {string} [filename=""] If this parameter is not given, the image will be saved as "hifi-snap-by-&lt;user name&gt;-YYYY-MM-DD_HH-MM-SS".
-     *     If this parameter is <code>""</code> then the image will be saved as ".jpg".    Otherwise, the image will be saved to this filename, with an appended ".jpg".
+     *     If this parameter is <code>""</code> then the image will be saved as ".jpg".
+    Otherwise, the image will be saved to this filename, with an appended ".jpg".
      */
     function takeSecondaryCameraSnapshot(notify: boolean, filename: string): void;
     /**
@@ -4842,7 +5228,8 @@ declare namespace Window {
      * @param notify {boolean} [notify=true] This value is passed on through the {@link Window.stillSnapshotTaken|stillSnapshotTaken}
      *     signal.
      * @param filename {string} [filename=""] If this parameter is not supplied, the image will be saved as "hifi-snap-by-&lt;user name&gt;-YYYY-MM-DD_HH-MM-SS".
-     *     If this parameter is <code>""</code> then the image will be saved as ".jpg".    Otherwise, the image will be saved to this filename, with an appended ".jpg".
+     *     If this parameter is <code>""</code> then the image will be saved as ".jpg".
+    Otherwise, the image will be saved to this filename, with an appended ".jpg".
      */
     function takeSecondaryCamera360Snapshot(cameraPosition: Vec3, cubemapOutputFormat: boolean, notify: boolean, filename: string): void;
     /**
@@ -4909,7 +5296,8 @@ declare namespace Window {
     function openMessageBox(title: string, text: string, buttons: Window.MessageBoxButton, defaultButton: Window.MessageBoxButton): number;
     /**
      * Open a URL in the Interface window or other application, depending on the URL's scheme. If the URL starts with 
-     * hifi:// then that URL is navigated to in Interface, otherwise the URL is opened in the application the OS associates with the URL's scheme (e.g., a Web browser for http://).
+     * hifi:// then that URL is navigated to in Interface, otherwise the URL is opened in the application the OS 
+associates with the URL's scheme (e.g., a Web browser for http://).
      * @param url {string}  The URL to open.
      */
     function openUrl(url: string): void;
@@ -6369,12 +6757,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -6500,7 +6892,8 @@ declare namespace Overlays {
         outerEndColor: Color;
         /**
          * The opacity of the overlay, 0.0 - 1.0. Setting this value also sets
-         *     the values of innerStartAlpha, innerEndAlpha, outerStartAlpha, and     outerEndAlpha. Synonym: Alpha; write-only.
+         *     the values of innerStartAlpha, innerEndAlpha, outerStartAlpha, and 
+    outerEndAlpha. Synonym: Alpha; write-only.
          */
         alpha: number;
         /**
@@ -6599,12 +6992,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -6700,12 +7097,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -6816,12 +7217,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -6984,12 +7389,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -7122,12 +7531,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -7576,12 +7989,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -7731,12 +8148,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -7836,12 +8257,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -7937,12 +8362,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -8151,12 +8580,16 @@ declare namespace Overlays {
         pulsePeriod: number;
         /**
          * If non-zero, the alpha of the overlay is pulsed: the alpha value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         alphaPulse: number;
         /**
          * If non-zero, the color of the overlay is pulsed: the color value is multiplied by the
-         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise    used.)
+         *     current pulse multiplier value each frame. If > 0 the pulse multiplier is applied in phase with the pulse period; if < 0
+    the pulse multiplier is applied out of phase with the pulse period. (The magnitude of the property isn't otherwise
+    used.)
          */
         colorPulse: number;
         /**
@@ -8257,7 +8690,8 @@ declare namespace Overlays {
 
     /**
      * Get or set the  Overlays.OverlayType overlay that has keyboard focus.
-     *     If no overlay has keyboard focus, get returns null; set to null or  Uuid to     clear keyboard focus.
+     *     If no overlay has keyboard focus, get returns null; set to null or  Uuid to 
+    clear keyboard focus.
      */
     let keyboardFocusOverlay: Uuid;
 }
@@ -8430,7 +8864,8 @@ declare namespace AudioStats {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsServer Entity ScriptsAssignment Client ScriptsAudio effect options used by the  Audio API.
- * Create using new AudioEffectOptions(reverbOptions).
+ * 
+Create using new AudioEffectOptions(reverbOptions).
  * @param reverbOptions {AudioEffectOptions.ReverbOptions} [reverbOptions=null] Reverberation options.
  */
 declare class AudioEffectOptions {
@@ -8525,7 +8960,11 @@ declare class AudioEffectOptions {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsServer Entity ScriptsAssignment Client ScriptsAn audio resource, created by  SoundCache.getSound, to be played back using  Audio.playSound.
- * Supported formats:  WAV: 16-bit uncompressed WAV at any sample rate, with 1 (mono), 2(stereo), or 4 (ambisonic) channels.  MP3: Mono or stereo, at any sample rate.  RAW: 48khz 16-bit mono or stereo. Filename must include ".stereo" to be interpreted as stereo.
+ * Supported formats:
+
+  WAV: 16-bit uncompressed WAV at any sample rate, with 1 (mono), 2(stereo), or 4 (ambisonic) channels.
+  MP3: Mono or stereo, at any sample rate.
+  RAW: 48khz 16-bit mono or stereo. Filename must include ".stereo" to be interpreted as stereo.
  */
 declare class SoundObject {
     /**
@@ -8650,12 +9089,37 @@ declare namespace AvatarList {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsA  Controller mapping object that can contain a set of routes that map:
- *      Controller.Standard outputs to  Controller.Actions actions or script functions.     Controller.Hardware outputs to  Controller.Standard outputs,  Controller.Actions actions, or     script functions.Create by one of the following methods:    Use  Controller.newMapping to create the mapping object, add routes using  MappingObject#from or     MappingObject#makeAxis, and map the routes to actions or functions using  RouteObject     methods.    Use  Controller.parseMapping or  Controller.loadMapping to load a  Controller.MappingJSON.Enable the mapping using  MappingObject#enable or  Controller.enableMapping for it to take effect.Mappings and their routes are applied according to the following rules:    One read per output: after a controller output has been read, it can't be read again. Exception: You can use      RouteObject#peek to read a value without marking that output as having been read.    Existing mapping routes take precedence over new mapping routes: within a mapping, if a route is added for a control     output that already has a route the new route is ignored.    New mappings override previous mappings: each output is processed using the route in the most recently enabled     mapping that contains that output.
+ * 
+     Controller.Standard outputs to  Controller.Actions actions or script functions.
+     Controller.Hardware outputs to  Controller.Standard outputs,  Controller.Actions actions, or 
+    script functions.
+
+
+Create by one of the following methods:
+
+    Use  Controller.newMapping to create the mapping object, add routes using  MappingObject#from or
+     MappingObject#makeAxis, and map the routes to actions or functions using  RouteObject 
+    methods.
+    Use  Controller.parseMapping or  Controller.loadMapping to load a  Controller.MappingJSON.
+
+
+Enable the mapping using  MappingObject#enable or  Controller.enableMapping for it to take 
+effect.
+
+Mappings and their routes are applied according to the following rules:
+
+    One read per output: after a controller output has been read, it can't be read again. Exception: You can use 
+     RouteObject#peek to read a value without marking that output as having been read.
+    Existing mapping routes take precedence over new mapping routes: within a mapping, if a route is added for a control 
+    output that already has a route the new route is ignored.
+    New mappings override previous mappings: each output is processed using the route in the most recently enabled 
+    mapping that contains that output.
  */
 declare class MappingObject {
     /**
      * Create a new  RouteObject from a controller output, ready to be mapped to a standard control, action, or 
-     * function.This is a QML-specific version of  MappingObject#from: use this version in QML files.
+     * function.
+This is a QML-specific version of  MappingObject#from: use this version in QML files.
      * @param source {Controller.Standard}  The controller output or function that is the source
      *     of the route data. If a function, it must return a number or a {@link Pose} value as the route data.
      * @returns {RouteObject} 
@@ -8663,7 +9127,8 @@ declare class MappingObject {
     fromQml(source: Controller.Standard): RouteObject;
     /**
      * Create a new  RouteObject from two numeric  Controller.Hardware outputs, one applied in the negative 
-     * direction and the other in the positive direction, ready to be mapped to a standard control, action, or function.This is a QML-specific version of  MappingObject#makeAxis: use this version in QML files.
+     * direction and the other in the positive direction, ready to be mapped to a standard control, action, or function.
+This is a QML-specific version of  MappingObject#makeAxis: use this version in QML files.
      * @param source1 {Controller.Hardware}  The first, negative-direction controller output.
      * @param source2 {Controller.Hardware}  The second, positive-direction controller output.
      * @returns {RouteObject} 
@@ -8702,21 +9167,38 @@ declare class MappingObject {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsA route in a  MappingObject used by the  Controller API.
- * Create a route using  MappingObject methods and apply this object's methods to process it, terminating with  RouteObject#to to apply it to a Standard control, action, or script function. Note: Loops are not permitted.Some methods apply to routes with number data, some apply routes with  Pose data, and some apply to both route types.
+ * 
+Create a route using  MappingObject methods and apply this object's methods to process it, terminating with 
+ RouteObject#to to apply it to a Standard control, action, or script function. Note: Loops are not 
+permitted.
+
+Some methods apply to routes with number data, some apply routes with  Pose data, and some apply to both route 
+types.
  */
 declare class RouteObject {
     /**
      * Terminate the route with a standard control, an action, or a script function. The output value from the route is 
-     * sent to the specified destination.This is a QML-specific version of  MappingObject#to: use this version in QML files.
+     * sent to the specified destination.
+This is a QML-specific version of  MappingObject#to: use this version in QML files.
      * @param destination {Controller.Standard}  The standard control, action, or JavaScript
-     * function that the route output is mapped to. For a function, the parameter can be either the name of the function oran in-line function definition.
+     * function that the route output is mapped to. For a function, the parameter can be either the name of the function or
+an in-line function definition.
      */
     toQml(destination: Controller.Standard): void;
     /**
      * Process the route only if a condition is satisfied. The condition is evaluated before the route input is read, and
-     * the input is read only if the condition is true. Thus, if the condition is not met then subsequentroutes using the same input are processed.This is a QML-specific version of  MappingObject#to: use this version in QML files.
+     * the input is read only if the condition is true. Thus, if the condition is not met then subsequent
+routes using the same input are processed.
+This is a QML-specific version of  MappingObject#to: use this version in QML files.
      * @param expression {condition}  <p>A <code>condition</code> may be a:</p>
-     *     <ul>        <li>A boolean or numeric {@link Controller.Hardware} property, which is evaluated as a boolean.</li>        <li><code>!</code> followed by a {@link Controller.Hardware} property, indicating the logical NOT should be        used.</li>        <li>A script function returning a boolean value. This can be either the name of the function or an in-line        definition.</li>    </ul><p>If an array of conditions is provided, their values are ANDed together.</p>
+     *     <ul>
+        <li>A boolean or numeric {@link Controller.Hardware} property, which is evaluated as a boolean.</li>
+        <li><code>!</code> followed by a {@link Controller.Hardware} property, indicating the logical NOT should be
+        used.</li>
+        <li>A script function returning a boolean value. This can be either the name of the function or an in-line
+        definition.</li>
+    </ul>
+<p>If an array of conditions is provided, their values are ANDed together.</p>
      * @returns {RouteObject} 
      */
     whenQml(expression: condition): RouteObject;
@@ -8724,7 +9206,8 @@ declare class RouteObject {
      * Terminate the route with a standard control, an action, or a script function. The output value from the route is 
      * sent to the specified destination.
      * @param destination {Controller.Standard}  The standard control, action, or JavaScript 
-     * function that the route output is mapped to. For a function, the parameter can be either the name of the function or an in-line function definition.
+     * function that the route output is mapped to. For a function, the parameter can be either the name of the function or 
+an in-line function definition.
      */
     to(destination: Controller.Standard): void;
     /**
@@ -8744,9 +9227,17 @@ declare class RouteObject {
     peek(enable: boolean): RouteObject;
     /**
      * Process the route only if a condition is satisfied. The condition is evaluated before the route input is read, and 
-     * the input is read only if the condition is true. Thus, if the condition is not met then subsequent routes using the same input are processed.
+     * the input is read only if the condition is true. Thus, if the condition is not met then subsequent 
+routes using the same input are processed.
      * @param expression {condition}  <p>A <code>condition</code> may be a:</p>
-     *     <ul>        <li>A numeric {@link Controller.Hardware} property, which is evaluated as a boolean.</li>        <li><code>!</code> followed by a {@link Controller.Hardware} property to use the logical NOT of the property         value.</li>        <li>A script function returning a boolean value. This can be either the name of the function or an in-line         definition.</li>    </ul><p>If an array of conditions is provided, their values are ANDed together.</p>
+     *     <ul>
+        <li>A numeric {@link Controller.Hardware} property, which is evaluated as a boolean.</li>
+        <li><code>!</code> followed by a {@link Controller.Hardware} property to use the logical NOT of the property 
+        value.</li>
+        <li>A script function returning a boolean value. This can be either the name of the function or an in-line 
+        definition.</li>
+    </ul>
+<p>If an array of conditions is provided, their values are ANDed together.</p>
      * @returns {RouteObject} 
      */
     when(expression: condition): RouteObject;
@@ -8760,7 +9251,8 @@ declare class RouteObject {
     clamp(min: number, max: number): RouteObject;
     /**
      * Filter numeric route values such that they are rounded to 0 or 1 without output values 
-     * flickering when the input value hovers around 0.5. For example, this enables you to use an analog input as if it were a toggle.
+     * flickering when the input value hovers around 0.5. For example, this enables you to use an analog input 
+as if it were a toggle.
      * @param min {number}  When the input value drops below this value the output value changes to <code>0</code>.
      * @param max {number}  When the input value rises above this value the output value changes to <code>1</code>.
      * @returns {RouteObject} 
@@ -8786,7 +9278,8 @@ declare class RouteObject {
     invert(): RouteObject;
     /**
      * Filter numeric route values such that they're sent only when the input value is outside a dead-zone. When the input 
-     * passes the dead-zone value, output is sent starting at 0.0 and catching up with the input value. As the input returns toward the dead-zone value, output values reduce to 0.0 at the dead-zone value.
+     * passes the dead-zone value, output is sent starting at 0.0 and catching up with the input value. As the 
+input returns toward the dead-zone value, output values reduce to 0.0 at the dead-zone value.
      * @param min {number}  The minimum input value at which to start sending output. For negative input values, the 
      *    negative of this value is used.
      * @returns {RouteObject} 
@@ -8794,7 +9287,8 @@ declare class RouteObject {
     deadZone(min: number): RouteObject;
     /**
      * Filter numeric route values such that they are rounded to -1, 0, or 1.
-     * For example, this enables you to use an analog input as if it were a toggle or, in the case of a bidirectional axis, a tri-state switch.
+     * For example, this enables you to use an analog input as if it were a toggle or, in the case of a bidirectional axis, 
+a tri-state switch.
      * @returns {RouteObject} 
      */
     constrainToInteger(): RouteObject;
@@ -8830,7 +9324,9 @@ declare class RouteObject {
     rotate(rotation: Quat): RouteObject;
     /**
      * Filter  Pose route values to be smoothed by a low velocity filter. The filter's rotation and translation 
-     * values are calculated as: (1 - f) * currentValue + f * previousValue where f = currentVelocity / filterConstant. At low velocities, the filter value is largely the previous value; at high velocities the value is wholly the current controller value.
+     * values are calculated as: (1 - f) * currentValue + f * previousValue where 
+f = currentVelocity / filterConstant. At low velocities, the filter value is largely the previous 
+value; at high velocities the value is wholly the current controller value.
      * @param rotationConstant {number}  The rotational velocity, in rad/s, at which the filter value is wholly the latest 
      *     controller value.
      * @param translationConstant {number}  The linear velocity, in m/s, at which the filter value is wholly the latest 
@@ -8840,7 +9336,9 @@ declare class RouteObject {
     lowVelocity(rotationConstant: number, translationConstant: number): RouteObject;
     /**
      * Filter  Pose route values to be smoothed by an exponential decay filter. The filter's rotation and 
-     * translation values are calculated as: filterConstant * currentValue + (1 - filterConstant) * previousValue. Values near 1 are less smooth with lower latency; values near 0 are more smooth with higher latency.
+     * translation values are calculated as: filterConstant * currentValue + (1 - filterConstant) * 
+previousValue. Values near 1 are less smooth with lower latency; values near 0 are more smooth with higher 
+latency.
      * @param rotationConstant {number}  Rotation filter constant, <code>0.0&ndash;1.0</code>.
      * @param translationConstant {number}  Translation filter constant, <code>0.0&ndash;1.0</code>.
      * @returns {RouteObject} 
@@ -8922,7 +9420,8 @@ declare namespace Reticle {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsServer Entity ScriptsAssignment Client ScriptsThe Entities API provides facilities to create and interact with entities. Entities are 2D and 3D objects that are visible
- * to everyone and typically are persisted to the domain. For Interface scripts, the entities available are those that Interface has displayed and so knows about.
+ * to everyone and typically are persisted to the domain. For Interface scripts, the entities available are those that 
+Interface has displayed and so knows about.
  */
 declare namespace Entities {
     interface ActionArguments-FarGrab {
@@ -8941,12 +9440,14 @@ declare namespace Entities {
         otherID: Uuid;
         /**
          * Controls how long it takes for the entity's position to catch up with the
-         *     target position. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action     is applied using an exponential decay.
+         *     target position. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action 
+    is applied using an exponential decay.
          */
         linearTimeScale: number;
         /**
          * Controls how long it takes for the entity's orientation to catch up with the
-         *     target orientation. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the     action is applied using an exponential decay.
+         *     target orientation. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the 
+    action is applied using an exponential decay.
          */
         angularTimeScale: number;
     }
@@ -8966,7 +9467,8 @@ declare namespace Entities {
         relativeRotation: Vec3;
         /**
          * Controls how long it takes for the entity's position and rotation to catch up with 
-         *     the target. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action is     applied using an exponential decay.
+         *     the target. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action is 
+    applied using an exponential decay.
          */
         timeScale: number;
         /**
@@ -8997,7 +9499,8 @@ declare namespace Entities {
         ambientIntensity: number;
         /**
          * A cube map image that defines the color of the light coming from each direction. If 
-         *     "" then the entity's  Entities.Skybox url property value is used, unless that also is "" in which     case the entity's ambientLightMode property is set to "inherit".
+         *     "" then the entity's  Entities.Skybox url property value is used, unless that also is "" in which 
+    case the entity's ambientLightMode property is set to "inherit".
          */
         ambientURL: string;
     }
@@ -9064,12 +9567,16 @@ declare namespace Entities {
         name: string;
         /**
          * The entity type. You cannot change the type of an entity after it's created. (Though 
-         *     its value may switch among "Box", "Shape", and "Sphere" depending on changes to     the shape property set for entities of these types.) Read-only.
+         *     its value may switch among "Box", "Shape", and "Sphere" depending on changes to 
+    the shape property set for entities of these types.) Read-only.
          */
         type: Entities.EntityType;
         /**
          * If true then the entity is an avatar entity; otherwise it is a server
-         *     entity. An avatar entity follows you to each domain you visit, rendering at the same world coordinates unless it's     parented to your avatar. Value cannot be changed after the entity is created.    The value can also be set at entity creation by using the clientOnly parameter in      Entities.addEntity.
+         *     entity. An avatar entity follows you to each domain you visit, rendering at the same world coordinates unless it's 
+    parented to your avatar. Value cannot be changed after the entity is created.
+    The value can also be set at entity creation by using the clientOnly parameter in 
+     Entities.addEntity.
          */
         clientOnly: boolean;
         /**
@@ -9117,7 +9624,9 @@ declare namespace Entities {
         visible: boolean;
         /**
          * Whether or not the entity can cast a shadow. Currently applicable only to 
-         *      Entities.EntityType and  Entities.EntityType entities. Shadows are cast if inside a      Entities.EntityType entity with castShadows enabled in its      Entities.EntityProperties-Zone property.
+         *      Entities.EntityType and  Entities.EntityType entities. Shadows are cast if inside a 
+     Entities.EntityType entity with castShadows enabled in its 
+     Entities.EntityProperties-Zone property.
          */
         canCastShadow: boolean;
         /**
@@ -9134,7 +9643,8 @@ declare namespace Entities {
         rotation: Quat;
         /**
          * The point in the entity that is set to the entity's position and is rotated 
-         *      about,  Vec3 &ndash;  Vec3. A value of  Vec3 is the entity's     minimum x, y, z corner; a value of  Vec3 is the entity's maximum x, y, z corner.
+         *      about,  Vec3 &ndash;  Vec3. A value of  Vec3 is the entity's
+     minimum x, y, z corner; a value of  Vec3 is the entity's maximum x, y, z corner.
          */
         registrationPoint: Vec3;
         /**
@@ -9153,7 +9663,9 @@ declare namespace Entities {
         velocity: Vec3;
         /**
          * How much to slow down the linear velocity of an entity over time, 0.0 
-         *     &ndash; 1.0. A higher damping value slows down the entity more quickly. The default value is for an     exponential decay timescale of 2.0s, where it takes 2.0s for the movement to slow to 1/e = 0.368 of its     initial value.
+         *     &ndash; 1.0. A higher damping value slows down the entity more quickly. The default value is for an 
+    exponential decay timescale of 2.0s, where it takes 2.0s for the movement to slow to 1/e = 0.368 of its 
+    initial value.
          */
         damping: number;
         /**
@@ -9163,17 +9675,26 @@ declare namespace Entities {
         angularVelocity: Vec3;
         /**
          * How much to slow down the angular velocity of an entity over time, 
-         *     0.0 &ndash; 1.0. A higher damping value slows down the entity more quickly. The default value     is for an exponential decay timescale of 2.0s, where it takes 2.0s for the movement to slow to 1/e = 0.368     of its initial value.
+         *     0.0 &ndash; 1.0. A higher damping value slows down the entity more quickly. The default value 
+    is for an exponential decay timescale of 2.0s, where it takes 2.0s for the movement to slow to 1/e = 0.368 
+    of its initial value.
          */
         angularDamping: number;
         /**
          * The acceleration due to gravity in m/s2 that the entity should move with, in 
-         *     world coordinates. Set to { x: 0, y: -9.8, z: 0 } to simulate Earth's gravity. Gravity is applied to an     entity's motion only if its dynamic property is true. If changing an entity's     gravity from  Vec3, you need to give it a small velocity in order to kick     off physics simulation.    The gravity value is applied in addition to the acceleration value.
+         *     world coordinates. Set to { x: 0, y: -9.8, z: 0 } to simulate Earth's gravity. Gravity is applied to an 
+    entity's motion only if its dynamic property is true. If changing an entity's 
+    gravity from  Vec3, you need to give it a small velocity in order to kick 
+    off physics simulation.
+    The gravity value is applied in addition to the acceleration value.
          */
         gravity: Vec3;
         /**
          * A general acceleration in m/s2 that the entity should move with, in world 
-         *     coordinates. The acceleration is applied to an entity's motion only if its dynamic property is     true. If changing an entity's acceleration from  Vec3, you need to give it     a small velocity in order to kick off physics simulation.    The acceleration value is applied in addition to the gravity value.
+         *     coordinates. The acceleration is applied to an entity's motion only if its dynamic property is 
+    true. If changing an entity's acceleration from  Vec3, you need to give it 
+    a small velocity in order to kick off physics simulation.
+    The acceleration value is applied in addition to the gravity value.
          */
         acceleration: Vec3;
         /**
@@ -9183,12 +9704,14 @@ declare namespace Entities {
         restitution: number;
         /**
          * How much to slow down an entity when it's moving against another, 0.0 &ndash; 
-         *     10.0. The higher the value, the more quickly it slows down. Examples: 0.1 for ice,     0.9 for sandpaper.
+         *     10.0. The higher the value, the more quickly it slows down. Examples: 0.1 for ice, 
+    0.9 for sandpaper.
          */
         friction: number;
         /**
          * The density of the entity in kg/m3, 100 for balsa wood &ndash; 
-         *     10000 for silver. The density is used in conjunction with the entity's bounding box volume to work out its     mass in the application of physics.
+         *     10000 for silver. The density is used in conjunction with the entity's bounding box volume to work out its 
+    mass in the application of physics.
          */
         density: number;
         /**
@@ -9233,7 +9756,10 @@ declare namespace Entities {
         description: string;
         /**
          * Used to store extra data about the entity in JSON format. WARNING: Other apps such as the 
-         *     Create app can also use this property, so make sure you handle data stored by other apps &mdash; edit only your bit and     leave the rest of the data intact. You can use JSON.parse() to parse the string into a JavaScript object     which you can manipulate the properties of, and use JSON.stringify() to convert the object into a string to     put in the property.
+         *     Create app can also use this property, so make sure you handle data stored by other apps &mdash; edit only your bit and 
+    leave the rest of the data intact. You can use JSON.parse() to parse the string into a JavaScript object 
+    which you can manipulate the properties of, and use JSON.stringify() to convert the object into a string to 
+    put in the property.
          */
         userData: string;
         /**
@@ -9242,7 +9768,9 @@ declare namespace Entities {
         script: string;
         /**
          * Intended to be used to indicate when the client entity script was loaded. Should be 
-         *     an integer number of milliseconds since midnight GMT on January 1, 1970 (e.g., as supplied by Date.now().     If you update the property's value, the script is re-downloaded and reloaded. This is how the "reload"     button beside the "script URL" field in properties tab of the Create app works.
+         *     an integer number of milliseconds since midnight GMT on January 1, 1970 (e.g., as supplied by Date.now(). 
+    If you update the property's value, the script is re-downloaded and reloaded. This is how the "reload" 
+    button beside the "script URL" field in properties tab of the Create app works.
          */
         scriptTimestamp: number;
         /**
@@ -9261,7 +9789,8 @@ declare namespace Entities {
         parentJointIndex: number;
         /**
          * The position of the entity relative to its parent if the entity is parented, 
-         *     otherwise the same value as position. If the entity is parented to an avatar and is clientOnly     so that it scales with the avatar, this value remains the original local position value while the avatar scale changes.
+         *     otherwise the same value as position. If the entity is parented to an avatar and is clientOnly 
+    so that it scales with the avatar, this value remains the original local position value while the avatar scale changes.
          */
         localPosition: Vec3;
         /**
@@ -9281,7 +9810,8 @@ declare namespace Entities {
         localAngularVelocity: Vec3;
         /**
          * The dimensions of the entity. If the entity is parented to an avatar and is 
-         *     clientOnly so that it scales with the avatar, this value remains the original dimensions value while the     avatar scale changes.
+         *     clientOnly so that it scales with the avatar, this value remains the original dimensions value while the 
+    avatar scale changes.
          */
         localDimensions: Vec3;
         /**
@@ -9291,12 +9821,18 @@ declare namespace Entities {
         boundingBox: Entities.BoundingBox;
         /**
          * The axis-aligned cube that determines where the entity lives in the entity server's octree. 
-         *     The cube may be considerably larger than the entity in some situations, e.g., when the entity is grabbed by an avatar:     the position of the entity is determined through avatar mixer updates and so the AA cube is expanded in order to reduce     unnecessary entity server updates. Scripts should not change this property's value.
+         *     The cube may be considerably larger than the entity in some situations, e.g., when the entity is grabbed by an avatar: 
+    the position of the entity is determined through avatar mixer updates and so the AA cube is expanded in order to reduce 
+    unnecessary entity server updates. Scripts should not change this property's value.
          */
         queryAACube: AACube;
         /**
          * Base-64 encoded compressed dump of the actions associated with the entity. This property
-         *     is typically not used in scripts directly; rather, functions that manipulate an entity's actions update it.    The size of this property increases with the number of actions. Because this property value has to fit within a High     Fidelity datagram packet there is a limit to the number of actions that an entity can have, and edits which would result     in overflow are rejected.    Read-only.
+         *     is typically not used in scripts directly; rather, functions that manipulate an entity's actions update it.
+    The size of this property increases with the number of actions. Because this property value has to fit within a High 
+    Fidelity datagram packet there is a limit to the number of actions that an entity can have, and edits which would result 
+    in overflow are rejected.
+    Read-only.
          */
         actionData: string;
         /**
@@ -9424,7 +9960,8 @@ declare namespace Entities {
         dimensions: Vec3;
         /**
          * The sequence of points to draw lines between. The values are relative to the entity's
-         *     position. A maximum of 70 points can be specified. The property's value is set only if all the linePoints     lie within the entity's dimensions.
+         *     position. A maximum of 70 points can be specified. The property's value is set only if all the linePoints 
+    lie within the entity's dimensions.
          */
         linePoints: Array.<Vec3>;
         /**
@@ -9440,17 +9977,22 @@ declare namespace Entities {
     interface EntityProperties-Material {
         /**
          * URL to a  MaterialResource. If you append ?name to the URL, the 
-         *     material with that name in the  MaterialResource will be applied to the entity.     Alternatively, set the property value to "materialData" to use the materialData property      for the  MaterialResource values.
+         *     material with that name in the  MaterialResource will be applied to the entity. 
+    Alternatively, set the property value to "materialData" to use the materialData property  
+    for the  MaterialResource values.
          */
         materialURL: string;
         /**
          * The priority for applying the material to its parent. Only the highest priority material is 
-         *     applied, with materials of the same priority randomly assigned. Materials that come with the model have a priority of     0.
+         *     applied, with materials of the same priority randomly assigned. Materials that come with the model have a priority of 
+    0.
          */
         priority: number;
         /**
          * Selects the submesh or submeshes within the parent to apply the material 
-         *     to. If in the format "mat::string", all submeshes with material name "string" are replaced.     Otherwise the property value is parsed as an unsigned integer, specifying the mesh index to modify. Invalid values are     parsed to 0.
+         *     to. If in the format "mat::string", all submeshes with material name "string" are replaced. 
+    Otherwise the property value is parsed as an unsigned integer, specifying the mesh index to modify. Invalid values are 
+    parsed to 0.
          */
         parentMaterialName: string;
         /**
@@ -9473,7 +10015,8 @@ declare namespace Entities {
         materialMappingRot: number;
         /**
          * Used to store  MaterialResource data as a JSON string. You can use 
-         *     JSON.parse() to parse the string into a JavaScript object which you can manipulate the properties of, and     use JSON.stringify() to convert the object into a string to put in the property.
+         *     JSON.parse() to parse the string into a JavaScript object which you can manipulate the properties of, and 
+    use JSON.stringify() to convert the object into a string to put in the property.
          */
         materialData: string;
     }
@@ -9481,7 +10024,8 @@ declare namespace Entities {
     interface EntityProperties-Model {
         /**
          * The dimensions of the entity. When adding an entity, if no dimensions 
-         *     value is specified then the model is automatically sized to its      Entities.EntityProperties.
+         *     value is specified then the model is automatically sized to its 
+     Entities.EntityProperties.
          */
         dimensions: Vec3;
         /**
@@ -9490,17 +10034,22 @@ declare namespace Entities {
         color: Color;
         /**
          * The URL of the FBX of OBJ model. Baked FBX models' URLs end in ".baked.fbx".
-         *     Note: If the name ends with "default-image-model.fbx" then the entity is considered to be an "Image"     entity, in which case the textures property should be set per the example.
+         *     Note: If the name ends with "default-image-model.fbx" then the entity is considered to be an "Image" 
+    entity, in which case the textures property should be set per the example.
          */
         modelURL: string;
         /**
          * A JSON string of texture name, URL pairs used when rendering the model in place of the
-         *     model's original textures. Use a texture name from the originalTextures property to override that texture.     Only the texture names and URLs to be overridden need be specified; original textures are used where there are no     overrides. You can use JSON.stringify() to convert a JavaScript object of name, URL pairs into a JSON     string.
+         *     model's original textures. Use a texture name from the originalTextures property to override that texture. 
+    Only the texture names and URLs to be overridden need be specified; original textures are used where there are no 
+    overrides. You can use JSON.stringify() to convert a JavaScript object of name, URL pairs into a JSON 
+    string.
          */
         textures: string;
         /**
          * A JSON string of texture name, URL pairs used in the model. The property value is 
-         *     filled in after the entity has finished rezzing (i.e., textures have loaded). You can use JSON.parse() to     parse the JSON string into a JavaScript object of name, URL pairs. Read-only.
+         *     filled in after the entity has finished rezzing (i.e., textures have loaded). You can use JSON.parse() to 
+    parse the JSON string into a JavaScript object of name, URL pairs. Read-only.
          */
         originalTextures: string;
         /**
@@ -9518,22 +10067,32 @@ declare namespace Entities {
         animation: Entities.AnimationProperties;
         /**
          * Joint rotations applied to the model; [] if none are applied or the 
-         *     model hasn't loaded. The array indexes are per  Entities.getJointIndex. Rotations are relative to     each joint's parent.    Joint rotations can be set by  Entities.setLocalJointRotation and similar functions, or by    setting the value of this property. If you set a joint rotation using this property you also need to set the     corresponding jointRotationsSet value to true.
+         *     model hasn't loaded. The array indexes are per  Entities.getJointIndex. Rotations are relative to 
+    each joint's parent.
+    Joint rotations can be set by  Entities.setLocalJointRotation and similar functions, or by
+    setting the value of this property. If you set a joint rotation using this property you also need to set the 
+    corresponding jointRotationsSet value to true.
          */
         jointRotations: Array.<Quat>;
         /**
          * true values for joints that have had rotations applied, 
-         *     false otherwise; [] if none are applied or the model hasn't loaded. The array indexes are per      Entities.getJointIndex.
+         *     false otherwise; [] if none are applied or the model hasn't loaded. The array indexes are per 
+     Entities.getJointIndex.
          */
         jointRotationsSet: Array.<boolean>;
         /**
          * Joint translations applied to the model; [] if none are applied or 
-         *     the model hasn't loaded. The array indexes are per  Entities.getJointIndex. Rotations are relative     to each joint's parent.    Joint translations can be set by  Entities.setLocalJointTranslation and similar     functions, or by setting the value of this property. If you set a joint translation using this property you also need to     set the corresponding jointTranslationsSet value to true.
+         *     the model hasn't loaded. The array indexes are per  Entities.getJointIndex. Rotations are relative 
+    to each joint's parent.
+    Joint translations can be set by  Entities.setLocalJointTranslation and similar 
+    functions, or by setting the value of this property. If you set a joint translation using this property you also need to 
+    set the corresponding jointTranslationsSet value to true.
          */
         jointTranslations: Array.<Vec3>;
         /**
          * true values for joints that have had translations applied, 
-         *     false otherwise; [] if none are applied or the model hasn't loaded. The array indexes are per      Entities.getJointIndex.
+         *     false otherwise; [] if none are applied or the model hasn't loaded. The array indexes are per 
+     Entities.getJointIndex.
          */
         jointTranslationsSet: Array.<boolean>;
         /**
@@ -9577,7 +10136,9 @@ declare namespace Entities {
         emitAcceleration: vec3;
         /**
          * The spread in accelerations that each particle is given. If
-         *     emitAccelerations == {x: 0, y: -9.8, z: 0} and accelerationSpread ==    {x: 0, y: 1, z: 0}, each particle will have an acceleration in the range {x: 0, y: -10.8, z: 0}    &ndash; {x: 0, y: -8.8, z: 0}.
+         *     emitAccelerations == {x: 0, y: -9.8, z: 0} and accelerationSpread ==
+    {x: 0, y: 1, z: 0}, each particle will have an acceleration in the range {x: 0, y: -10.8, z: 0}
+    &ndash; {x: 0, y: -8.8, z: 0}.
          */
         accelerationSpread: vec3;
         /**
@@ -9592,7 +10153,9 @@ declare namespace Entities {
         emitterShouldTrail: boolean;
         /**
          * The orientation of particle emission relative to the entity's axes. By
-         *     default, particles emit along the entity's local z-axis, and azimuthStart and azimuthFinish     are relative to the entity's local x-axis. The default value is a rotation of -90 degrees about the local x-axis, i.e.,     the particles emit vertically.
+         *     default, particles emit along the entity's local z-axis, and azimuthStart and azimuthFinish 
+    are relative to the entity's local x-axis. The default value is a rotation of -90 degrees about the local x-axis, i.e., 
+    the particles emit vertically.
          */
         emitOrientation: Quat;
         /**
@@ -9601,27 +10164,33 @@ declare namespace Entities {
         emitDimensions: vec3;
         /**
          * The starting radius within the ellipsoid at which particles start being emitted;
-         *     range 0.0 &ndash; 1.0 for the ellipsoid center to the ellipsoid surface, respectively.    Particles are emitted from the portion of the ellipsoid that lies between emitRadiusStart and the     ellipsoid's surface.
+         *     range 0.0 &ndash; 1.0 for the ellipsoid center to the ellipsoid surface, respectively.
+    Particles are emitted from the portion of the ellipsoid that lies between emitRadiusStart and the 
+    ellipsoid's surface.
          */
         emitRadiusStart: number;
         /**
          * The angle in radians from the entity's local z-axis at which particles start being emitted 
-         *     within the ellipsoid; range 0 &ndash; Math.PI. Particles are emitted from the portion of the     ellipsoid that lies between polarStart and polarFinish.
+         *     within the ellipsoid; range 0 &ndash; Math.PI. Particles are emitted from the portion of the 
+    ellipsoid that lies between polarStart and polarFinish.
          */
         polarStart: number;
         /**
          * The angle in radians from the entity's local z-axis at which particles stop being emitted 
-         *     within the ellipsoid; range 0 &ndash; Math.PI. Particles are emitted from the portion of the     ellipsoid that lies between polarStart and polarFinish.
+         *     within the ellipsoid; range 0 &ndash; Math.PI. Particles are emitted from the portion of the 
+    ellipsoid that lies between polarStart and polarFinish.
          */
         polarFinish: number;
         /**
          * The angle in radians from the entity's local x-axis about the entity's local 
-         *     z-axis at which particles start being emitted; range -Math.PI &ndash; Math.PI. Particles are     emitted from the portion of the ellipsoid that lies between azimuthStart and azimuthFinish.
+         *     z-axis at which particles start being emitted; range -Math.PI &ndash; Math.PI. Particles are 
+    emitted from the portion of the ellipsoid that lies between azimuthStart and azimuthFinish.
          */
         azimuthStart: number;
         /**
          * The angle in radians from the entity's local x-axis about the entity's local
-         *     z-axis at which particles stop being emitted; range -Math.PI &ndash; Math.PI. Particles are    emitted from the portion of the ellipsoid that lies between azimuthStart and azimuthFinish.
+         *     z-axis at which particles stop being emitted; range -Math.PI &ndash; Math.PI. Particles are
+    emitted from the portion of the ellipsoid that lies between azimuthStart and azimuthFinish.
          */
         azimuthFinish: number;
         /**
@@ -9645,7 +10214,8 @@ declare namespace Entities {
         radiusFinish: number;
         /**
          * The spread in radius that each particle is given. If particleRadius == 0.5
-         *     and radiusSpread == 0.25, each particle will have a radius in the range 0.25 &ndash;     0.75.
+         *     and radiusSpread == 0.25, each particle will have a radius in the range 0.25 &ndash; 
+    0.75.
          */
         radiusSpread: number;
         /**
@@ -9664,7 +10234,9 @@ declare namespace Entities {
         colorFinish: Color;
         /**
          * The spread in color that each particle is given. If
-         *     color == {red: 100, green: 100, blue: 100} and colorSpread ==    {red: 10, green: 25, blue: 50}, each particle will have a color in the range     {red: 90, green: 75, blue: 50} &ndash; {red: 110, green: 125, blue: 150}.
+         *     color == {red: 100, green: 100, blue: 100} and colorSpread ==
+    {red: 10, green: 25, blue: 50}, each particle will have a color in the range 
+    {red: 90, green: 75, blue: 50} &ndash; {red: 110, green: 125, blue: 150}.
          */
         colorSpread: Color;
         /**
@@ -9683,7 +10255,8 @@ declare namespace Entities {
         alphaFinish: number;
         /**
          * The spread in alpha that each particle is given. If alpha == 0.5
-         *     and alphaSpread == 0.25, each particle will have an alpha in the range 0.25 &ndash;     0.75.
+         *     and alphaSpread == 0.25, each particle will have an alpha in the range 0.25 &ndash; 
+    0.75.
          */
         alphaSpread: number;
         /**
@@ -9769,12 +10342,18 @@ declare namespace Entities {
         dimensions: Vec3;
         /**
          * Integer number of voxels along each axis of the entity, in the range 
-         *     1,1,1 to 128,128,128. The dimensions of each voxel is     dimensions / voxelVolumesize.
+         *     1,1,1 to 128,128,128. The dimensions of each voxel is 
+    dimensions / voxelVolumesize.
          */
         voxelVolumeSize: Vec3;
         /**
          * Base-64 encoded compressed dump of 
-         *     the PolyVox data. This property is typically not used in scripts directly; rather, functions that manipulate a PolyVox     entity update it.    The size of this property increases with the size and complexity of the PolyVox entity, with the size depending on how     the particular entity's voxels compress. Because this property value has to fit within a High Fidelity datagram packet     there is a limit to the size and complexity of a PolyVox entity, and edits which would result in an overflow are     rejected.
+         *     the PolyVox data. This property is typically not used in scripts directly; rather, functions that manipulate a PolyVox 
+    entity update it.
+    The size of this property increases with the size and complexity of the PolyVox entity, with the size depending on how 
+    the particular entity's voxels compress. Because this property value has to fit within a High Fidelity datagram packet 
+    there is a limit to the size and complexity of a PolyVox entity, and edits which would result in an overflow are 
+    rejected.
          */
         voxelData: string;
         /**
@@ -9888,7 +10467,8 @@ declare namespace Entities {
         sourceUrl: string;
         /**
          * The resolution to display the page at, in dots per inch. If you convert this to dots per meter 
-         *     (multiply by 1 / 0.0254 = 39.3701) then multiply dimensions.x and dimensions.y by that value     you get the resolution in pixels.
+         *     (multiply by 1 / 0.0254 = 39.3701) then multiply dimensions.x and dimensions.y by that value 
+    you get the resolution in pixels.
          */
         dpi: number;
     }
@@ -9901,7 +10481,8 @@ declare namespace Entities {
         dimensions: Vec3;
         /**
          * The shape of the volume in which the zone's lighting effects and avatar 
-         *     permissions have effect. Reverts to the default value if set to "none", or set to "compound"     and compoundShapeURL is "".
+         *     permissions have effect. Reverts to the default value if set to "none", or set to "compound" 
+    and compoundShapeURL is "".
          */
         shapeType: ShapeType;
         /**
@@ -9911,7 +10492,11 @@ declare namespace Entities {
         compoundShapeURL: string;
         /**
          * Configures the key light in the zone. Possible values:
-         *     "inherit": The key light from any enclosing zone continues into this zone.    "disabled": The key light from any enclosing zone and the key light of this zone are disabled in this         zone.    "enabled": The key light properties of this zone are enabled, overriding the key light of from any         enclosing zone.
+         *     "inherit": The key light from any enclosing zone continues into this zone.
+    "disabled": The key light from any enclosing zone and the key light of this zone are disabled in this 
+        zone.
+    "enabled": The key light properties of this zone are enabled, overriding the key light of from any 
+        enclosing zone.
          */
         keyLightMode: string;
         /**
@@ -9920,7 +10505,11 @@ declare namespace Entities {
         keyLight: Entities.KeyLight;
         /**
          * Configures the ambient light in the zone. Possible values:
-         *     "inherit": The ambient light from any enclosing zone continues into this zone.    "disabled": The ambient light from any enclosing zone and the ambient light of this zone are disabled in         this zone.    "enabled": The ambient light properties of this zone are enabled, overriding the ambient light from any         enclosing zone.
+         *     "inherit": The ambient light from any enclosing zone continues into this zone.
+    "disabled": The ambient light from any enclosing zone and the ambient light of this zone are disabled in 
+        this zone.
+    "enabled": The ambient light properties of this zone are enabled, overriding the ambient light from any 
+        enclosing zone.
          */
         ambientLightMode: string;
         /**
@@ -9929,7 +10518,9 @@ declare namespace Entities {
         ambientLight: Entities.AmbientLight;
         /**
          * Configures the skybox displayed in the zone. Possible values:
-         *     "inherit": The skybox from any enclosing zone is dislayed in this zone.    "disabled": The skybox from any enclosing zone and the skybox of this zone are disabled in this zone.    "enabled": The skybox properties of this zone are enabled, overriding the skybox from any enclosing zone.
+         *     "inherit": The skybox from any enclosing zone is dislayed in this zone.
+    "disabled": The skybox from any enclosing zone and the skybox of this zone are disabled in this zone.
+    "enabled": The skybox properties of this zone are enabled, overriding the skybox from any enclosing zone.
          */
         skyboxMode: string;
         /**
@@ -9938,7 +10529,9 @@ declare namespace Entities {
         skybox: Entities.Skybox;
         /**
          * Configures the haze in the zone. Possible values:
-         *     "inherit": The haze from any enclosing zone continues into this zone.    "disabled": The haze from any enclosing zone and the haze of this zone are disabled in this zone.    "enabled": The haze properties of this zone are enabled, overriding the haze from any enclosing zone.
+         *     "inherit": The haze from any enclosing zone continues into this zone.
+    "disabled": The haze from any enclosing zone and the haze of this zone are disabled in this zone.
+    "enabled": The haze properties of this zone are enabled, overriding the haze from any enclosing zone.
          */
         hazeMode: string;
         /**
@@ -9947,7 +10540,9 @@ declare namespace Entities {
         haze: Entities.Haze;
         /**
          * Configures the bloom in the zone. Possible values:
-         *     "inherit": The bloom from any enclosing zone continues into this zone.    "disabled": The bloom from any enclosing zone and the bloom of this zone are disabled in this zone.    "enabled": The bloom properties of this zone are enabled, overriding the bloom from any enclosing zone.
+         *     "inherit": The bloom from any enclosing zone continues into this zone.
+    "disabled": The bloom from any enclosing zone and the bloom of this zone are disabled in this zone.
+    "enabled": The bloom properties of this zone are enabled, overriding the bloom from any enclosing zone.
          */
         bloomMode: string;
         /**
@@ -9965,7 +10560,14 @@ declare namespace Entities {
         ghostingAllowed: boolean;
         /**
          * The URL of a JavaScript file that filters changes to properties of entities within the 
-         *     zone. It is periodically executed for each entity in the zone. It can, for example, be used to not allow changes to     certain properties.function filter(properties) {    // Test and edit properties object values,    // e.g., properties.modelURL, as required.    return properties;}
+         *     zone. It is periodically executed for each entity in the zone. It can, for example, be used to not allow changes to 
+    certain properties.
+
+function filter(properties) {
+    // Test and edit properties object values,
+    // e.g., properties.modelURL, as required.
+    return properties;
+}
          */
         filterURL: string;
     }
@@ -10044,7 +10646,8 @@ declare namespace Entities {
         face: BoxFace;
         /**
          * Extra information depending on the entity intersected. Currently, only Model 
-         *     entities provide extra information, and the information provided depends on the precisionPicking parameter     value that the search function was called with.
+         *     entities provide extra information, and the information provided depends on the precisionPicking parameter 
+    value that the search function was called with.
          */
         extraInfo: object;
     }
@@ -10059,7 +10662,8 @@ declare namespace Entities {
     function getMultipleEntityProperties(entityIDs: Array.<Uuid>, desiredProperties: Array.<string>): Array.<Entities.EntityProperties>;
     /**
      * Check whether or not you can change the locked property of entities. Locked entities have their 
-     * locked property set to true and cannot be edited or deleted. Whether or not you can change entities' locked properties is configured in the domain server's permissions.
+     * locked property set to true and cannot be edited or deleted. Whether or not you can change 
+entities' locked properties is configured in the domain server's permissions.
      * @returns {boolean} 
      */
     function canAdjustLocks(): boolean;
@@ -10100,13 +10704,15 @@ declare namespace Entities {
      * Add a new entity with specified properties.
      * @param properties {Entities.EntityProperties}  The properties of the entity to create.
      * @param clientOnly {boolean} [clientOnly=false] If <code>true</code>, or if <code>clientOnly</code> is set <code>true</code> in 
-     *     the properties, the entity is created as an avatar entity; otherwise it is created on the server. An avatar entity     follows you to each domain you visit, rendering at the same world coordinates unless it's parented to your avatar.
+     *     the properties, the entity is created as an avatar entity; otherwise it is created on the server. An avatar entity 
+    follows you to each domain you visit, rendering at the same world coordinates unless it's parented to your avatar.
      * @returns {Uuid} 
      */
     function addEntity(properties: Entities.EntityProperties, clientOnly: boolean): Uuid;
     /**
      * Create a clone of an entity. A clone can be created by a client that doesn't have rez permissions in the current domain.
-     * The entity must have its cloneable property set to true. The clone has a modified name, other properties set per its clone related-properties, and its clone-related properties are set to defaults.
+     * The entity must have its cloneable property set to true. The clone has a modified name, other 
+properties set per its clone related-properties, and its clone-related properties are set to defaults.
      * @param entityID {Uuid}  The ID of the entity to clone.
      * @returns {Uuid} 
      */
@@ -10133,7 +10739,9 @@ declare namespace Entities {
     function deleteEntity(entityID: Uuid): void;
     /**
      * Call a method in a client entity script from a client script or client entity script, or call a method in a server 
-     * entity script from a server entity script. The entity script method must be exposed as a property in the target client entity script. Additionally, if calling a server entity script, the server entity script must include the method's name in an exposed property called remotelyCallable that is an array of method names that can be called.
+     * entity script from a server entity script. The entity script method must be exposed as a property in the target client 
+entity script. Additionally, if calling a server entity script, the server entity script must include the method's name 
+in an exposed property called remotelyCallable that is an array of method names that can be called.
      * @param entityID {Uuid}  The ID of the entity to call the method in.
      * @param method {string}  The name of the method to call.
      * @param parameters {Array.<string>} [parameters=[]] The parameters to call the specified method with.
@@ -10141,7 +10749,9 @@ declare namespace Entities {
     function callEntityMethod(entityID: Uuid, method: string, parameters: Array.<string>): void;
     /**
      * Call a method in a server entity script from a client script or client entity script. The entity script method must be 
-     * exposed as a property in the target server entity script. Additionally, the target server entity script must include the method's name in an exposed property called remotelyCallable that is an array of method names that can be called.
+     * exposed as a property in the target server entity script. Additionally, the target server entity script must include the 
+method's name in an exposed property called remotelyCallable that is an array of method names that can be 
+called.
      * @param entityID {Uuid}  The ID of the entity to call the method in.
      * @param method {string}  The name of the method to call.
      * @param parameters {Array.<string>} [parameters=[]] The parameters to call the specified method with.
@@ -10204,7 +10814,8 @@ declare namespace Entities {
     function findEntitiesByName(entityName: string, center: Vec3, radius: number, caseSensitive: boolean): Array.<Uuid>;
     /**
      * Find the first entity intersected by a  PickRay. Light and Zone entities are not 
-     * intersected unless they've been configured as pickable using  Entities.setLightsArePickableand  Entities.setZonesArePickable, respectively.
+     * intersected unless they've been configured as pickable using  Entities.setLightsArePickable
+and  Entities.setZonesArePickable, respectively.
      * @param pickRay {PickRay}  The PickRay to use for finding entities.
      * @param precisionPicking {boolean} [precisionPicking=false] If <code>true</code> and the intersected entity is a <code>Model</code> 
      *     entity, the result's <code>extraInfo</code> property includes more information than it otherwise would.
@@ -10219,7 +10830,9 @@ declare namespace Entities {
     function findRayIntersection(pickRay: PickRay, precisionPicking: boolean, entitiesToInclude: Array.<Uuid>, entitiesToDiscard: Array.<Uuid>, visibleOnly: boolean, collideableOnly: boolean): Entities.RayToEntityIntersectionResult;
     /**
      * Find the first entity intersected by a  PickRay. Light and Zone entities are not 
-     * intersected unless they've been configured as pickable using  Entities.setLightsArePickable and  Entities.setZonesArePickable, respectively.This is a synonym for  Entities.findRayIntersection.
+     * intersected unless they've been configured as pickable using  Entities.setLightsArePickable 
+and  Entities.setZonesArePickable, respectively.
+This is a synonym for  Entities.findRayIntersection.
      * @param pickRay {PickRay}  The PickRay to use for finding entities.
      * @param precisionPicking {boolean} [precisionPicking=false] If <code>true</code> and the intersected entity is a <code>Model</code>
      *     entity, the result's <code>extraInfo</code> property includes more information than it otherwise would.
@@ -10259,27 +10872,37 @@ declare namespace Entities {
     function queryPropertyMetadata(entityID: Uuid, property: string, scope: object, callback: Entities~queryPropertyMetadataCallback): boolean;
     /**
      * Set whether or not ray picks intersect the bounding box of  Entities.EntityType entities. By default, Light 
-     * entities are not intersected. The setting lasts for the Interface session. Ray picks are done using      Entities.findRayIntersection or      Entities.findRayIntersectionBlocking, or the  Picks and  RayPick     APIs.
+     * entities are not intersected. The setting lasts for the Interface session. Ray picks are done using 
+     Entities.findRayIntersection or 
+     Entities.findRayIntersectionBlocking, or the  Picks and  RayPick 
+    APIs.
      * @param value {boolean}  Set <code>true</code> to make ray picks intersect the bounding box of 
      *     {@link Entities.EntityType|Light} entities, otherwise <code>false</code>.
      */
     function setLightsArePickable(value: boolean): void;
     /**
      * Get whether or not ray picks intersect the bounding box of  Entities.EntityType entities. Ray picks are 
-     *     done using  Entities.findRayIntersection or      Entities.findRayIntersectionBlocking, or the  Picks and  RayPick     APIs.
+     *     done using  Entities.findRayIntersection or 
+     Entities.findRayIntersectionBlocking, or the  Picks and  RayPick 
+    APIs.
      * @returns {boolean} 
      */
     function getLightsArePickable(): boolean;
     /**
      * Set whether or not ray picks intersect the bounding box of  Entities.EntityType entities. By default, Light 
-     * entities are not intersected. The setting lasts for the Interface session. Ray picks are done using      Entities.findRayIntersection or      Entities.findRayIntersectionBlocking, or the  Picks and  RayPick     APIs.
+     * entities are not intersected. The setting lasts for the Interface session. Ray picks are done using 
+     Entities.findRayIntersection or 
+     Entities.findRayIntersectionBlocking, or the  Picks and  RayPick 
+    APIs.
      * @param value {boolean}  Set <code>true</code> to make ray picks intersect the bounding box of 
      *     {@link Entities.EntityType|Zone} entities, otherwise <code>false</code>.
      */
     function setZonesArePickable(value: boolean): void;
     /**
      * Get whether or not ray picks intersect the bounding box of  Entities.EntityType entities. Ray picks are 
-     *     done using  Entities.findRayIntersection or      Entities.findRayIntersectionBlocking, or the  Picks and  RayPick     APIs.
+     *     done using  Entities.findRayIntersection or 
+     Entities.findRayIntersectionBlocking, or the  Picks and  RayPick 
+    APIs.
      * @returns {boolean} 
      */
     function getZonesArePickable(): boolean;
@@ -10315,7 +10938,8 @@ declare namespace Entities {
      * Set the value of a particular voxels in a  Entities.EntityType entity.
      * @param entityID {Uuid}  The ID of the {@link Entities.EntityType|PolyVox} entity.
      * @param position {Vec3}  The position relative to the minimum axes values corner of the entity. The 
-     *     <code>position</code> coordinates are rounded to the nearest integer to get the voxel coordinate. The minimum axes     corner voxel is <code>{ x: 0, y: 0, z: 0 }</code>.
+     *     <code>position</code> coordinates are rounded to the nearest integer to get the voxel coordinate. The minimum axes 
+    corner voxel is <code>{ x: 0, y: 0, z: 0 }</code>.
      * @param value {number}  If <code>value % 256 == 0</code> then voxel is cleared, otherwise the voxel is set.
      */
     function setVoxel(entityID: Uuid, position: Vec3, value: number): void;
@@ -10336,7 +10960,8 @@ declare namespace Entities {
     function setVoxelsInCuboid(entityID: Uuid, lowPosition: Vec3, cuboidSize: Vec3, value: number): void;
     /**
      * Convert voxel coordinates in a  Entities.EntityType entity to world coordinates. Voxel coordinates are 
-     * relative to the minimum axes values corner of the entity with a scale of Vec3.ONE being the dimensions of each voxel.
+     * relative to the minimum axes values corner of the entity with a scale of Vec3.ONE being the dimensions of 
+each voxel.
      * @param entityID {Uuid}  The ID of the {@link Entities.EntityType|PolyVox} entity.
      * @param voxelCoords {Vec3}  The voxel coordinates. May be fractional and outside the entity's bounding box.
      * @returns {Vec3} 
@@ -10344,7 +10969,8 @@ declare namespace Entities {
     function voxelCoordsToWorldCoords(entityID: Uuid, voxelCoords: Vec3): Vec3;
     /**
      * Convert world coordinates to voxel coordinates in a  Entities.EntityType entity. Voxel coordinates are 
-     * relative to the minimum axes values corner of the entity, with a scale of Vec3.ONE being the dimensions of each voxel.
+     * relative to the minimum axes values corner of the entity, with a scale of Vec3.ONE being the dimensions of 
+each voxel.
      * @param entityID {Uuid}  The ID of the {@link Entities.EntityType|PolyVox} entity.
      * @param worldCoords {Vec3}  The world coordinates. May be outside the entity's bounding box.
      * @returns {Vec3} 
@@ -10387,7 +11013,8 @@ declare namespace Entities {
     function dumpTree(): void;
     /**
      * Add an action to an entity. An action is registered with the physics engine and is applied every physics simulation 
-     * step. Any entity may have more than one action associated with it, but only as many as will fit in an entity's actionData property.
+     * step. Any entity may have more than one action associated with it, but only as many as will fit in an entity's 
+actionData property.
      * @param actionType {Entities.ActionType}  The type of action.
      * @param entityID {Uuid}  The ID of the entity to add the action to.
      * @param arguments {Entities.ActionArguments}  Configure the action.
@@ -10502,7 +11129,8 @@ declare namespace Entities {
     function setLocalJointRotations(entityID: Uuid, rotations: Array.<Quat>): boolean;
     /**
      * Set the local rotations and translations of joints in a  Entities.EntityType entity. This is the same as 
-     * calling both  Entities.setLocalJointRotations and  Entities.setLocalJointTranslations at the same time.
+     * calling both  Entities.setLocalJointRotations and 
+ Entities.setLocalJointTranslations at the same time.
      * @param entityID {Uuid}  The ID of the entity.
      * @param rotations {Array.<Quat>}  The local rotations to set the joints to.
      * @param translations {Array.<Vec3>}  The local translations to set the joints to.
@@ -10828,7 +11456,8 @@ declare namespace Entities {
     function deletingEntity(entityID: Uuid): Signal;
     /**
      * Triggered when an entity is added to Interface's local in-memory tree of entities it knows about. This may occur when 
-     * entities are loaded upon visiting a domain, when the user rotates their view so that more entities become visible, and when a domain or client-only entity is added (e.g., by Entities.addEntity).
+     * entities are loaded upon visiting a domain, when the user rotates their view so that more entities become visible, and 
+when a domain or client-only entity is added (e.g., by Entities.addEntity).
      * @param entityID {Uuid}  The ID of the entity added.
      * @returns {Signal} 
      */
@@ -10920,7 +11549,8 @@ declare namespace Entities {
         direction: Vec3;
         /**
          * If true then shadows are cast. Shadows are cast by avatars, plus 
-         *      Entities.EntityType and  Entities.EntityType entities that have their      Entities.EntityProperties property set to true.
+         *      Entities.EntityType and  Entities.EntityType entities that have their 
+     Entities.EntityProperties property set to true.
          */
         castShadows: boolean;
     }
@@ -11024,7 +11654,8 @@ declare namespace Entities {
         linearDistance: number;
         /**
          * Controls how long it takes for the entity's position to catch up with the
-         *     target offset. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action     is applied using an exponential decay.
+         *     target offset. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action 
+    is applied using an exponential decay.
          */
         linearTimeScale: number;
     }
@@ -11045,12 +11676,14 @@ declare namespace Entities {
         otherID: Uuid;
         /**
          * Controls how long it takes for the entity's position to catch up with the
-         *     target position. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action     is applied using an exponential decay.
+         *     target position. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the action 
+    is applied using an exponential decay.
          */
         linearTimeScale: number;
         /**
          * Controls how long it takes for the entity's orientation to catch up with the
-         *     target orientation. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the     action is applied using an exponential decay.
+         *     target orientation. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the 
+    action is applied using an exponential decay.
          */
         angularTimeScale: number;
     }
@@ -11062,7 +11695,8 @@ declare namespace Entities {
         forward: Vec3;
         /**
          * Controls how long it takes for the entity's orientation to catch up with the 
-         *     direction of travel. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the     action is applied using an exponential decay.
+         *     direction of travel. The value is the time for the action to catch up to 1/e = 0.368 of the target value, where the 
+    action is applied using an exponential decay.
          */
         angularTimeScale: number;
     }
@@ -11233,7 +11867,8 @@ declare namespace Entities {
         ::no-motion-state: boolean;
         /**
          * Is true when the action is modifying the entity's motion, false 
-         *     otherwise. Is present once the entity has been registered with the physics engine, otherwise undefined.     Read-only.
+         *     otherwise. Is present once the entity has been registered with the physics engine, otherwise undefined. 
+    Read-only.
          */
         ::active: boolean;
         /**
@@ -11245,20 +11880,23 @@ declare namespace Entities {
 
     /**
      * Triggered when the script starts for a user.
-     * Note: Can only be connected to via this.preload = function (...) { ... } in the entity script.Available in:Client Entity ScriptsServer Entity Scripts
+     * Note: Can only be connected to via this.preload = function (...) { ... } in the entity script.
+Available in:Client Entity ScriptsServer Entity Scripts
      * @param entityID {Uuid}  The ID of the entity that the script is running in.
      * @returns {Signal} 
      */
     function preload(entityID: Uuid): Signal;
     /**
      * Triggered when the script terminates for a user.
-     * Note: Can only be connected to via this.unoad = function () { ... } in the entity script.Available in:Client Entity ScriptsServer Entity Scripts
+     * Note: Can only be connected to via this.unoad = function () { ... } in the entity script.
+Available in:Client Entity ScriptsServer Entity Scripts
      * @returns {Signal} 
      */
     function unload(): Signal;
     /**
      * Get or set the  Entities.EntityType entity that has keyboard focus.
-     *     If no entity has keyboard focus, get returns null; set to null or  Uuid to     clear keyboard focus.
+     *     If no entity has keyboard focus, get returns null; set to null or  Uuid to 
+    clear keyboard focus.
      */
     let keyboardFocusEntity: Uuid;
 }
@@ -11653,13 +12291,18 @@ declare namespace TextureCache {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsAssignment Client ScriptsThe location API provides facilities related to your current location in the metaverse.
- * Getter/SetterYou can get and set your current metaverse address by directly reading a string value from and writing a string value to the location object. This is an alternative to using the location.href property or this object'sfunctions.
+ * 
+Getter/Setter
+You can get and set your current metaverse address by directly reading a string value from and writing a string value to 
+the location object. This is an alternative to using the location.href property or this object's
+functions.
  */
 declare namespace location {
     /**
      * Go to a specified metaverse address.
      * @param address {string}  The address to go to: a <code>"hifi://"<code> address, an IP address (e.g., 
-     * <code>"127.0.0.1"</code> or <code>"localhost"</code>), a domain name, a named path on a domain (starts with <code>"/"</code>), a position or position and orientation, or a user (starts with <code>"@"</code>).
+     * <code>"127.0.0.1"</code> or <code>"localhost"</code>), a domain name, a named path on a domain (starts with 
+<code>"/"</code>), a position or position and orientation, or a user (starts with <code>"@"</code>).
      * @param fromSuggestions {boolean}  Set to <code>true</code> if the address is obtained from the "Goto" dialog.
      *    Helps ensure that user's location history is correctly maintained.
      */
@@ -11805,17 +12448,21 @@ declare namespace location {
     function goForwardPossible(isPossible: boolean): Signal;
     /**
      * A UUID uniquely identifying the domain you're visiting. Is  Uuid if you're not
-     *     connected to the domain or are in a serverless domain.    Read-only.
+     *     connected to the domain or are in a serverless domain.
+    Read-only.
      */
     let domainID: Uuid;
     /**
      * The name of the domain for your current metaverse address (e.g., "AvatarIsland",
-     *     localhost, or an IP address). Is blank if you're in a serverless domain.    Read-only.
+     *     localhost, or an IP address). Is blank if you're in a serverless domain.
+    Read-only.
      */
     let hostname: string;
     /**
      * Your current metaverse address (e.g., "hifi://avatarisland/15,-10,26/0,0,0,1")
-     *     regardless of whether or not you're connected to the domain. Starts with "file:///" if you're in a     serverless domain.    Read-only.
+     *     regardless of whether or not you're connected to the domain. Starts with "file:///" if you're in a 
+    serverless domain.
+    Read-only.
      */
     let href: string;
     /**
@@ -11825,12 +12472,14 @@ declare namespace location {
     let isConnected: boolean;
     /**
      * The location and orientation in your current href metaverse address 
-     *     (e.g., "/15,-10,26/0,0,0,1").    Read-only.
+     *     (e.g., "/15,-10,26/0,0,0,1").
+    Read-only.
      */
     let pathname: string;
     /**
      * The place name in your current href metaverse address
-     *     (e.g., "AvatarIsland"). Is blank if your hostname is an IP address.    Read-only.
+     *     (e.g., "AvatarIsland"). Is blank if your hostname is an IP address.
+    Read-only.
      */
     let placename: string;
     /**
@@ -11842,7 +12491,15 @@ declare namespace location {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsServer Entity ScriptsAssignment Client ScriptsThe Messages API enables text and data to be sent between scripts over named "channels". A channel can have an arbitrary 
- * name to help separate messaging between different sets of scripts.Note: If you want to call a function in another script, you should use one of the following rather than sending a message:   Entities.callEntityClientMethod   Entities.callEntityMethod   Entities.callEntityServerMethod   Script.callEntityScriptMethod
+ * name to help separate messaging between different sets of scripts.
+
+Note: If you want to call a function in another script, you should use one of the following rather than 
+sending a message:
+
+   Entities.callEntityClientMethod
+   Entities.callEntityMethod
+   Entities.callEntityServerMethod
+   Script.callEntityScriptMethod
  */
 declare namespace Messages {
     /**
@@ -11850,12 +12507,16 @@ declare namespace Messages {
      * @param channel {string}  The channel to send the message on.
      * @param message {string}  The message to send.
      * @param localOnly {boolean} [localOnly=false] If <code>false</code> then the message is sent to all Interface, client entity, 
-     *     server entity, and assignment client scripts in the domain.<br />    If <code>true</code> then: if sent from an Interface or client entity script it is received by all Interface and     client entity scripts; if sent from a server entity script it is received by all entity server scripts; and if sent     from an assignment client script it is received only by that same assignment client script.
+     *     server entity, and assignment client scripts in the domain.<br />
+    If <code>true</code> then: if sent from an Interface or client entity script it is received by all Interface and 
+    client entity scripts; if sent from a server entity script it is received by all entity server scripts; and if sent 
+    from an assignment client script it is received only by that same assignment client script.
      */
     function sendMessage(channel: string, message: string, localOnly: boolean): void;
     /**
      * Send a text message locally on a channel.
-     * This is the same as calling  Messages.sendMessage with localOnly set to true.
+     * This is the same as calling  Messages.sendMessage with localOnly set to 
+true.
      * @param channel {string}  The channel to send the message on.
      * @param message {string}  The message to send.
      */
@@ -11866,12 +12527,16 @@ declare namespace Messages {
      * @param data {object}  The data to send. The data is handled as a byte stream, for example as may be provided via a 
      *     JavaScript <code>Int8Array</code> object.
      * @param localOnly {boolean} [localOnly=false] If <code>false</code> then the message is sent to all Interface, client entity,
-     *     server entity, and assignment client scripts in the domain.<br />    If <code>true</code> then: if sent from an Interface or client entity script it is received by all Interface and    client entity scripts; if sent from a server entity script it is received by all entity server scripts; and if sent    from an assignment client script it is received only by that same assignment client script.
+     *     server entity, and assignment client scripts in the domain.<br />
+    If <code>true</code> then: if sent from an Interface or client entity script it is received by all Interface and
+    client entity scripts; if sent from a server entity script it is received by all entity server scripts; and if sent
+    from an assignment client script it is received only by that same assignment client script.
      */
     function sendData(channel: string, data: object, localOnly: boolean): void;
     /**
      * Subscribe the scripting environment &mdash; Interface, the entity script server, or assignment client instance &mdash; 
-     * to receive messages on a specific channel. Note that, for example, if there are two Interface scripts that subscribe to different channels, both scripts will receive messages on both channels.
+     * to receive messages on a specific channel. Note that, for example, if there are two Interface scripts that subscribe to 
+different channels, both scripts will receive messages on both channels.
      * @param channel {string}  The channel to subscribe to.
      */
     function subscribe(channel: string): void;
@@ -11886,7 +12551,8 @@ declare namespace Messages {
      *     to your script.
      * @param message {string}  The message received.
      * @param senderID {Uuid}  The UUID of the sender: the user's session UUID if sent by an Interface or client entity 
-     *     script, the UUID of the entity script server if sent by a server entity script, or the UUID of the assignment client     instance if sent by an assignment client script.
+     *     script, the UUID of the entity script server if sent by a server entity script, or the UUID of the assignment client 
+    instance if sent by an assignment client script.
      * @param localOnly {boolean}  <code>true</code> if the message was sent with <code>localOnly = true</code>.
      * @returns {Signal} 
      */
@@ -11898,7 +12564,9 @@ declare namespace Messages {
      * @param data {object}  The data received. The data is handled as a byte stream, for example as may be used by a 
      *     JavaScript <code>Int8Array</code> object.
      * @param senderID {Uuid}  The UUID of the sender: the user's session UUID if sent by an Interface or client entity
-     *     script, the UUID of the entity script server if sent by a server entity script, or the UUID of the assignment client    script, the UUID of the entity script server if sent by a server entity script, or the UUID of the assignment client    instance if sent by an assignment client script.
+     *     script, the UUID of the entity script server if sent by a server entity script, or the UUID of the assignment client
+    script, the UUID of the entity script server if sent by a server entity script, or the UUID of the assignment client
+    instance if sent by an assignment client script.
      * @param localOnly {boolean}  <code>true</code> if the message was sent with <code>localOnly = true</code>.
      * @returns {Signal} 
      */
@@ -12341,7 +13009,8 @@ declare namespace Mat4 {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsServer Entity ScriptsAssignment Client ScriptsThe Quat API provides facilities for generating and manipulating quaternions.
- * Quaternions should be used in preference to Euler angles wherever possible because quaternions don't suffer from the problemof gimbal lock.
+ * Quaternions should be used in preference to Euler angles wherever possible because quaternions don't suffer from the problem
+of gimbal lock.
  */
 declare namespace Quat {
     /**
@@ -12427,14 +13096,16 @@ declare namespace Quat {
     function inverse(q: Quat): Quat;
     /**
      * Get the "front" direction that the camera would face if its orientation was set to the quaternion value.
-     * This is a synonym for  Quat.getForward.The High Fidelity camera has axes x = right, y = up, -z = forward.
+     * This is a synonym for  Quat.getForward.
+The High Fidelity camera has axes x = right, y = up, -z = forward.
      * @param orientation {Quat}  A quaternion representing an orientation.
      * @returns {Vec3} 
      */
     function getFront(orientation: Quat): Vec3;
     /**
      * Get the "forward" direction that the camera would face if its orientation was set to the quaternion value.
-     * This is a synonym for  Quat.getFront.The High Fidelity camera has axes x = right, y = up, -z = forward.
+     * This is a synonym for  Quat.getFront.
+The High Fidelity camera has axes x = right, y = up, -z = forward.
      * @param orientation {Quat}  A quaternion representing an orientation.
      * @returns {Vec3} 
      */
@@ -12485,7 +13156,8 @@ declare namespace Quat {
      * @param q1 {Quat}  The beginning rotation.
      * @param q2 {Quat}  The ending rotation.
      * @param alpha {number}  The mixture coefficient between <code>0.0</code> and <code>1.0</code>. Specifies the proportion
-     *     of <code>q2</code>'s value to return in favor of <code>q1</code>'s value. A value of <code>0.0</code> returns     <code>q1</code>'s value; <code>1.0</code> returns <code>q2s</code>'s value.
+     *     of <code>q2</code>'s value to return in favor of <code>q1</code>'s value. A value of <code>0.0</code> returns 
+    <code>q1</code>'s value; <code>1.0</code> returns <code>q2s</code>'s value.
      * @returns {Quat} 
      */
     function mix(q1: Quat, q2: Quat, alpha: number): Quat;
@@ -12495,7 +13167,8 @@ declare namespace Quat {
      * @param q1 {Quat}  The beginning rotation.
      * @param q2 {Quat}  The ending rotation.
      * @param alpha {number}  The mixture coefficient between <code>0.0</code> and <code>1.0</code>. Specifies the proportion
-     *     of <code>q2</code>'s value to return in favor of <code>q1</code>'s value. A value of <code>0.0</code> returns    <code>q1</code>'s value; <code>1.0</code> returns <code>q2s</code>'s value.
+     *     of <code>q2</code>'s value to return in favor of <code>q1</code>'s value. A value of <code>0.0</code> returns
+    <code>q1</code>'s value; <code>1.0</code> returns <code>q2s</code>'s value.
      * @returns {Quat} 
      */
     function slerp(q1: Quat, q2: Quat, alpha: number): Quat;
@@ -12708,7 +13381,8 @@ declare class AudioInjector {
         volume: number;
         /**
          * Alter the pitch of the sound, within +/- 2 octaves. The value is the relative sample rate to 
-         *     resample the sound at, range 0.0625 &ndash; 16.0. A value of 0.0625 lowers the     pitch by 2 octaves; 1.0 is no change in pitch; 16.0 raises the pitch by 2 octaves.
+         *     resample the sound at, range 0.0625 &ndash; 16.0. A value of 0.0625 lowers the 
+    pitch by 2 octaves; 1.0 is no change in pitch; 16.0 raises the pitch by 2 octaves.
          */
         pitch: number;
         /**
@@ -13255,7 +13929,8 @@ declare namespace ScriptDiscoveryService {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsProvided as a property of  ScriptDiscoveryService.
- * Has properties and functions below in addition to those of http://doc.qt.io/qt-5/qabstractitemmodel.html.
+ * Has properties and functions below in addition to those of 
+http://doc.qt.io/qt-5/qabstractitemmodel.html.
  */
 declare class ScriptsModel {
     /**
@@ -13299,14 +13974,16 @@ declare class ScriptsModel {
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsProvided as a property of  ScriptDiscoveryService.
- * Has properties and functions per http://doc.qt.io/qt-5/qsortfilterproxymodel.html.
+ * Has properties and functions per 
+http://doc.qt.io/qt-5/qsortfilterproxymodel.html.
  */
 declare class ScriptsModelFilter {
 }
 
 /**
  * Available in:Interface ScriptsClient Entity ScriptsServer Entity ScriptsAssignment Client ScriptsA UUID (Universally Unique IDentifier) is used to uniquely identify entities, overlays, avatars, and the like. It is
- * represented in JavaScript as a string in the format, {nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}, where the "n"s arehexadecimal digits.
+ * represented in JavaScript as a string in the format, {nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn}, where the "n"s are
+hexadecimal digits.
  */
 declare namespace Uuid {
     /**
@@ -13407,7 +14084,8 @@ declare namespace Users {
     function mute(nodeID: Uuid): void;
     /**
      * Request the user name and machine fingerprint associated with the given UUID. The user name will be returned in a 
-     *  Users.usernameFromIDReply signal. This will only do anything if you're an admin of the domain you're in.
+     *  Users.usernameFromIDReply signal. This will only do anything if you're an admin of the domain 
+you're in.
      * @param nodeID {Uuid}  The node or session ID of the user whose user name you want.
      */
     function requestUsernameFromID(nodeID: Uuid): void;
@@ -13450,7 +14128,8 @@ declare namespace Users {
     function enteredIgnoreRadius(): Signal;
     /**
      * Triggered in response to a  Users.requestUsernameFromID call. Provides the user name and 
-     * machine fingerprint associated with a UUID.Username and machineFingerprint will be their default constructor output if the requesting user isn't an admin.
+     * machine fingerprint associated with a UUID.
+Username and machineFingerprint will be their default constructor output if the requesting user isn't an admin.
      * @param nodeID {Uuid}  
      * @param userName {string}  
      * @param machineFingerprint {string}  
@@ -13847,7 +14526,8 @@ declare namespace Camera {
     function setOrientation(orientation: Quat): void;
     /**
      * Compute a  PickRay based on the current camera configuration and the specified x, y position on the 
-     *     screen. The  PickRay can be used in functions such as  Entities.findRayIntersection and      Overlays.findRayIntersection.
+     *     screen. The  PickRay can be used in functions such as  Entities.findRayIntersection and 
+     Overlays.findRayIntersection.
      * @param x {number}  X-coordinate on screen.
      * @param y {number}  Y-coordinate on screen.
      * @returns {PickRay} 
