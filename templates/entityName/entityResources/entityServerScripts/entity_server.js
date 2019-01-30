@@ -35,6 +35,7 @@
 
 
     var _entityID;
+    var materialID;
 
 
     // #endregion
@@ -63,6 +64,7 @@
     // Initialize the entity on preload
     function preload(entityID) {
         _entityID = entityID;
+
     }
 
 
