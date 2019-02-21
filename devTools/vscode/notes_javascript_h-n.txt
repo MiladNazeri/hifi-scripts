@@ -1,0 +1,19 @@
+{
+    "notes": {
+        "scope": "javascript",
+        "prefix": "h-n",
+        "body": [
+            "",
+            "/*",
+            "    NOTES",
+            "    -----",
+            "    IDEAS:",
+            "",
+            "    TODOS:",
+            "",
+            "*/",
+            ""
+        ],
+        "description": "note section"
+    }
+}

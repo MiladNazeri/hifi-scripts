@@ -23,26 +23,31 @@ function gp(){
    git push
 }
 
+
 # Just commit don't push.  Optional commit message
 function gc(){
     git add .
     git commit -m "$1"
 }
 
+
 # Set this branch to have a designated upstream for easy push and pull
 function up(){
     git branch --set-upstream-to=$1/$2
 }
+
 
 # Checkout a branch.  You can also do co -b branch if you want to make one
 function co(){
     git checkout $1 $2
 }
 
+
 # shortcut for the sync function
 function s(){
     sync
 }
+
 
 # push with several defaults made
 function pu(){
@@ -59,34 +64,41 @@ function pu(){
     fi
 }
 
+
 # get the status 
 function gs() {
     git status
 }
+
 
 # get logs with a default of the last 10 but you can change that with an argument
 function gl() {
     git log --oneline ${1:--10}
 }
 
+
 # Fetch a repo or all repos
 function gf() {
     git fetch ${1:---all}
 }
 
+
 function gb() {
     git branch $1
 }
+
 
 # push a dir
 function p(){
     pushd $1
 }
 
+
 # pop a dir
 function pd(){
     popd $1
 }
+
 
 # format list of directories
 function d(){
