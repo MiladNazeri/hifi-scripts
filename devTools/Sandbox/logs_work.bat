@@ -1,4 +1,4 @@
-start "Interface" "D:\ROLC_High-Fidelity\01_Reference\R_Programs\HF Builds\Stable\LATEST\interface.exe"
+REM start "Interface" "D:\ROLC_High-Fidelity\01_Reference\R_Programs\HF Builds\Stable\LATEST\interface.exe"
 start "domain server" "D:\ROLC_High-Fidelity\01_Reference\R_Programs\HF Builds\Stable\LATEST\domain-server.exe"
 timeout /t 1
 start "audiomixer" "D:\ROLC_High-Fidelity\01_Reference\R_Programs\HF Builds\Stable\LATEST\assignment-client.exe" -t 0

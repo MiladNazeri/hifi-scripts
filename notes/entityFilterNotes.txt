@@ -1,0 +1,47 @@
+
+EntityTree::filterProperties
+gets auto entityEditFilters = DependencyManager::get<EntityEditFilters>() and calls the filter function
+This will just give a bool back
+-used in shouldEraseEntity
+
+
+shouldEraseEntity
+We check if you are allowed as the editor(lock/unlock)
+- Delete / Edit
+Dummy properties are passed so there is no difference between properties and original properties
+- allowed T/F
+
+- Used in processEraseMessage and EntityTree::processEditPacketData
+
+processEraseMessage
+                if (shouldEraseEntity(entityID, sourceNode)) {
+                    entityItemIDsToDelete << entityItemID;
+                    cleanupCloneIDs(entityItemID);
+                }
+            }
+            deleteEntities(entityItemIDsToDelete, true, true); 
+
+
+EntityTree::processEditPacketData
+Handles the following -
+PacketType::EntityErase
+	processEraseMessageDetails -> processEraseMessage -> processEraseMessage -> EntityTree::deleteEntities
+
+PacketType::EntityClone
+PacketType::EntityAdd
+	isAdd = true (next case) 
+PacketType::EntityPhysics
+	This does nothing, just falls through to edit
+	
+PacketType::EntityEdit
+	Is it physics - isPhysics = true
+
+return processedBytes;
+
+// Having (un)lock rights bypasses the filter, unless it's a physics result.
+- This is for Edit / Add (delete handled differently and physics pass through)
+
+Question about was changed - how is this getting set if it's not being passed by reference?
+
+- We then check if it exists and not added ( for edit )
+
