@@ -1,3 +1,14 @@
+
+/*
+    NOTES
+    -----
+    IDEAS:
+
+    TODOS:
+
+*/
+
+
 // test script to transform controller data from avatar space into sensor space.
 
 var VELOCITY_MULTIPLIER = 5.0;
@@ -80,7 +91,11 @@ function update(dt) {
                     previousAzimuth.y = 0;
                     var currentAzimuth = Quat.getFront(pose.rotation);
                     currentAzimuth.y = 0;
-                    smoothedRotation[hand] = Quat.mix(Quat.rotationBetween(currentAzimuth, previousAzimuth), smoothedRotation[hand], SMOOTH_ROTATION);
+                    smoothedRotation[hand] = Quat.mix(
+                        Quat.rotationBetween(currentAzimuth, previousAzimuth), 
+                        smoothedRotation[hand], 
+                        SMOOTH_ROTATION
+                    );
                     MyAvatar.orientation = Quat.multiply(MyAvatar.orientation, smoothedRotation[hand]);
                 } else {
                     // Something went wrong, and we suddenly got a big change in the sensor position!
