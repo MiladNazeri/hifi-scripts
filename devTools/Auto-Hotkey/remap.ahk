@@ -1,8 +1,5 @@
-+CapsLock::CapsLock
-CapsLock::Ctrl
-
 ; CapsLock navigation
-Suspend On
+; Suspend On
 
 i::Up
 j::Left
@@ -12,6 +9,14 @@ u::Home
 o::End
 p::PgUp
 `;::PgDn
-
-CapsLock::Suspend Off
-CapsLock Up::Suspend On
+y::Backspace
+h::Delete
+'::WheelUp
+/::WheelDown
+,::^Left
+.::^Right
+n::Tab
+c::^c
+v::^v
+x::^x
+CapsLock & Tab::Suspend, Toggle
