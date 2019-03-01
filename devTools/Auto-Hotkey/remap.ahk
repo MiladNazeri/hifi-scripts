@@ -1,54 +1,78 @@
-; CapsLock navigation
-Suspend On
+; Script to help remap your keyboard in a secondary mode
 
+; CapsLock navigation
+; Suspend means it's not running
+Suspend On
+; Toggle suspense with Ctrl + 6
+;^6::Suspend, toggle
+^;::Suspend, toggle
+
+; https://autohotkey.com/docs/KeyList.htm
+; ` escape a character
+; # Windows key
+; + Shift
+; ^ Ctrl
+; ! Alt
+
+; Arrow keys
 i::Up
 j::Left
 k::Down
 l::Right
+,::^Left  ; This does control Left and right to skip between words = default windows function
+.::^Right 
+
+; Standard Navigation
 u::Home
 o::End
 p::PgUp
 `;::PgDn
-y::Backspace
-h::Delete
-'::WheelUp
-/::WheelDown
-,::^Left
-.::^Right
+
+; Additonal function keys
 n::Tab
-c::^c
+h::Backspace
+y::Delete
+1::Esc
+
+; cut copy and paste
+c::^c 
 v::^v
 x::^x
-q::^+o
-w::^+[
-e::^+]
-g::^g
-r::+!Down
-z::^z
-f::^f
-7::+Up
-8::+Down
-9::^+\
+
+; VS Code things
+q::^+o ; opens up the symbols finder
+w::^+[ ; fold
+e::^+] ; unfold
+g::^g ; Go to line
+r::+!Down ; Copies the line down
+z::^z ; undo
+f::^f ; finds
+7::+Up ; shift up to highlight above current line
+8::+Down ; high light below
+9::^+\ ; go to the end of the current bracket
+a::+F12 ; find all references to the current high light
+s::^s ; saves a file
+d::^/ ; turns line into a comment
+b::+!g ; Smart Grow
+5::^d ; add the next occurance of highlighted item
+2::^#!2 ; Git commit all
+3::^b ; Files
+
 t::Click
 ^t::Click, right
-a::+F12
-s::^s
-d::^/
-b::+!g
-5::^d
+'::WheelUp
+/::WheelDown
 6::MouseMove, % A_CaretX, % A_CaretY
-1::MouseMove, 0, -20, 0, R  ; Win+UpArrow hotkey => Move cursor upward
-2::MouseMove, 0, 20, 0, R  ; Win+DownArrow => Move cursor downward
-3::MouseMove, -20, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
-4::MouseMove, 20, 0, 0, R  ; Win+RightArrow => Move cursor to the right
-^1::MouseMove, 0, -5, 0, R  ; Win+UpArrow hotkey => Move cursor upward
-^2::MouseMove, 0, 5, 0, R  ; Win+DownArrow => Move cursor downward
-^3::MouseMove, -5, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
-^4::MouseMove, 5, 0, 0, R  ; Win+RightArrow => Move cursor to the right
-+1::MouseMove, 0, -175, 0, R  ; Win+UpArrow hotkey => Move cursor upward
-+2::MouseMove, 0, 175, 0, R  ; Win+DownArrow => Move cursor downward
-+3::MouseMove, -175, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
-+4::MouseMove, 175, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+^i::MouseMove, 0, -20, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+^k::MouseMove, 0, 20, 0, R  ; Win+DownArrow => Move cursor downward
+^j::MouseMove, -20, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+^l::MouseMove, 20, 0, 0, R  ; Win+RightArrow => Move cursor to the right
++i::MouseMove, 0, -5, 0, R  ; Win+UpArrow hotkey => Move cursor upward
++k::MouseMove, 0, 5, 0, R  ; Win+DownArrow => Move cursor downward
++j::MouseMove, -5, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
++l::MouseMove, 5, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+!i::MouseMove, 0, -175, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+!k::MouseMove, 0, 175, 0, R  ; Win+DownArrow => Move cursor downward
+!j::MouseMove, -175, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+!l::MouseMove, 175, 0, 0, R  ; Win+RightArrow => Move cursor to the right
 
-
-^6::Suspend, toggle
