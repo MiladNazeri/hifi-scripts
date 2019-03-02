@@ -63,16 +63,29 @@ t::Click
 '::WheelUp
 /::WheelDown
 6::MouseMove, % A_CaretX, % A_CaretY
-^i::MouseMove, 0, -20, 0, R  ; Win+UpArrow hotkey => Move cursor upward
-^k::MouseMove, 0, 20, 0, R  ; Win+DownArrow => Move cursor downward
-^j::MouseMove, -20, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
-^l::MouseMove, 20, 0, 0, R  ; Win+RightArrow => Move cursor to the right
-+i::MouseMove, 0, -5, 0, R  ; Win+UpArrow hotkey => Move cursor upward
-+k::MouseMove, 0, 5, 0, R  ; Win+DownArrow => Move cursor downward
-+j::MouseMove, -5, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
-+l::MouseMove, 5, 0, 0, R  ; Win+RightArrow => Move cursor to the right
-!i::MouseMove, 0, -175, 0, R  ; Win+UpArrow hotkey => Move cursor upward
-!k::MouseMove, 0, 175, 0, R  ; Win+DownArrow => Move cursor downward
-!j::MouseMove, -175, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
-!l::MouseMove, 175, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+; ^i::MouseMove, 0, -20, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+; ^k::MouseMove, 0, 20, 0, R  ; Win+DownArrow => Move cursor downward
+; ^j::MouseMove, -20, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+; ^l::MouseMove, 20, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+; +i::MouseMove, 0, -5, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+; +k::MouseMove, 0, 5, 0, R  ; Win+DownArrow => Move cursor downward
+; +j::MouseMove, -5, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+; +l::MouseMove, 5, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+; !i::MouseMove, 0, -175, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+; !k::MouseMove, 0, 175, 0, R  ; Win+DownArrow => Move cursor downward
+; !j::MouseMove, -175, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+; !l::MouseMove, 175, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+; 6::MouseMove, % A_CaretX, % A_CaretY
+UP::MouseMove, 0, -40, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+DOWN::MouseMove, 0, 40, 0, R  ; Win+DownArrow => Move cursor downward
+LEFT::MouseMove, -40, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+RIGHT::MouseMove, 40, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+^!UP::MouseMove, 0, -10, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+^!DOWN::MouseMove, 0, 10, 0, R  ; Win+DownArrow => Move cursor downward
+^!LEFT::MouseMove, -10, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+^!RIGHT::MouseMove, 10, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+^UP::MouseMove, 0, -250, 0, R  ; Win+UpArrow hotkey => Move cursor upward
+^DOWN::MouseMove, 0, 250, 0, R  ; Win+DownArrow => Move cursor downward
+^LEFT::MouseMove, -250, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
+^RIGHT::MouseMove, 250, 0, 0, R  ; Win+RightArrow => Move cursor to the right
 
