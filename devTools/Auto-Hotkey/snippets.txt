@@ -1,0 +1,25 @@
+; Additonal function keys
+n  -  Tab
+h  -  Backspace
+y  -  Delete
+1  -  Esc
+4  -  ^w ; close window
+
+; VS Code things
+q  -  opens up the symbols finder
+w  -  fold
+e  -  unfold
+g  -  Go to line
+r  -  Copies the line down
+z  -  undo
+f  -  finds
+7  -  shift up to highlight above current line
+8  -  high light below
+9  -  go to the end of the current bracket
+a  -  find all references to the current high light
+s  -  saves a file
+d  -  turns line into a comment
+b  -  Smart Grow
+5  -  add the next occurance of highlighted item
+2  -  Git commit all
+3  -  Files

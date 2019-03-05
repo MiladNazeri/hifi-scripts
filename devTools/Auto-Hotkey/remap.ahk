@@ -1,5 +1,6 @@
 ; Script to help remap your keyboard in a secondary mode
 
+
 ; CapsLock navigation
 ; Suspend means it's not running
 Suspend On
@@ -18,17 +19,47 @@ if (isOn) {
     currentMessage := msgOff
 }
 
-CustomColor := "EEAA99"  ; Can be any RGB color (it will be made transparent below).
-Gui +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
-Gui, Color, %CustomColor%
-Gui, Font, s32 cFFFFFF ; Set a large font size (32-point).
-Gui, Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
-; Make all pixels of this color transparent and make the text itself translucent (150):
-WinSet, TransColor, %CustomColor% 175
-Gui, Show, Center NoActivate  ; NoActivate avoids deactivating the currently active window.
-Sleep, 135
-Gui, Destroy
+SysGet, MonitorCount, MonitorCount
+Loop, %MonitorCount%
+{
+    SysGet, MonitorName, MonitorName, %A_Index%
+    SysGet, Monitor, Monitor, %A_Index%
+    SysGet, MonitorWorkArea, MonitorWorkArea, %A_Index%
+    ; MsgBox, Monitor:`t#%A_Index%`nName:`t%MonitorName%`nLeft:`t%MonitorLeft% (%MonitorWorkAreaLeft% work)`nTop:`t%MonitorTop% (%MonitorWorkAreaTop% work)`nRight:`t%MonitorRight% (%MonitorWorkAreaRight% work)`nBottom:`t%MonitorBottom% (%MonitorWorkAreaBottom% work)
+    test := MonitorRight - MonitorLeft
+    ; MsgBox, %test%
+    centerHorizontal := MonitorLeft
+    centerVertical := MonitorTop
+    ; centerHorizontal := (MonitorRight - MonitorLeft) / 2 + MonitorLeft
+    ; centerVertical := (MonitorBottom - MonitorTop) / 2 + MonitorTop
+    ; MsgBox, %centerHorizontal% : %centerVertical%
+    CustomColor := "000000"  ; Can be any RGB color (it will be made transparent below).
+    Gui, %A_Index%: +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item. 
+    Gui, %A_Index%: Color, %CustomColor%
+    Gui, %A_Index%: Font, s40 cFFFFFF ; Set a large fount size (32-point).
+    Gui, %A_Index%: Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
+    ; Make all pixels of this color transparent and make the text itself translucent (150):
+    ; WinSet, TransColor, %CustomColor% 255
+    Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical% NoActivate  ; NoActivate avoids deactivating the currently active window.
+    ; return
+}
+sleep 300
+Gui, 1: Destroy
+Gui, 2: Destroy
 return
+; CustomColor := "EEAA99"  ; Can be any RGB color (it will be made transparent below).
+; Gui +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
+; Gui, Color, %CustomColor%
+; Gui, Font, s32 cFFFFFF ; Set a large font size (32-point).
+; Gui, Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
+; ; Make all pixels of this color transparent and make the text itself translucent (150):
+; WinSet, TransColor, %CustomColor% 175
+; Gui, Show, Center NoActivate  ; NoActivate avoids deactivating the currently active window.
+; Sleep, 135
+; Gui, Destroy
+; return
+
+
 
 ; MouseGetPos, xPos, yPos	
 ; GUI, ADD, Text, , %currentMessage%
@@ -37,8 +68,20 @@ return
 ; Sleep, 500
 ; Gui, Destroy
 
-
+6::
+; Gui, Add, Edit, R20 vMyEdit
+FileRead, FileContents, %A_WorkingDir%\snippets.txt
+Gui, 3: Font, s16, Verdana
+; GuiControl,, MyEdit, %FileContents%
+Gui, 3: +AlwaysOnTop -Caption +ToolWindow 
+Gui, 3: Add, Text,gClose, %FileContents% 
+Gui, 3: SHOW, xCenter yCenter
 return
+
+Close:
+Gui, 3: Destroy
+return
+
 ; https://autohotkey.com/docs/KeyList.htm
 ; ` escape a character
 ; # Windows key
@@ -95,7 +138,7 @@ t::Click
 ^t::Click, right
 '::WheelUp
 /::WheelDown
-6::MouseMove, % A_CaretX, % A_CaretY
+; 6::MouseMove, % A_CaretX, % A_CaretY
 ; ^i::MouseMove, 0, -20, 0, R  ; Win+UpArrow hotkey => Move cursor upward
 ; ^k::MouseMove, 0, 20, 0, R  ; Win+DownArrow => Move cursor downward
 ; ^j::MouseMove, -20, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
