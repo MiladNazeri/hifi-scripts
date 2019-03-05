@@ -12,9 +12,14 @@ Progress,1: B zh0 fs15 x874 y924 w80, %currentMessage%
 Progress,2: B zh0 fs15 x2900 y924 w80, %currentMessage%
 
 Suspend On
+isOn := false
+msgOn := "O N"
+msgOff := "O F F"
+currentMessage := msgOff
 ; Toggle suspense with Ctrl + 6
 ;^6::Suspend, toggle
 ^;::
+<<<<<<< HEAD
 ; ToolTip, %isOn%
 Suspend, toggle
 isOn := !isOn
@@ -53,7 +58,37 @@ Progress, 1: OFF
 Progress, 2: OFF
 return
 
+=======
+Suspend, toggle
+isOn := !isOn
+if (isOn) {
+    currentMessage := msgOn
+} else {
+    currentMessage := msgOff
+}
+>>>>>>> 6729a2f7049b9555979b729f6847a6f84c1f85c2
 
+CustomColor := "EEAA99"  ; Can be any RGB color (it will be made transparent below).
+Gui +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
+Gui, Color, %CustomColor%
+Gui, Font, s32 cFFFFFF ; Set a large font size (32-point).
+Gui, Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
+; Make all pixels of this color transparent and make the text itself translucent (150):
+WinSet, TransColor, %CustomColor% 175
+Gui, Show, Center NoActivate  ; NoActivate avoids deactivating the currently active window.
+Sleep, 135
+Gui, Destroy
+return
+
+; MouseGetPos, xPos, yPos	
+; GUI, ADD, Text, , %currentMessage%
+; Gui, SHOW, x%xPos% y%yPos%
+; Gui, ToolWindow
+; Sleep, 500
+; Gui, Destroy
+
+
+return
 ; https://autohotkey.com/docs/KeyList.htm
 ; ` escape a character
 ; # Windows key
@@ -81,6 +116,7 @@ n::Tab
 h::Backspace
 y::Delete
 1::Esc
+4::^w ; close window
 
 ; cut copy and paste
 c::^c 
