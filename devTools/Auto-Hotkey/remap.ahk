@@ -1,78 +1,70 @@
 ; Script to help remap your keyboard in a secondary mode
-
-
-; CapsLock navigation
-; Suspend means it's not running
 Suspend On
+
+isFlashOn := false
 isOn := false
-msgOn := "O N"
-msgOff := "O F F"
+msgOn := "Y E S"
+msgOff := "N O"
 currentMessage := msgOff
+Progress,1: m1 zh zw fs10 cXY y0 w1 h25, %currentMessage%
+
 ; Toggle suspense with Ctrl + 6
 ;^6::Suspend, toggle
 ^;::
 Suspend, toggle
 isOn := !isOn
-if (isOn) {
+
+if (isOn){
     currentMessage := msgOn
 } else {
     currentMessage := msgOff
 }
 
-SysGet, MonitorCount, MonitorCount
-Loop, %MonitorCount%
-{
-    SysGet, MonitorName, MonitorName, %A_Index%
-    SysGet, Monitor, Monitor, %A_Index%
-    SysGet, MonitorWorkArea, MonitorWorkArea, %A_Index%
-    ; MsgBox, Monitor:`t#%A_Index%`nName:`t%MonitorName%`nLeft:`t%MonitorLeft% (%MonitorWorkAreaLeft% work)`nTop:`t%MonitorTop% (%MonitorWorkAreaTop% work)`nRight:`t%MonitorRight% (%MonitorWorkAreaRight% work)`nBottom:`t%MonitorBottom% (%MonitorWorkAreaBottom% work)
-    test := MonitorRight - MonitorLeft
-    ; MsgBox, %test%
-    centerHorizontal := MonitorLeft
-    centerVertical := MonitorTop
-    ; centerHorizontal := (MonitorRight - MonitorLeft) / 2 + MonitorLeft
-    ; centerVertical := (MonitorBottom - MonitorTop) / 2 + MonitorTop
-    ; MsgBox, %centerHorizontal% : %centerVertical%
-    CustomColor := "000000"  ; Can be any RGB color (it will be made transparent below).
-    Gui, %A_Index%: +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item. 
-    Gui, %A_Index%: Color, %CustomColor%
-    Gui, %A_Index%: Font, s40 cFFFFFF ; Set a large fount size (32-point).
-    Gui, %A_Index%: Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
-    ; Make all pixels of this color transparent and make the text itself translucent (150):
-    ; WinSet, TransColor, %CustomColor% 255
-    Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical% NoActivate  ; NoActivate avoids deactivating the currently active window.
-    ; return
+Progress,1: m1 zh zw fs10 cXY y0 w1 h25, %currentMessage%
+#Persistent
+ToolTip, %currentMessage%
+SetTimer, RemoveToolTip, -300
+
+if (isFlashOn){
+    SysGet, MonitorCount, MonitorCount
+    Loop, %MonitorCount%
+    {
+        SysGet, MonitorName, MonitorName, %A_Index%
+        SysGet, Monitor, Monitor, %A_Index%
+        SysGet, MonitorWorkArea, MonitorWorkArea, %A_Index%
+        test := MonitorRight - MonitorLeft
+        centerHorizontal := MonitorLeft
+        centerVertical := MonitorTop
+        CustomColor := "000000"  ; Can be any RGB color (it will be made transparent below).
+        Gui, %A_Index%: +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item. 
+        Gui, %A_Index%: Color, %CustomColor%
+        Gui, %A_Index%: Font, s40 cFFFFFF ; Set a large fount size (32-point).
+        Gui, %A_Index%: Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
+        Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical% NoActivate  ; NoActivate avoids deactivating the currently active window.
+    }
+    sleep 300
+    Gui, 1: Destroy
+    Gui, 2: Destroy
 }
-sleep 300
-Gui, 1: Destroy
-Gui, 2: Destroy
 return
-; CustomColor := "EEAA99"  ; Can be any RGB color (it will be made transparent below).
-; Gui +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item.
-; Gui, Color, %CustomColor%
-; Gui, Font, s32 cFFFFFF ; Set a large font size (32-point).
-; Gui, Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
-; ; Make all pixels of this color transparent and make the text itself translucent (150):
-; WinSet, TransColor, %CustomColor% 175
-; Gui, Show, Center NoActivate  ; NoActivate avoids deactivating the currently active window.
-; Sleep, 135
-; Gui, Destroy
-; return
 
+RemoveToolTip:
+ToolTip
+return
 
+0::
+Progress, 1: OFF
+Progress, 2: OFF
+return
 
-; MouseGetPos, xPos, yPos	
-; GUI, ADD, Text, , %currentMessage%
-; Gui, SHOW, x%xPos% y%yPos%
-; Gui, ToolWindow
-; Sleep, 500
-; Gui, Destroy
+^0::
+isFlashOn := !isFlashOn
+return
+
 
 6::
-; Gui, Add, Edit, R20 vMyEdit
 FileRead, FileContents, %A_WorkingDir%\snippets.txt
 Gui, 3: Font, s16, Verdana
-; GuiControl,, MyEdit, %FileContents%
 Gui, 3: +AlwaysOnTop -Caption +ToolWindow 
 Gui, 3: Add, Text,gClose, %FileContents% 
 Gui, 3: SHOW, xCenter yCenter
@@ -164,3 +156,13 @@ RIGHT::MouseMove, 40, 0, 0, R  ; Win+RightArrow => Move cursor to the right
 ^DOWN::MouseMove, 0, 250, 0, R  ; Win+DownArrow => Move cursor downward
 ^LEFT::MouseMove, -250, 0, 0, R  ; Win+LeftArrow => Move cursor to the left
 ^RIGHT::MouseMove, 250, 0, 0, R  ; Win+RightArrow => Move cursor to the right
+
+
+
+
+
+; Suspend means it's not runningSysGet, MonitorCount, MonitorCount
+    ; Gui, 1: +AlwaysOnTop +Disabled -SysMenu +Owner -Caption ; +Owner avoids a taskbar button.
+    ; Gui, 1: Add, Text,, %currentMessage%
+    ; Gui, 1: Show, Center NoActivate, Title of Window  ; NoActivate avoids deactivating the currently active window.
+; Progress,2: B zh0 fs15 x2900 y924 w80, %currentMessage%
