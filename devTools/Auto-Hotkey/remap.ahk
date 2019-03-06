@@ -1,26 +1,24 @@
 ; Script to help remap your keyboard in a secondary mode
 Suspend On
 
-isFlashOn := false
+isFlashOn := true
 isOn := false
 msgOn := "Y E S"
 msgOff := "N O"
 currentMessage := msgOff
-Progress,1: m1 zh zw fs10 cXY y0 w1 h25, %currentMessage%
 
 ; Toggle suspense with Ctrl + 6
 ;^6::Suspend, toggle
-^;::
+CapsLock & `;::
 Suspend, toggle
 isOn := !isOn
-
 if (isOn){
     currentMessage := msgOn
 } else {
     currentMessage := msgOff
 }
 
-Progress,1: m1 zh zw fs10 cXY y0 w1 h25, %currentMessage%
+
 #Persistent
 ToolTip, %currentMessage%
 SetTimer, RemoveToolTip, -300
@@ -32,19 +30,19 @@ if (isFlashOn){
         SysGet, MonitorName, MonitorName, %A_Index%
         SysGet, Monitor, Monitor, %A_Index%
         SysGet, MonitorWorkArea, MonitorWorkArea, %A_Index%
-        test := MonitorRight - MonitorLeft
         centerHorizontal := MonitorLeft
         centerVertical := MonitorTop
         CustomColor := "000000"  ; Can be any RGB color (it will be made transparent below).
-        Gui, %A_Index%: +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item. 
-        Gui, %A_Index%: Color, %CustomColor%
-        Gui, %A_Index%: Font, s40 cFFFFFF ; Set a large fount size (32-point).
-        Gui, %A_Index%: Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
-        Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical% NoActivate  ; NoActivate avoids deactivating the currently active window.
+        ; Gui, %A_Index%: +LastFound +AlwaysOnTop -Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item. 
+        ; Gui, %A_Index%: Color, %CustomColor%
+        ; Gui, %A_Index%: Font, s40 cFFFFFF ; Set a large fount size (32-point).
+        ; Gui, %A_Index%: Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
+        ; Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical% NoActivate  ; NoActivate avoids deactivating the currently active window.
+        Progress,%A_Index%: m1 zh zw fs10 x%centerHorizontal% y%centerVertical% w1 h25, %currentMessage%
     }
-    sleep 300
-    Gui, 1: Destroy
-    Gui, 2: Destroy
+    ; sleep 300
+    ; Gui, 1: Destroy
+    ; Gui, 2: Destroy
 }
 return
 
