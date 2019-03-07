@@ -6,10 +6,14 @@ isOn := false
 msgOn := "Y E S"
 msgOff := "N O"
 currentMessage := msgOff
+baseCapsLockMessage := "Caps:"
+capsLockStatus := 0
 
+caplockState := baseCapsLockMessage + msgOff
 ; Toggle suspense with Ctrl + 6
 ;^6::Suspend, toggle
 CapsLock & `;::
+^`;::
 Suspend, toggle
 isOn := !isOn
 if (isOn){
@@ -18,15 +22,23 @@ if (isOn){
     currentMessage := msgOff
 }
 
-
+; GetKeyState, capLockStatus, CapsLock, T
+; if (capLockStatus = D) {
+;     MsgBox, "on d"
+;     caplockState := baseCapsLockMessage + msgOn
+; } else {
+;     MsgBox, "off d"
+;     caplockState := baseCapsLockMessage + msgOff
+; }
 #Persistent
 ToolTip, %currentMessage%
-SetTimer, RemoveToolTip, -300
+SetTimer, RemoveToolTip, -400
 
 if (isFlashOn){
     SysGet, MonitorCount, MonitorCount
     Loop, %MonitorCount%
     {
+        WinGetPos, x, y,,,%A_Index%
         SysGet, MonitorName, MonitorName, %A_Index%
         SysGet, Monitor, Monitor, %A_Index%
         SysGet, MonitorWorkArea, MonitorWorkArea, %A_Index%
@@ -38,7 +50,11 @@ if (isFlashOn){
         ; Gui, %A_Index%: Font, s40 cFFFFFF ; Set a large fount size (32-point).
         ; Gui, %A_Index%: Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
         ; Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical% NoActivate  ; NoActivate avoids deactivating the currently active window.
-        Progress,%A_Index%: m1 zh zw fs10 x%centerHorizontal% y%centerVertical% w1 h25, %currentMessage%
+        if (!x) {
+            Progress,%A_Index%: m zh0 fs8 w30 x%centerHorizontal% y%centerVertical%, %currentMessage%,, %A_Index%
+        } else {
+            Progress,%A_Index%: m zh0 fs8 w30 x%x% y%y%,%currentMessage%,, %A_Index%
+        }
     }
     ; sleep 300
     ; Gui, 1: Destroy
