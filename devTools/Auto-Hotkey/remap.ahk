@@ -139,6 +139,7 @@ b::+!g ; Smart Grow
 5::^d ; add the next occurance of highlighted item
 2::^#!2 ; Git commit all
 3::^b ; Files
+^w::^#!w ; Fold region 1
 
 t::Click
 ^t::Click, right
