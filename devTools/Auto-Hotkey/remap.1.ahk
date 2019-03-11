@@ -8,66 +8,68 @@ msgOff := "N"
 currentMessage := msgOff
 baseCapsLockMessage := "Caps:"
 capsLockStatus := 0
-fontSize := 175
+
 caplockState := baseCapsLockMessage + msgOff
+; Toggle suspense with Ctrl + 6
+;^6::Suspend, toggle
 
-if (isFlashOn){
-    SysGet, MonitorCount, MonitorCount
-    Loop, %MonitorCount%
-    {
-        SysGet, MonitorName, MonitorName, %A_Index%
-        SysGet, Monitor, Monitor, %A_Index%
-        SysGet, MonitorWorkArea, MonitorWorkArea, %A_Index%
-        centerHorizontal := (Abs(MonitorRight) + Abs(MonitorLeft)) / 2 + MonitorLeft
-        centerVertical := (Abs(MonitorTop) + Abs(MonitorBottom)) / 2 + MonitorTop
-        CustomColor := "000000"  ; Can be any RGB color (it will be made transparent below).
-        Gui, %A_Index%: +LastFound +AlwaysOnTop -Caption +ToolWindow ; +ToolWindow avoids a taskbar button and an alt-tab menu item. 
-        Gui, %A_Index%: Color, %CustomColor%
-        Gui, %A_Index%: Font, w1000 s%fontSize% cFFFFFF ; Set a large fount size (32-point).
-        Gui, %A_Index%: Add, Text, v%A_Index% GuiMove, % currentMessage
-        Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical%, %A_Index%
-        WinSet, Transparent, 1
-        WinSet, TransColor, %CustomColor%
 
-    }
-}
-
-NEWCOLOR := "Red"
 CapsLock & `;::
 ^`;::
 Suspend, toggle
 isOn := !isOn
 if (isOn){
     currentMessage := msgOn
-    NEWCOLOR := "Green"
 } else {
     currentMessage := msgOff
-    NEWCOLOR := "Red"
 }
+
+; GetKeyState, capLockStatus, CapsLock, T
+; if (capLockStatus = D) {
+;     MsgBox, "on d"
+;     caplockState := baseCapsLockMessage + msgOn
+; } else {
+;     MsgBox, "off d"
+;     caplockState := baseCapsLockMessage + msgOff
+; }
+#Persistent
+ToolTip, %currentMessage%
+SetTimer, RemoveToolTip, -400
 
 if (isFlashOn){
     SysGet, MonitorCount, MonitorCount
     Loop, %MonitorCount%
     {
-        GuiControl,%A_Index%: , %A_Index%, % currentMessage
-        Gui, %A_Index%: Font, c%NEWCOLOR%
-        GuiControl, %A_Index%: Font, %A_Index%
+        WinGetPos, x, y,,,,%A_Index%
+        SysGet, MonitorName, MonitorName, %A_Index%
+        SysGet, Monitor, Monitor, %A_Index%
+        SysGet, MonitorWorkArea, MonitorWorkArea, %A_Index%
+        centerHorizontal := (Abs(MonitorRight) + Abs(MonitorLeft)) / 2 + MonitorLeft
+        centerVertical := (Abs(MonitorTop) + Abs(MonitorBottom)) / 2 + MonitorTop
+        CustomColor := "000000"  ; Can be any RGB color (it will be made transparent below).
+        Gui, %A_Index%: +LastFound +AlwaysOnTop +Caption +ToolWindow  ; +ToolWindow avoids a taskbar button and an alt-tab menu item. 
+        Gui, %A_Index%: Color, %CustomColor%
+        Gui, %A_Index%: Font, s40 cFFFFFF ; Set a large fount size (32-point).
+        Gui, %A_Index%: Add, Text,, %currentMessage%  ; XX & YY serve to auto-size the window.
+        Gui, %A_Index%: Show, x%centerHorizontal% y%centerVertical% NoActivate  ; NoActivate avoids deactivating the currently active window.
+        ;     WinSet, TransColor, 0, ,%A_Index%
+        ; if (!x) {
+        ;     Progress,%A_Index%: m zh0 fs25 w150 cW000000 cT00FF00 x%centerHorizontal% y%centerVertical%, , %A_Index%:%currentMessage%, .
+        ;     WinSet, TransColor, 0, ,%A_Index%
+        ; } else {
+        ;     Progress,%A_Index%: m zh0 fs25 w150 cW000000 cT00FF00 x%x% y%y%,, %A_Index%:%currentMessage%, .
+        ;     WinSet, TransColor, 0, ,%A_Index%
+        ; }
     }
+    ; sleep 300
+    ; Gui, 1: Destroy
+    ; Gui, 2: Destroy
 }
-
-
-#Persistent
-ToolTip, %currentMessage%
-SetTimer, RemoveToolTip, -400
 return
 
 RemoveToolTip:
 ToolTip
 return
-
-uiMove:
-PostMessage, 0xA1, 2,,, A 
-Return
 
 0::
 Progress, 1: OFF
@@ -75,40 +77,9 @@ Progress, 2: OFF
 return
 
 ^0::
-    SysGet, MonitorCount, MonitorCount
-    Loop, %MonitorCount%
-    {
-        Gui, %A_Index%: Show, Hide
-    }
+isFlashOn := !isFlashOn
 return
 
-^9::
-    SysGet, MonitorCount, MonitorCount
-    Loop, %MonitorCount%
-    {
-        Gui, %A_Index%: Show
-    }
-return
-
-^#!8::
-fontSize -= 5
-SysGet, MonitorCount, MonitorCount
-Loop, %MonitorCount%
-{
-    Gui, %A_Index%: Font, s%fontSize%
-    GuiControl, %A_Index%: Font, %A_Index%
-}
-return
-
-^#!9::
-fontSize += 5
-SysGet, MonitorCount, MonitorCount
-Loop, %MonitorCount%
-{
-    Gui, %A_Index%: Font, s%fontSize%
-    GuiControl, %A_Index%: Font, %A_Index%
-}
-return
 
 6::
 FileRead, FileContents, %A_WorkingDir%\snippets.txt
